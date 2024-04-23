@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-010001000100-fightvault-55bvukeroni.ws-eu110.gitpod.io',
-    'fightvault-d3f5315751bb.herokuapp.com/'
+    'fightvault-d3f5315751bb.herokuapp.com'
 ]
 
 
