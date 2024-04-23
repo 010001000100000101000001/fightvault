@@ -23,9 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-fspf-#af3w_qf95aj4=+s+x-g-ts&60foy+656g*8izk#b4(sz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['8000-010001000100-fightvault-55bvukeroni.ws-eu110.gitpod.io']
+ALLOWED_HOSTS = [
+    '8000-010001000100-fightvault-55bvukeroni.ws-eu110.gitpod.io',
+    'fightvault-d3f5315751bb.herokuapp.com/'
+]
 
 
 # Application definition
