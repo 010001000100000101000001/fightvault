@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 # Constants for post status choices
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Post(models.Model):
     """
     Represents a blog post.
@@ -29,11 +30,14 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
 
+    class Meta:
+        ordering = ["-created_on"]
+
     def __str__(self):
         """
         Returns a string representation of the post, which is the title.
         """
-        return self.title
+        return f"{self.title} | written by {self.author.username}"
 
 
 class Comment(models.Model):
