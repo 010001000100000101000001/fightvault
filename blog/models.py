@@ -55,15 +55,18 @@ class Comment(models.Model):
         Post, on_delete=models.CASCADE, related_name="comments"
     )
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="commenter"
+        User, on_delete=models.CASCADE, related_name="comments_author"
     )
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ["created_on"]
+
     def __str__(self):
         """
-        Returns a string representation of the comment, including the author's username
-        and the comment's content.
+        Returns a string representation of the comment, including the author's username and
+        a truncated version of the comment's content.
         """
         return f"Comment by {self.author.username}: {self.body[:20]}..."
