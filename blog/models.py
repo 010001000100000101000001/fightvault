@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 # Constants for post status choices
 STATUS = ((0, "Draft"), (1, "Published"))
 
-
 class Post(models.Model):
     """
     Represents a blog post.
@@ -70,3 +69,24 @@ class Comment(models.Model):
         a truncated version of the comment's content.
         """
         return f"Comment by {self.author.username}: {self.body[:20]}..."
+
+
+class Rating(models.Model):
+        """
+    Represents a rating on a blog post.
+
+    Attributes:
+        post (ForeignKey): The post being rated (many-to-one relationship).
+        user (ForeignKey): The user who submitted the rating.
+        score (IntegerField): The star rating (1-5).
+        comment (TextField): Optional review comment.
+        created_on (DateTimeField): When the rating was submitted.
+    """
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="ratings")
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    score = models.IntegerField(choices=[(i, str(i)) for i in range(1, 6)])  # 1 to 5 stars
+    comment = models.TextField(blank=True, null=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Rating by {self.user.username} on {self.post.title}: {self.score} stars"
