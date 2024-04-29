@@ -72,7 +72,7 @@ class Comment(models.Model):
 
 
 class Rating(models.Model):
-        """
+    """
     Represents a rating on a blog post.
 
     Attributes:
