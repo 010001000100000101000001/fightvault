@@ -13,7 +13,7 @@
                             <div class="image-container">
                                 <p class="author">Author: {{ post.author }}</p>
                             </div>
-                            <a href="{% url 'post_detail' post.id %}" class="post-title-link"></a>
+                            <a href="{% url 'post_detail' post.slug %}" class="post-title-link"></a>
                                 <h2 class="card-title">{{ post.title }}</h2>
                             </a>
                             <p class="post-excerpt">{{ post.excerpt }}</p>

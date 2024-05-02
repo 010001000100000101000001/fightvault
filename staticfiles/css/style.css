@@ -4,111 +4,118 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    background-color: #f4f4f4;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
     margin-top: 0;
+    color: #333;
 }
 
-/* Navbar */
-.site-navbar {
+/* Navbar styles */
+.navbar {
     background-color: #1d1d1d;
     padding: 0.5rem;
 }
 
-.site-navbar .brand-logo {
-    color: #f44336;
+.navbar-brand {
+    color: #b719eb;
     font-weight: bold;
     font-size: 1.5rem;
 }
 
-.site-navbar .nav-item {
+.nav-link {
     color: #fff;
 }
 
-.site-navbar .nav-item.active {
-    color: #f44336;
+.nav-link.active {
+    color: #b719eb;
 }
 
-/* Main content */
-main {
+/* Blog content styles */
+.container-fluid {
     padding: 1rem 2rem;
-    background-color: #f4f4f4;
 }
 
-.post-card {
+.card {
     background-color: #fff;
-    padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.post-card h3 {
-    margin-bottom: 0.5rem;
-    color: #333;
+.card-body {
+    padding: 1rem;
 }
 
-.post-link {
-    color: #f44336;
+.card-title {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.author, .post-date, .post-excerpt {
+    color: #666;
+}
+
+.post-title-link, .post-link {
+    color: #b719eb;
     text-decoration: none;
 }
 
-.post-link:hover {
+.post-title-link:hover, .post-link:hover {
     text-decoration: underline;
 }
 
-/* Pagination */
-site-pagination {
+/* Pagination styles */
+.pagination {
     text-align: center;
     margin: 1rem 0;
 }
 
-site-pagination a {
-    color: #f44336;
-    margin: 0 0.5rem;
-    padding: 0.5rem;
+.page-link {
+    color: #b719eb;
 }
 
-site-pagination a:hover {
+.page-link:hover {
     background-color: #1d1d1d;
     color: #fff;
 }
 
-/* Footer */
-.site-footer {
+/* Footer styles */
+.footer {
     background-color: #1d1d1d;
     padding: 1rem;
     color: #fff;
     text-align: center;
 }
 
-.site-footer p {
+.footer p {
     margin: 0;
 }
 
-.site-footer a {
-    color: #f44336;
+.footer a {
+    color: #b719eb;
     margin: 0 0.5rem;
 }
 
-.site-footer a:hover {
+.footer a:hover {
     text-decoration: underline;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     /* Adjustments for mobile view */
-    main {
+    .container-fluid {
         padding: 0.5rem 1rem;
     }
 
-    .site-navbar {
+    .navbar {
         padding: 0.5rem;
     }
 
-    .site-footer {
+    .footer {
         padding: 0.5rem;
     }
 }

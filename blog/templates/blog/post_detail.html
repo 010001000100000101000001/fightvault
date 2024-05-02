@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Post title -->
+            <h1 class="post-title">{{ post.title }}</h1>
+            <!-- Post author and created date -->
+            <p class="post-subtitle">Author: {{ post.author }} | Date: {{ post.created_on }}</p>
+        </div>
+        <div class="col-md-6 d-none d-md-block">
+            <img src="{% static 'images/default.jpg' %}" alt="Default image" class="img-fluid post-image">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card post-card mt-4">
+                <div class="card-body">
+                    <!-- Post content -->
+                    <p class="card-text">
+                        {{ post.content | safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
