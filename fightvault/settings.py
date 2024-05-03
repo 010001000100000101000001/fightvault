@@ -27,10 +27,10 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-010001000100-fightvault-vbif5w4zfrd.ws-eu110.gitpod.io',
+    '8000-010001000100-fightvault-gj8g565cbpc.ws-eu110.gitpod.io',
     'fightvault-d3f5315751bb.herokuapp.com'
 ]
 

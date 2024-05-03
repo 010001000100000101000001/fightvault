@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 <!-- Blog content starts here -->
 <div class="container-fluid">
@@ -7,23 +7,35 @@
         <div class="col-12 mt-3">
             <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
                         <div class="card-body">
+                            <!-- Post Image or Default Image -->
                             <div class="image-container">
-                                <p class="author">Author: {{ post.author }}</p>
+                                {% if post.image %}
+                                    <!-- If post has an image, display it -->
+                                    <img src="{{ post.image.url }}" class="img-fluid card-img-top" alt="Image for {{ post.title }}">
+                                {% else %}
+                                    <!-- If post does not have an image, display a default image -->
+                                    <img src="{% static 'images/default.jpg' %}" class="img-fluid card-img-top" alt="Default image for {{ post.title }}">
+                                {% endif %}
                             </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-title-link"></a>
+                            <!-- Post Author -->
+                            <p class="author">Author: {{ post.author }}</p>
+                            <!-- Post Title Link -->
+                            <a href="{% url 'post_detail' post.slug %}" class="post-title-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                             </a>
+                            <!-- Post Excerpt -->
                             <p class="post-excerpt">{{ post.excerpt }}</p>
+                            <!-- Post Date -->
                             <p class="post-date text-muted h6">{{ post.created_on }}</p>
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
+                {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                </div>
+                <div class="row">
                 {% endif %}
                 {% endfor %}
             </div>

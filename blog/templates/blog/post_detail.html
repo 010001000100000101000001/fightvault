@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
-{% block content %}
 {% load static %}
-
+{% block content %}
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-8 offset-md-2">
@@ -11,7 +10,13 @@
             <p>By {{ post.author }} | {{ post.created_on }}</p>
             <!-- Post image -->
             <div class="post-image mb-3">
-                <img src="{% static 'images/default.jpg' %}" class="img-fluid" alt="Image for {{ post.title }}">
+                {% if post.image %}
+                    <!-- Display the post image if it exists -->
+                    <img src="{{ post.image.url }}" class="img-fluid" alt="Image for {{ post.title }}">
+                {% else %}
+                    <!-- Display a default image or message if the post has no image -->
+                    <img src="{% static 'images/default.jpg' %}" class="img-fluid" alt="Default image for {{ post.title }}">
+                {% endif %}
             </div>
             <!-- Post content -->
             <div class="post-content">
@@ -20,5 +25,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
