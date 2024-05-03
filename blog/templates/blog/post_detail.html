@@ -11,17 +11,32 @@
             <!-- Post image -->
             <div class="post-image mb-3">
                 {% if post.image %}
-                    <!-- Display the post image if it exists -->
-                    <img src="{{ post.image.url }}" class="img-fluid" alt="Image for {{ post.title }}">
+                <!-- Display the post image if it exists -->
+                <img src="{{ post.image.url }}" class="img-fluid" alt="Image for {{ post.title }}">
                 {% else %}
-                    <!-- Display a default image or message if the post has no image -->
-                    <img src="{% static 'images/default.jpg' %}" class="img-fluid" alt="Default image for {{ post.title }}">
+                <!-- Display a default image or message if the post has no image -->
+                <img src="{% static 'images/default.jpg' %}" class="img-fluid" alt="Default image for {{ post.title }}">
                 {% endif %}
             </div>
             <!-- Post content -->
             <div class="post-content">
                 {{ post.content|safe }}
             </div>
+            <!-- Ratings display -->
+            <h2>Ratings</h2>
+            <p>Average Rating: {{ average_rating }} out of 5</p>
+            {% if ratings %}
+            {% for rating in ratings %}
+            <div class="rating">
+                <p>Score: {{ rating.score }} stars</p>
+                <p>Comment: {{ rating.comment }}</p>
+                <p>Rated by: {{ rating.user.username }}</p>
+                <p>Rated on: {{ rating.created_on }}</p>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No ratings yet.</p>
+            {% endif %}
         </div>
     </div>
 </div>
