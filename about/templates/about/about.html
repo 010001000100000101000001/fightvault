@@ -6,10 +6,10 @@
     <div class="row">
         <!-- Left column for image -->
         <div class="col-md-4">
-            {% if "placeholder" in about.profile_image.url %}
-                <img src="{% static 'images/nobody.jpg' %}" width="75%" alt="placeholder image">
+            {% if about.image %}
+                <img src="{{ about.image.url }}" class="img-fluid about-image" alt="{{ about.title }}">
             {% else %}
-                <img src="{{ about.profile_image.url }}" width="75%" alt="{{ about.title }}">
+                <img src="{% static 'images/default-about.webp' %}" class="img-fluid about-image" alt="About FightVault">
             {% endif %}
         </div>
 
