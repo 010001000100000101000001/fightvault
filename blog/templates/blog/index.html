@@ -12,12 +12,13 @@
                         <div class="card-body">
                             <!-- Post Image or Default Image -->
                             <div class="image-container">
-                                {% if post.image %}
-                                    <!-- If post has an image, display it -->
-                                    <img src="{{ post.image.url }}" class="img-fluid card-img-top" alt="Image for {{ post.title }}">
+                                {% if "placeholder" in post.featured_image.url %}
+                                <!-- If the URL contains 'placeholder', display the default image -->
+                                <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                                    alt="placeholder image">
                                 {% else %}
-                                    <!-- If post does not have an image, display a default image -->
-                                    <img src="{% static 'images/default.jpg' %}" class="img-fluid card-img-top" alt="Default image for {{ post.title }}">
+                                <!-- Otherwise, display the featured image -->
+                                <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                                 {% endif %}
                             </div>
                             <!-- Post Author -->
@@ -34,8 +35,8 @@
                     </div>
                 </div>
                 {% if forloop.counter|divisibleby:3 and not forloop.last %}
-                </div>
-                <div class="row">
+            </div>
+            <div class="row">
                 {% endif %}
                 {% endfor %}
             </div>
