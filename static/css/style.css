@@ -89,6 +89,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1rem;
     color: #fff;
     text-align: center;
+    margin-top: 0;
 }
 
 .footer p {
@@ -102,6 +103,32 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+.contact-image {
+    width: 100%;
+    padding: 20px 0 0 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image img {
+    height: auto;
+    display: block;
+}
+
+.container form {
+    max-width: 500px
+    margin: auto;
+}
+
+.container form input,
+.container form textarea,
+.container form button {
+    width: 60%;
+    box-sizing: border-box;
 }
 
 /* Media Queries */

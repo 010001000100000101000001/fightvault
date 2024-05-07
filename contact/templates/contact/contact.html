@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- Contact form -->
+<div class="container">
+    <h1>Ask us a Question</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</div>
+<!-- Image -->
+<div class="contact-image">
+    <img src="{% static 'images/arena-contact-page.webp' %}" alt="Contact Us" class="img-fluid">
+</div>
+{% endblock %}
