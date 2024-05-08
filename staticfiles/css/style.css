@@ -11,6 +11,12 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
 }
 
+/* Navigation Bar Styles */
+.navbar {
+    padding-left: 20px; /* Add left padding */
+    padding-right: 20px; /* Add right padding */
+}
+
 /* Logo Styles */
 .navbar-brand .brand-logo {
     font-size: 26px; /* Adjust the size as needed */
