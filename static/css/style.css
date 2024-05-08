@@ -1,6 +1,6 @@
 /* Logo Styles */
 .navbar-brand .brand-logo {
-    font-size: 22px; /* Adjust the size as needed */
+    font-size: 26px; /* Adjust the size as needed */
     letter-spacing: 1px; /* Adds space between characters */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     font-weight: 600; /* Makes the text thicker */
@@ -9,4 +9,23 @@
 /* Navigation Link Styles */
 .navbar-nav .nav-link {
     font-size: 18px; /* Increases the font size of the nav links */
+}
+
+/* Default size for mobile devices */
+.navbar-brand .brand-logo {
+    font-size: 20px; /* Smaller font size for mobile devices */
+}
+
+/* Medium size for tablets */
+@media (min-width: 768px) {
+    .navbar-brand .brand-logo {
+        font-size: 24px; /* Medium font size for tablets */
+    }
+}
+
+/* Larger size for desktops */
+@media (min-width: 992px) {
+    .navbar-brand .brand-logo {
+        font-size: 26px; /* Larger font size for desktop screens */
+    }
 }
