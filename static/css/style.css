@@ -40,7 +40,17 @@ h1, h2, h3, h4, h5, h6 {
     background-color: red; /* Change background color to red on hover */
 }
 
+button.btn.btn-primary {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
+button.btn.btn-primary:hover {
+    background-color: red;
+}
 
 /* Default size for mobile devices */
 .navbar-brand .brand-logo {

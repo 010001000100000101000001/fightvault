@@ -30,6 +30,28 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px; /* Increases the font size of the nav links */
 }
 
+/* Custom styles for pagination buttons */
+.pagination .page-link {
+    background-color: black; /* Set background color to black */
+    color: white; /* Set text color to white */
+}
+
+.pagination .page-link:hover {
+    background-color: red; /* Change background color to red on hover */
+}
+
+button.btn.btn-primary {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button.btn.btn-primary:hover {
+    background-color: red;
+}
+
 /* Default size for mobile devices */
 .navbar-brand .brand-logo {
     font-size: 20px; /* Smaller font size for mobile devices */
