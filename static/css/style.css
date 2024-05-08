@@ -40,6 +40,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: red; /* Change background color to red on hover */
 }
 
+
+
 /* Default size for mobile devices */
 .navbar-brand .brand-logo {
     font-size: 20px; /* Smaller font size for mobile devices */
