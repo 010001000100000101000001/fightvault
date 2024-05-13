@@ -6,7 +6,7 @@
 <!-- Contact form -->
 <div class="container">
     <h1>Ask us a Question</h1>
-    <form method="post" class="contact-form">
+    <form action="https://formdump.codeinstitute.net" method="POST" class="contact-form">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary">Send</button>
