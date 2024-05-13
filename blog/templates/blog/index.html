@@ -12,14 +12,17 @@
                         <div class="card-body">
                             <!-- Post Image or Default Image -->
                             <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <!-- If the URL contains 'placeholder', display the default image -->
-                                <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                                    alt="placeholder image">
-                                {% else %}
-                                <!-- Otherwise, display the featured image -->
-                                <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
-                                {% endif %}
+                                <a href="{% url 'post_detail' post.slug %}">
+                                    {% if "placeholder" in post.featured_image.url %}
+                                    <!-- If the URL contains 'placeholder', display the default image -->
+                                    <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                                        alt="Default image for {{ post.title }}">
+                                    {% else %}
+                                    <!-- Otherwise, display the featured image -->
+                                    <img class="card-img-top" src="{{ post.featured_image.url }}"
+                                        alt="{{ post.title }}">
+                                    {% endif %}
+                                </a>
                             </div>
                             <!-- Post Author -->
                             <p class="author">Author: {{ post.author }}</p>

@@ -10,9 +10,9 @@
             <p>By {{ post.author }} | {{ post.created_on }}</p>
             <!-- Post image -->
             <div class="post-image mb-3">
-                {% if post.image %}
+                {% if post.featured_image %}
                 <!-- Display the post image if it exists -->
-                <img src="{{ post.image.url }}" class="img-fluid" alt="Image for {{ post.title }}">
+                <img src="{{ post.featured_image.url }}" class="img-fluid" alt="Image for {{ post.title }}">
                 {% else %}
                 <!-- Display a default image or message if the post has no image -->
                 <img src="{% static 'images/default.jpg' %}" class="img-fluid" alt="Default image for {{ post.title }}">
