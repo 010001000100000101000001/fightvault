@@ -15,7 +15,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-010001000100-fightvault-5nmfyn9qnju.ws-eu111.gitpod.io',
@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'blog',
     'about',
     'contact',
-    'allauth.socialaccount.providers.google',
 ]
 
 SITE_ID = 1
@@ -74,8 +73,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'allauth.account.context_processors.account',
-                'allauth.socialaccount.context_processors.socialaccount',
             ],
         },
     },
