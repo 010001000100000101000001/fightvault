@@ -8,15 +8,18 @@
             <h1>{{ post.title }}</h1>
             <!-- Post author and creation date -->
             <p>By {{ post.author }} | {{ post.created_on }}</p>
-            <!-- Post image -->
-            <div class="post-image mb-3">
-                {% if post.featured_image %}
-                <!-- Display the post image if it exists -->
-                <img src="{{ post.featured_image.url }}" class="img-fluid" alt="Image for {{ post.title }}">
-                {% else %}
-                <!-- Display a default image or message if the post has no image -->
-                <img src="{% static 'images/default.jpg' %}" class="img-fluid" alt="Default image for {{ post.title }}">
-                {% endif %}
+            <!-- Post Image or Default Image -->
+            <div class="image-container">
+                <a href="{% url 'post_detail' post.slug %}">
+                    {% if post.featured_image and not "placeholder" in post.featured_image.url %}
+                    <!-- Display the featured image -->
+                    <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
+                    {% else %}
+                    <!-- Display the default image -->
+                    <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                        alt="Default image for {{ post.title }}">
+                    {% endif %}
+                </a>
             </div>
             <!-- Post content -->
             <div class="post-content">
