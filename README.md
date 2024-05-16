@@ -167,7 +167,8 @@ FightVault is a comprehensive platform designed for MMA and combat sports enthus
 - **Bootstrap**
   - Utilized for responsive and mobile-first front-end design.
   
-- ElephantSQL
+- **ElephantSQL**
+  - 
   
 - **GitHub and Heroku**
  
