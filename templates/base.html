@@ -13,9 +13,10 @@
 <head>
     <title>FightVault - Your Destination for MMA and Combat Sports News</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="FightVault provides the latest news, updates, and information on MMA and combat sports. Stay informed and connected with our community.">
+    <meta name="description"
+        content="FightVault provides the latest news, updates, and information on MMA and combat sports. Stay informed and connected with our community.">
     <meta name="keywords" content="MMA, combat sports, boxing, UFC, martial arts, FightVault">
-    
+
     <!-- Favicon for browser window tab -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
@@ -96,7 +97,23 @@
         </div>
     </nav>
 
-    <main class="main-content flex-shrink-0">
+
+    <!-- Main Content -->
+    <main class="flex-shrink-0 main-bg">
+        {% if user.is_authenticated %}
+        <div class="alert alert-success text-end m-3" role="alert">
+            Welcome back, <strong>{{ user.username }}</strong>!
+            <br>
+            <small>Email: {{ user.email }}</small>
+            <br>
+            <small>Last login: {{ user.last_login|date:"F j, Y, g:i a" }}</small>
+        </div>
+        {% else %}
+        <div class="alert alert-warning text-end m-3" role="alert">
+            You are not logged in. Please <a href="{% url 'account_login' %}">login</a> or <a
+                href="{% url 'account_signup' %}">register</a>.
+        </div>
+        {% endif %}
         {% block content %}
         <!-- Dynamic content goes here -->
         {% endblock content %}
