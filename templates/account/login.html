@@ -6,24 +6,23 @@
 
 {% block content %}
 
-<div class="login-logout-page-container">
-<div class="container mt-4">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <h1>{% trans "Sign In to FightVault" %}
-        <i class="fa-duotone fa-boxing-glove"></i>
-      </h1>
-      <form class="login" method="POST" action="{% url 'account_login' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div class="mb-3">
-          <a class="btn btn-link" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-        </div>
-        <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
-      </form>
-      <p>{% trans "Don’t have an account?" %} <a href="{% url 'account_signup' %}">{% trans "Register here" %}</a>.</p>
+<div class="login-logout-signup-page-container">
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1>{% trans "Sign In to FightVault" %}<i class="fa-duotone fa-boxing-glove"></i></h1>
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <div class="mb-3">
+            <a class="btn btn-link" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+          </div>
+          <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+        </form>
+        <p>{% trans "Don’t have an account?" %} <a href="{% url 'account_signup' %}">{% trans "Register here" %}</a>.
+        </p>
+      </div>
     </div>
   </div>
-</div>
 </div>
 {% endblock content %}
