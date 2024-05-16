@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom styles for pagination buttons */
 .pagination .page-link {
-    background-color: black; /* Set background color to black */
+    background-color: #282c31; /* Set background color to #282c31 */
     color: white; /* Set text color to white */
 }
 
@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 
 button.btn.btn-primary {
     margin-bottom: 20px;
-    background-color: black;
+    background-color: #282c31;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -69,6 +69,19 @@ button.btn.btn-primary:hover {
     border-radius: 10px;
     padding: 15px;
     margin-top: 10px;
+}
+
+/* Success alert style for authenticated users */
+.alert-success {
+    background-color: #282c31; /* Changed to match site's theme */
+    color: white; /* Text color for better contrast */
+}
+
+/* Warning alert style for unauthenticated users */
+.alert-warning {
+    background-color: white; /* Changed to white for unauthenticated users */
+    color: #282c31; /* Text color for better contrast */
+    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
 }
 
 /* Default size for mobile devices */
