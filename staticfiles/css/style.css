@@ -82,6 +82,11 @@ button.btn.btn-primary:hover {
     align-items: center;
 }
 
+/* Custom styles for about page */
+.image-container {
+    margin-bottom: 30px; /* Add space below the image container */
+}
+
 .form-container {
     background-color: #fff; /* Solid white background */
     padding: 40px 30px; /* Sufficient padding for better readability */
