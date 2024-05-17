@@ -39,9 +39,18 @@ h1, h2, h3, h4, h5, h6 {
 .pagination .page-link:hover {
     background-color: red; /* Change background color to red on hover */
 }
+
 /* Custom styles for contact page */
 .container {
     margin-top: 20px;
+}
+
+.contact-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
 }
 
 button.btn.btn-primary {

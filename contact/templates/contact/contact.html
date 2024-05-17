@@ -1,23 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block content %}
-
-
-<!-- Contact form -->
-<div class="container">
-    <h1>Ask us a Question</h1>
-    <form action="https://formdump.codeinstitute.net" method="POST" class="contact-form">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Send</button>
-    </form>
+<div class="contact-page-container">
+    <div class="form-wrapper">
+        <div class="form-container">
+            <h3 class="text-center text-uppercase font-weight-bold">Ask us a Question</h3>
+            <form action="https://formdump.codeinstitute.net" method="POST" class="contact-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
 </div>
-<!-- Gloves image 
-<div class="additional-image">
-    <img src="{% static 'images/signed-gloves.jpg' %}" alt="Signed Gloves" class="img-fluid rounded-circle">
-</div> -->
 <!-- Image -->
-<div class="contact-image">
-    <img src="{% static 'images/arena-contact-page.webp' %}" alt="Contact Us" class="img-fluid">
+<div class="contact-image-container">
+    <img src="{% static 'images/arena-contact-page.webp' %}" alt="Contact Us" class="img-fluid contact-image">
 </div>
 {% endblock %}
