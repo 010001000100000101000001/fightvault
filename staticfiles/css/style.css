@@ -79,7 +79,7 @@ button.btn.btn-primary:hover {
 
 /* Warning alert style for unauthenticated users */
 .alert-warning {
-    background-color: rgb(248, 249, 250); /* Changed to white for unauthenticated users */
+    background-color: rgb(248, 249, 250); /* Changed to rgb(248, 249, 250) for unauthenticated users */
     color: #282c31; /* Text color for better contrast */
     border: 1px solid #ccc; /* Add a border for better visibility */
 }
