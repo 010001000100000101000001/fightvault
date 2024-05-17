@@ -79,19 +79,9 @@ button.btn.btn-primary:hover {
 
 /* Warning alert style for unauthenticated users */
 .alert-warning {
-    background-color: white; /* Changed to white for unauthenticated users */
+    background-color: rgb(248, 249, 250); /* Changed to white for unauthenticated users */
     color: #282c31; /* Text color for better contrast */
-    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
-}
-
-footer a:hover {
-    color: red; /* Color on hover */
-}
-
-/* Social media icons styles for footer */
-.footer a {
-    color: red; /* Default color */
-    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+    border: 1px solid #ccc; /* Add a border for better visibility */
 }
 
 /* Default size for mobile devices */
