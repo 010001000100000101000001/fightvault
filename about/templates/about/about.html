@@ -6,10 +6,13 @@
     <div class="row">
         <!-- Left column for image -->
         <div class="col-md-4">
+            <!-- New image added above the existing image -->
+            <img src="{% static 'images/fightvault-image.webp' %}" class="img-fluid mb-3" alt="FightVault Image">
+
             {% if about.image %}
-                <img src="{{ about.image.url }}" class="img-fluid about-image" alt="{{ about.title }}">
+            <img src="{{ about.image.url }}" class="img-fluid about-image" alt="{{ about.title }}">
             {% else %}
-                <img src="{% static 'images/default-about.webp' %}" class="img-fluid about-image" alt="About FightVault">
+            <img src="{% static 'images/default-about.webp' %}" class="img-fluid about-image" alt="About FightVault">
             {% endif %}
         </div>
 
