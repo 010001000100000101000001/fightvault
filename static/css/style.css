@@ -45,12 +45,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 20px;
 }
 
-.contact-page-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    position: relative;
+.contact-page-background {
+    background-image: url('static/images/fightvault-image.webp'); /* Background image for contact page */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the background image */
+    min-height: 100vh; /* Minimum height of 100vh to cover full viewport */
+    display: flex; /* Flexbox display */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
 }
 
 button.btn.btn-primary {
@@ -97,6 +99,8 @@ button.btn.btn-primary:hover {
 .navbar-brand .brand-logo {
     font-size: 20px; /* Smaller font size for mobile devices */
 }
+
+
 
 /* Medium size for tablets */
 @media (min-width: 768px) {

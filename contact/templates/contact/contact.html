@@ -2,15 +2,17 @@
 {% load static %}
 
 {% block content %}
-<div class="contact-page-container">
-    <div class="form-wrapper">
-        <div class="form-container">
-            <h3 class="text-center text-uppercase font-weight-bold">Ask us a Question</h3>
-            <form action="https://formdump.codeinstitute.net" method="POST" class="contact-form">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Send</button>
-            </form>
+<div class="contact-page-background">
+    <div class="contact-page-container">
+        <div class="form-wrapper">
+            <div class="form-container">
+                <h3 class="text-center text-uppercase font-weight-bold">Ask us a Question</h3>
+                <form action="https://formdump.codeinstitute.net" method="POST" class="contact-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
