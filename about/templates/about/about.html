@@ -2,17 +2,19 @@
 {% load static %}
 {% block content %}
 
-<div class="container mt-4">
+<div class="container mt-4 about-page-container">
     <div class="row">
         <!-- Left column for image -->
         <div class="col-md-4 image-container">
-            <!-- New image added above the existing image -->
-            <img src="{% static 'images/fightvault-image.webp' %}" class="img-fluid mb-3" alt="FightVault Image">
+            <!-- FightVault logo image -->
+            <img src="{% static 'images/fightvault-image.webp' %}" class="img-fluid mb-3 fightvault-logo"
+                alt="FightVault Image">
 
             {% if about.image %}
             <img src="{{ about.image.url }}" class="img-fluid about-image" alt="{{ about.title }}">
             {% else %}
-            <img src="{% static 'images/default-about.jpg' %}" class="img-fluid about-image" alt="About FightVault">
+            <img src="{% static 'images/default-about.jpg' %}" class="img-fluid about-image default-about-image"
+                alt="About FightVault">
             {% endif %}
         </div>
 

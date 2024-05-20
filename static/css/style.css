@@ -83,18 +83,20 @@ button.btn.btn-primary:hover {
 }
 
 /* Custom styles for about page */
+.about-page-container {
+    position: relative;
+    z-index: 1;
+}
+
 .image-container {
     margin-bottom: 30px; /* Add space below the image container */
 }
 
-.form-container {
-    background-color: #fff; /* Solid white background */
-    padding: 40px 30px; /* Sufficient padding for better readability */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .default-about-image {
+        display: none;
+    }
 }
 
 /* Styles for login,logout and signup pages*/
@@ -125,19 +127,21 @@ button.btn.btn-primary:hover {
     border: 1px solid #ccc; /* Add a border for better visibility */
 }
 
-/* Default size for mobile devices */
-.navbar-brand .brand-logo {
-    font-size: 20px; /* Smaller font size for mobile devices */
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .navbar-brand .brand-logo {
+        font-size: 20px; /* Smaller font size for mobile devices */
+    }
 }
 
-/* Medium size for tablets */
+/* Media query for tablets */
 @media (min-width: 768px) {
     .navbar-brand .brand-logo {
         font-size: 24px; /* Medium font size for tablets */
     }
 }
 
-/* Larger size for desktops */
+/* Media query size for desktops */
 @media (min-width: 992px) {
     .navbar-brand .brand-logo {
         font-size: 26px; /* Larger font size for desktop screens */
