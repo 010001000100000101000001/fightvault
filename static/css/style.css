@@ -99,6 +99,19 @@ button.btn.btn-primary:hover {
     }
 }
 
+/* Media query for tablet view */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .image-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .image-container img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
 /* Styles for login,logout and signup pages*/
 .login-logout-signup-page-container {
     display: flex;
