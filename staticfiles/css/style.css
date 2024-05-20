@@ -110,6 +110,11 @@ button.btn.btn-primary:hover {
         max-width: 100%;
         margin: 0 auto;
     }
+    
+    .col-md-8 {
+        margin-top: 20px;
+    }
+
 }
 
 /* Styles for login,logout and signup pages*/
