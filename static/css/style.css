@@ -30,6 +30,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px; /* Increases the font size of the nav links */
 }
 
+/* Styles for article titles */
+.post-title-link {
+    color: #000000; /* Change the default color to black */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.post-title-link:hover {
+    color: red; /* Change to red on hover */
+}
+
 /* Custom styles for pagination buttons */
 .pagination .page-link {
     background-color: #282c31; /* Set background color to #282c31 */
