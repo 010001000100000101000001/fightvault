@@ -40,6 +40,10 @@ h1, h2, h3, h4, h5, h6 {
     color: red; /* Change to red on hover */
 }
 
+.post-title-link:visited {
+    color: rgb(59, 59, 237); /* Change to blue when visited */
+}
+
 /* Custom styles for pagination buttons */
 .pagination .page-link {
     background-color: #282c31; /* Set background color to #282c31 */
