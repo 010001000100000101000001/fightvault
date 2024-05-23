@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from .models import Post, Rating
+from .forms import RatingForm, CommentForm
 
 # Class based views
 
@@ -37,6 +37,17 @@ def post_detail(request, slug):
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
 
+    if request.method == "POST":
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.author = request.user
+            comment.save()
+            return redirect('post_detail', slug=post.slug)
+    else:
+        comment_form = CommentForm()
+
     # Render the post_detail template with context variables
     return render(
         request,
@@ -47,5 +58,6 @@ def post_detail(request, slug):
             "average_rating": average_rating,
             "comments": comments,
             "comment_count": comment_count,
+            "comment_form": comment_form,
         }
     )
