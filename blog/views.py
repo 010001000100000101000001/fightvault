@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
+from django.contrib import messages
 from .models import Post, Rating
 from .forms import RatingForm, CommentForm
 
@@ -44,6 +45,10 @@ def post_detail(request, slug):
             comment.post = post
             comment.author = request.user
             comment.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Your comment was submitted successfully and is currently waiting admin approval.'
+            )
             return redirect('post_detail', slug=post.slug)
     else:
         comment_form = CommentForm()
