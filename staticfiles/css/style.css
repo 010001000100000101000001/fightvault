@@ -185,6 +185,12 @@ button.btn.btn-primary:hover {
     color: #ffffff; /* White text */
 }
 
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Media query for tablets */
 @media (min-width: 768px) {
     .navbar-brand .brand-logo {
