@@ -178,6 +178,7 @@ button.btn.btn-primary:hover {
     border-radius: 8px; /* Rounded edges */
     padding: 8px 16px; 
     font-size: 14px;
+    border: none;
 }
 
 .btn-submit-comment:hover {
