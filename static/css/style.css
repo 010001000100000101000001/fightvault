@@ -170,6 +170,19 @@ button.btn.btn-primary:hover {
     }
 }
 
+
+/* Custom styles for the comment submit button */
+.btn-submit-comment {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    border-radius: 8px; /* Rounded edges */
+}
+
+.btn-submit-comment:hover {
+    background-color: red; /* red background on hover */
+    color: #ffffff; /* White text */
+}
+
 /* Media query for tablets */
 @media (min-width: 768px) {
     .navbar-brand .brand-logo {
