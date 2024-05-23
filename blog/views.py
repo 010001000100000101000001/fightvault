@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.contrib import messages
+from django.contrib.auth import logout
 from .models import Post, Rating
 from .forms import RatingForm, CommentForm
 
@@ -66,3 +67,9 @@ def post_detail(request, slug):
             "comment_form": comment_form,
         }
     )
+
+
+def custom_logout(request):
+    logout(request)
+    messages.success(request, "You have successfully logged out.")
+    return redirect('home')  # Redirect to home page
