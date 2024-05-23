@@ -33,6 +33,10 @@ def post_detail(request, slug):
     # Calculate average rating if there are any ratings; otherwise set to 0
     average_rating = sum(rating.score for rating in ratings) / len(ratings) if ratings else 0
 
+    # Retrieve all comments for the post, ordered by creation date
+    comments = post.comments.all().order_by("-created_on")
+    comment_count = post.comments.filter(approved=True).count()
+
     # Render the post_detail template with context variables
     return render(
         request,
@@ -41,5 +45,7 @@ def post_detail(request, slug):
             "post": post,
             "ratings": ratings,
             "average_rating": average_rating,
+            "comments": comments,
+            "comment_count": comment_count,
         }
     )
