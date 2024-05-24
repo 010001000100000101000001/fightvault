@@ -39,8 +39,21 @@ def post_detail(request, slug):
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
 
-
+    # Initialize vote form
     vote_form = VoteForm()
+
+    # Calculate vote percentages
+    total_votes = post.votes.count()
+    if total_votes > 0:
+        fighter1_votes = post.votes.filter(choice='fighter1').count()
+        fighter2_votes = post.votes.filter(choice='fighter2').count()
+        fighter1_percentage = (fighter1_votes / total_votes) * 100
+        fighter2_percentage = (fighter2_votes / total_votes) * 100
+    else:
+        fighter1_percentage = 0
+        fighter2_percentage = 0
+
+
     if request.method == "POST" and 'vote' in request.POST:
         vote_form = VoteForm(request.POST)
         if vote_form.is_valid():
