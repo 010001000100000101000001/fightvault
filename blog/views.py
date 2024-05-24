@@ -2,8 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.contrib import messages
 from django.contrib.auth import logout
-from .models import Post, Rating
-from .forms import RatingForm, CommentForm
+from .models import Post, Rating, Comment, Vote
+from .forms import RatingForm, CommentForm, VoteForm
 
 # Class based views
 
@@ -38,6 +38,17 @@ def post_detail(request, slug):
     # Retrieve all comments for the post, ordered by creation date
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+
+vote_form = VoteForm()#
+if request.method == "POST" and 'vote' in request.POST:
+    vote_form = VoteForm(request.POST)
+    if vote_form.is_valid():
+        vote = vote_form.save(commit=False)
+        vote.post = post
+        vote.user = request.user
+        vote.save()
+        messages.success(request, "Your vote has been submitted.")
+        return redirect('post_detail', slug=post.slug)
 
     if request.method == "POST":
         comment_form = CommentForm(request.POST)
