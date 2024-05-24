@@ -22,32 +22,37 @@
                     {% endif %}
                 </a>
             </div>
-
-             <!-- Voting Section -->
+            
+            <!-- Voting Section -->
             <div class="row mt-4">
                 <div class="col-md-12">
                     <h3>Who do you predict will win?</h3>
                     <form method="post">
                         {% csrf_token %}
-                        {{ vote_form | crispy }}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="choice" id="fighter1" value="fighter1">
+                            <label class="form-check-label" for="fighter1">{{ fighter1_name }}</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="choice" id="fighter2" value="fighter2">
+                            <label class="form-check-label" for="fighter2">{{ fighter2_name }}</label>
+                        </div>
                         <button type="submit" name="vote" class="btn btn-primary">Submit Vote</button>
                     </form>
                     <div class="mt-4">
                         <h4>Current Votes:</h4>
                         <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" 
-                                 style="width: {{ fighter1_percentage }}%;" 
-                                 aria-valuenow="{{ fighter1_percentage }}" 
-                                 aria-valuemin="0" aria-valuemax="100">
-                                 {{ fighter1_name }}: {{ fighter1_percentage }}%
+                            <div class="progress-bar bg-success" role="progressbar"
+                                style="width: {{ fighter1_percentage }}%;" aria-valuenow="{{ fighter1_percentage }}"
+                                aria-valuemin="0" aria-valuemax="100">
+                                {{ fighter1_name }}: {{ fighter1_percentage }}%
                             </div>
                         </div>
                         <div class="progress mt-2">
-                            <div class="progress-bar bg-danger" role="progressbar" 
-                                 style="width: {{ fighter2_percentage }}%;" 
-                                 aria-valuenow="{{ fighter2_percentage }}" 
-                                 aria-valuemin="0" aria-valuemax="100">
-                                 {{ fighter2_name }}: {{ fighter2_percentage }}%
+                            <div class="progress-bar bg-danger" role="progressbar"
+                                style="width: {{ fighter2_percentage }}%;" aria-valuenow="{{ fighter2_percentage }}"
+                                aria-valuemin="0" aria-valuemax="100">
+                                {{ fighter2_name }}: {{ fighter2_percentage }}%
                             </div>
                         </div>
                     </div>
