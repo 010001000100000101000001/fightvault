@@ -94,6 +94,8 @@ def post_detail(request, slug):
             "vote_form": vote_form,
             "fighter1_percentage": fighter1_percentage,
             "fighter2_percentage": fighter2_percentage,
+            "fighter1_name": post.fighter1_name,
+            "fighter2_name": post.fighter2_name,
         }
     )
 
