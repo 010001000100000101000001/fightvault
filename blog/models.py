@@ -30,6 +30,10 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
+    # New fields for fighters' names
+    fighter1_name = models.CharField(max_length=100, default='Fighter 1')
+    fighter2_name = models.CharField(max_length=100, default='Fighter 2')
+
 
     class Meta:
         ordering = ["-created_on"]
