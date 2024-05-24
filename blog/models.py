@@ -31,8 +31,8 @@ class Post(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     # New fields for fighters' names
-    fighter1_name = models.CharField(max_length=100, blank=True, null=True)
-    fighter2_name = models.CharField(max_length=100, blank=True, null=True)
+    fighter1_name = models.CharField(max_length=35, default='Fighter 1')
+    fighter2_name = models.CharField(max_length=35, default='Fighter 2')
 
 
 

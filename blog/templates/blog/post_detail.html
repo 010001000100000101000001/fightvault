@@ -22,8 +22,9 @@
                     {% endif %}
                 </a>
             </div>
-            
+
             <!-- Voting Section -->
+            {% if post.fighter1_name != "Fighter 1" and post.fighter2_name != "Fighter 2" %}
             <div class="row mt-4">
                 <div class="col-md-12">
                     <h3>Who do you predict will win?</h3>
@@ -58,6 +59,7 @@
                     </div>
                 </div>
             </div>
+            {% endif %}
 
             <!-- Post content -->
             <div class="post-content">
