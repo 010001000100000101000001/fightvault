@@ -22,6 +22,28 @@
                     {% endif %}
                 </a>
             </div>
+
+            <!-- Voting Section -->
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h3>Who will win the fight?</h3>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ vote_form.as_p }}
+                        <button type="submit" name="vote" class="btn btn-primary">Submit Vote</button>
+                    </form>
+                    <div class="mt-4">
+                        <h4>Current Votes:</h4>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: {{ fighter1_percentage }}%;" aria-valuenow="{{ fighter1_percentage }}" aria-valuemin="0" aria-valuemax="100">Fighter 1: {{ fighter1_percentage }}%</div>
+                        </div>
+                        <div class="progress mt-2">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: {{ fighter2_percentage }}%;" aria-valuenow="{{ fighter2_percentage }}" aria-valuemin="0" aria-valuemax="100">Fighter 2: {{ fighter2_percentage }}%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Post content -->
             <div class="post-content">
                 {{ post.content|safe }}
@@ -41,6 +63,7 @@
             {% else %}
             <p>No ratings yet.</p>
             {% endif %}
+
 
             <!-- Displaying count of comments -->
             <div class="row">
