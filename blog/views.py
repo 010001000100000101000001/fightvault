@@ -39,16 +39,18 @@ def post_detail(request, slug):
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
 
-vote_form = VoteForm()#
-if request.method == "POST" and 'vote' in request.POST:
-    vote_form = VoteForm(request.POST)
-    if vote_form.is_valid():
-        vote = vote_form.save(commit=False)
-        vote.post = post
-        vote.user = request.user
-        vote.save()
-        messages.success(request, "Your vote has been submitted.")
-        return redirect('post_detail', slug=post.slug)
+
+    vote_form = VoteForm()
+    if request.method == "POST" and 'vote' in request.POST:
+        vote_form = VoteForm(request.POST)
+        if vote_form.is_valid():
+           vote = vote_form.save(commit=False)
+           vote = vote_form.save(commit=False)
+           vote.post = post
+           vote.user = request.user
+           vote.save()
+           messages.success(request, "Your vote has been submitted.")
+           return redirect('post_detail', slug=post.slug)
 
     if request.method == "POST":
         comment_form = CommentForm(request.POST)
@@ -76,6 +78,9 @@ if request.method == "POST" and 'vote' in request.POST:
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
+            "vote_form": vote_form,
+            "fighter1_percentage": fighter1_percentage,
+            "fighter2_percentage": fighter2_percentage,
         }
     )
 
