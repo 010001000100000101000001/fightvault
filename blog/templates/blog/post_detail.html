@@ -42,15 +42,15 @@
                     <div class="mt-4">
                         <h4>Current Votes:</h4>
                         <div class="progress">
-                            <div class="progress-bar bg-success fighter1-progress" role="progressbar"
-                                aria-valuenow="{{ fighter1_percentage }}" aria-valuemin="0" aria-valuemax="100">{{
-                                fighter1_name }}: {{ fighter1_percentage }}%
+                            <div class="progress-bar bg-success" role="progressbar"
+                                style="width: {{ fighter1_percentage }}%;" aria-valuenow="{{ fighter1_percentage }}"
+                                aria-valuemin="0" aria-valuemax="100">{{ fighter1_name }}: {{ fighter1_percentage }}%
                             </div>
                         </div>
                         <div class="progress mt-2">
-                            <div class="progress-bar bg-danger fighter2-progress" role="progressbar"
-                                aria-valuenow="{{ fighter2_percentage }}" aria-valuemin="0" aria-valuemax="100">{{
-                                fighter2_name }}: {{ fighter2_percentage }}%
+                            <div class="progress-bar bg-danger" role="progressbar"
+                                style="width: {{ fighter2_percentage }}%;" aria-valuenow="{{ fighter2_percentage }}"
+                                aria-valuemin="0" aria-valuemax="100">{{ fighter2_name }}: {{ fighter2_percentage }}%
                             </div>
                         </div>
                     </div>

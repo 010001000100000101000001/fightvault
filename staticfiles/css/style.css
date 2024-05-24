@@ -163,13 +163,6 @@ button.btn.btn-primary:hover {
     border: 1px solid #ccc; /* Add a border for better visibility */
 }
 
-/* Media query for mobile view */
-@media (max-width: 768px) {
-    .navbar-brand .brand-logo {
-        font-size: 20px; /* Smaller font size for mobile devices */
-    }
-}
-
 
 /* Custom styles for the comment submit button */
 .btn-submit-comment {
@@ -190,6 +183,22 @@ button.btn.btn-primary:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Style for Voting bar */
+.fighter1-progress {
+    width: var(--fighter1-percentage, 0%);
+}
+
+.fighter2-progress {
+    width: var(--fighter2-percentage, 0%);
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .navbar-brand .brand-logo {
+        font-size: 20px; /* Smaller font size for mobile devices */
+    }
 }
 
 /* Media query for tablets */
