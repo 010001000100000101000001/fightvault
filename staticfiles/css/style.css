@@ -100,6 +100,11 @@ button.btn.btn-primary:hover {
     align-items: center;
 }
 
+/* Voting section styles */
+.current-votes {
+    margin-bottom: 20px;
+}
+
 /* Custom styles for about page */
 .about-page-container {
     position: relative;
@@ -183,15 +188,6 @@ button.btn.btn-primary:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Style for Voting bar */
-.fighter1-progress {
-    width: var(--fighter1-percentage, 0%);
-}
-
-.fighter2-progress {
-    width: var(--fighter2-percentage, 0%);
 }
 
 /* Media query for mobile view */

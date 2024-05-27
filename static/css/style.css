@@ -100,6 +100,11 @@ button.btn.btn-primary:hover {
     align-items: center;
 }
 
+/* Voting section styles */
+.current-votes {
+    margin-bottom: 20px;
+}
+
 /* Custom styles for about page */
 .about-page-container {
     position: relative;
