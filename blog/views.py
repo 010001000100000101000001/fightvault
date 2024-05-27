@@ -57,13 +57,17 @@ def post_detail(request, slug):
     if request.method == "POST" and 'vote' in request.POST:
         vote_form = VoteForm(request.POST)
         if vote_form.is_valid():
-           vote = vote_form.save(commit=False)
-           vote = vote_form.save(commit=False)
-           vote.post = post
-           vote.user = request.user
-           vote.save()
-           messages.success(request, "Your vote has been submitted.")
-           return redirect('post_detail', slug=post.slug)
+            # Check if the user has already voted on this post
+            existing_vote = Vote.objects.filter(post=post, user=request.user).first()
+            if existing_vote:
+                messages.error(request, "You have already voted on this post.")
+            else:
+                vote = vote_form.save(commit=False)
+                vote.post = post
+                vote.user = request.user
+                vote.save()
+                messages.success(request, "Your vote has been submitted.")
+            return redirect('post_detail', slug=post.slug)
 
     if request.method == "POST":
         comment_form = CommentForm(request.POST)
