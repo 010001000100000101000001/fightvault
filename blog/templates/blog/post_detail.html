@@ -65,22 +65,24 @@
             <div class="post-content">
                 {{ post.content|safe }}
             </div>
-            <!-- Ratings display -->
-            <h2>Ratings</h2>
-            <p>Average Rating: {{ average_rating }} out of 5</p>
-            {% if ratings %}
-            {% for rating in ratings %}
-            <div class="rating">
-                <p>Score: {{ rating.score }} stars</p>
-                <p>Comment: {{ rating.comment }}</p>
-                <p>Rated by: {{ rating.user.username }}</p>
-                <p>Rated on: {{ rating.created_on }}</p>
-            </div>
-            {% endfor %}
-            {% else %}
-            <p>No ratings yet.</p>
-            {% endif %}
 
+            <!-- Ratings display -->
+            <div class="ratings-section">
+                <h2>Ratings</h2>
+                <p>Average Rating: {{ average_rating }} out of 5</p>
+                {% if ratings %}
+                {% for rating in ratings %}
+                <div class="rating">
+                    <p>Score: {{ rating.score }} stars</p>
+                    <p>Comment: {{ rating.comment }}</p>
+                    <p>Rated by: {{ rating.user.username }}</p>
+                    <p>Rated on: {{ rating.created_on }}</p>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p>No ratings yet.</p>
+                {% endif %}
+            </div>
 
             <!-- Displaying count of comments -->
             <div class="row">
