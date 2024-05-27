@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.contrib import messages
 from django.contrib.auth import logout
+from django.http import JsonResponse
 from .models import Post, Rating, Comment, Vote
 from .forms import RatingForm, CommentForm, VoteForm
 
@@ -106,6 +107,29 @@ def post_detail(request, slug):
         }
     )
 
+@require_POST
+@login_required
+def rate_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    rating_value = request.POST.get('rating')
+
+    if not rating_value:
+        return JsonResponse({'message': 'Rating value is required.'}, status=400)
+
+    rating_value = int(rating_value)
+    if rating_value < 1 or rating_value > 5:
+        return JsonResponse({'message': 'Invalid rating value.'}, status=400)
+
+    rating, created = Rating.objects.get_or_create(
+        post=post,
+        user=request.user,
+        defaults={'score': rating_value}
+    )
+
+    if not created:
+        return JsonResponse({'message': 'You have already rated this post.'}, status=400)
+
+    return JsonResponse({'message': 'Thank you for rating this post!'})
 
 def custom_logout(request):
     logout(request)
