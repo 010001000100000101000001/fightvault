@@ -55,6 +55,9 @@ def post_detail(request, slug):
 
 
     if request.method == "POST" and 'vote' in request.POST:
+        if not request.user.is_authenticated:
+            messages.warning(request, "You need to log in or register to vote.")
+            return redirect('post_detail', slug=post.slug)
         vote_form = VoteForm(request.POST)
         if vote_form.is_valid():
             # Check if the user has already voted on this post
@@ -68,7 +71,7 @@ def post_detail(request, slug):
                 vote.save()
                 messages.success(request, "Your vote has been submitted.")
             return redirect('post_detail', slug=post.slug)
-
+            
     if request.method == "POST":
         comment_form = CommentForm(request.POST)
         if comment_form.is_valid():

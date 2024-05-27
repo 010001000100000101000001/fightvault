@@ -17,15 +17,14 @@
                     <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                     {% else %}
                     <!-- Display the default image -->
-                    <img class="card-img-top" src="{% static 'images/default.jpg' %}"
-                        alt="Default image for {{ post.title }}">
+                    <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Default image for {{ post.title }}">
                     {% endif %}
                 </a>
             </div>
 
             <!-- Voting Section -->
             {% if post.fighter1_name != "Fighter 1" and post.fighter2_name != "Fighter 2" %}
-            <div class="row mt-4">
+            <div class="row mt-4 voting-section">
                 <div class="col-md-12">
                     <h3>Who do you predict will win?</h3>
                     <form method="post">
@@ -43,16 +42,12 @@
                     <div class="mt-4 current-votes">
                         <h4>Current Votes:</h4>
                         <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar"
-                                style="width: {{ fighter1_percentage }}%;" aria-valuenow="{{ fighter1_percentage }}"
-                                aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: {{ fighter1_percentage }}%;" aria-valuenow="{{ fighter1_percentage }}" aria-valuemin="0" aria-valuemax="100">
                                 {{ fighter1_name }}: {{ fighter1_percentage }}%
                             </div>
                         </div>
                         <div class="progress mt-2">
-                            <div class="progress-bar bg-danger" role="progressbar"
-                                style="width: {{ fighter2_percentage }}%;" aria-valuenow="{{ fighter2_percentage }}"
-                                aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: {{ fighter2_percentage }}%;" aria-valuenow="{{ fighter2_percentage }}" aria-valuemin="0" aria-valuemax="100">
                                 {{ fighter2_name }}: {{ fighter2_percentage }}%
                             </div>
                         </div>
@@ -100,12 +95,9 @@
                 <div class="col-md-8 card mb-4 mt-3">
                     <h3>Comments:</h3>
                     <div class="card-body">
-                        <!-- for loop inside the empty control tags
-                            to iterate through each comment in comments -->
+                        <!-- for loop inside the empty control tags to iterate through each comment in comments -->
                         {% for comment in comments %}
-                        <div class="p-2 comments
-                            {% if not comment.approved and comment.author == user %}
-                            faded{% elif not comment.approved %} d-none{% endif %}">
+                        <div class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
                             <p class="font-weight-bold">
                                 {{ comment.author }}
                                 <span class="font-weight-normal">
@@ -121,7 +113,6 @@
                             </p>
                             {% endif %}
                         </div>
-                        <!-- for loop ends here -->
                         {% endfor %}
                     </div>
                 </div>
@@ -131,12 +122,11 @@
                         {% if user.is_authenticated %}
                         <h3>Leave a comment:</h3>
                         <p>Posting as: {{ user.username }}</p>
-                        <form id="commentForm" method="post" style="margin-top: 1.3em;">
+                        <form id="commentForm" method="post">
                             {{ comment_form | crispy }}
                             {% csrf_token %}
                             <div class="center-button">
-                                <button id="submitButton" type="submit"
-                                    class="btn-submit-comment btn-lg">Submit</button>
+                                <button id="submitButton" type="submit" class="btn-submit-comment btn-lg">Submit</button>
                             </div>
                         </form>
                         {% else %}
