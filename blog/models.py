@@ -33,6 +33,7 @@ class Post(models.Model):
     # New fields for fighters' names
     fighter1_name = models.CharField(max_length=35, default='Fighter 1')
     fighter2_name = models.CharField(max_length=35, default='Fighter 2')
+    display_voting = models.BooleanField(default=False)
 
 
 
