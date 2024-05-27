@@ -47,8 +47,8 @@ def post_detail(request, slug):
     if total_votes > 0:
         fighter1_votes = post.votes.filter(choice='fighter1').count()
         fighter2_votes = post.votes.filter(choice='fighter2').count()
-        fighter1_percentage = (fighter1_votes / total_votes) * 100
-        fighter2_percentage = (fighter2_votes / total_votes) * 100
+        fighter1_percentage = round((fighter1_votes / total_votes) * 100, 2)
+        fighter2_percentage = round((fighter2_votes / total_votes) * 100, 2)
     else:
         fighter1_percentage = 0
         fighter2_percentage = 0
