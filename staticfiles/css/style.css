@@ -129,6 +129,12 @@ button.btn.btn-primary:hover {
     background-size: contain;
 }
 
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    filter: grayscale(100%) brightness(0); /* Change color to black */
+}
+
 /* Voting section styles */
 .current-votes {
     margin-bottom: 20px;
