@@ -105,6 +105,21 @@ button.btn.btn-primary:hover {
     margin-top: 20px;
 }
 
+/*  Star Ratings Styles (Customised to Gloves)  */
+.star-rating {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    display: inline-block;
+}
+
+.star-rating input {
+    display: none; /* Hide the radio buttons */
+}
+
+.star-rating input {
+    display: none;
+}
+
 /* Voting section styles */
 .current-votes {
     margin-bottom: 20px;
