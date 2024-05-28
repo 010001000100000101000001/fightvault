@@ -107,8 +107,6 @@ def post_detail(request, slug):
         }
     )
 
-@require_POST
-@login_required
 def rate_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     rating_value = request.POST.get('rating')
