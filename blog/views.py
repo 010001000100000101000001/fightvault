@@ -71,18 +71,34 @@ def post_detail(request, slug):
                 vote.save()
                 messages.success(request, "Your vote has been submitted.")
             return redirect('post_detail', slug=post.slug)
-            
-    if request.method == "POST":
+    elif request.method == "POST" and 'rating' in request.POST:
+        if not request.user.is_authenticated:
+            messages.warning(request, "You need to log in or register to rate.")
+            return redirect('post_detail', slug=post.slug)
+        rating_value = request.POST.get('rating')
+        if rating_value:
+            rating_value = int(rating_value)
+            if 1 <= rating_value <= 5:
+                rating, created = Rating.objects.get_or_create(
+                    post=post,
+                    user=request.user,
+                    defaults={'score': rating_value}
+                )
+                if not created:
+                    rating.score = rating_value
+                    rating.save()
+                messages.success(request, "Your rating has been submitted.")
+                return redirect('post_detail', slug=post.slug)
+            else:
+                messages.error(request, "Invalid rating value.")
+    elif request.method == "POST":
         comment_form = CommentForm(request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.author = request.user
             comment.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Your comment was submitted successfully and is currently waiting admin approval.'
-            )
+            messages.success(request, 'Your comment was submitted successfully and is currently waiting admin approval.')
             return redirect('post_detail', slug=post.slug)
     else:
         comment_form = CommentForm()
@@ -106,6 +122,28 @@ def post_detail(request, slug):
         }
     )
 
+
+def rate_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    rating_value = request.POST.get('rating')
+
+    if not rating_value:
+        return JsonResponse({'message': 'Rating value is required.'}, status=400)
+
+    rating_value = int(rating_value)
+    if rating_value < 1 or rating_value > 5:
+        return JsonResponse({'message': 'Invalid rating value.'}, status=400)
+
+    rating, created = Rating.objects.get_or_create(
+        post=post,
+        user=request.user,
+        defaults={'score': rating_value}
+    )
+
+    if not created:
+        return JsonResponse({'message': 'You have already rated this post.'}, status=400)
+
+    return JsonResponse({'message': 'Thank you for rating this post!'})
 
 def custom_logout(request):
     logout(request)
