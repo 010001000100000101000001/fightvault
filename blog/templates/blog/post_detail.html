@@ -17,7 +17,8 @@
                     <img class="card-img-top" src="{{ post.featured_image.url }}" alt="{{ post.title }}">
                     {% else %}
                     <!-- Display the default image -->
-                    <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="Default image for {{ post.title }}">
+                    <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                        alt="Default image for {{ post.title }}">
                     {% endif %}
                 </a>
             </div>
@@ -42,12 +43,16 @@
                     <div class="mt-4 current-votes">
                         <h4>Current Votes:</h4>
                         <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: {{ fighter1_percentage }}%;" aria-valuenow="{{ fighter1_percentage }}" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-success" role="progressbar"
+                                style="width: {{ fighter1_percentage }}%;" aria-valuenow="{{ fighter1_percentage }}"
+                                aria-valuemin="0" aria-valuemax="100">
                                 {{ fighter1_name }}: {{ fighter1_percentage }}%
                             </div>
                         </div>
                         <div class="progress mt-2">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: {{ fighter2_percentage }}%;" aria-valuenow="{{ fighter2_percentage }}" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-danger" role="progressbar"
+                                style="width: {{ fighter2_percentage }}%;" aria-valuenow="{{ fighter2_percentage }}"
+                                aria-valuemin="0" aria-valuemax="100">
                                 {{ fighter2_name }}: {{ fighter2_percentage }}%
                             </div>
                         </div>
@@ -77,65 +82,85 @@
                 {% else %}
                 <p>No ratings yet.</p>
                 {% endif %}
-            </div>
 
-            <!-- Displaying count of comments -->
-            <div class="row">
-                <div class="col-12">
-                    <strong class="text-secondary">
-                        <i class="far fa-comments"></i> {{ comment_count }}
-                    </strong>
-                </div>
-                <div class="col-12">
-                    <hr>
-                </div>
-            </div>
-            <!-- Displaying Comments -->
-            <div class="row">
-                <div class="col-md-8 card mb-4 mt-3">
-                    <h3>Comments:</h3>
-                    <div class="card-body">
-                        <!-- for loop inside the empty control tags to iterate through each comment in comments -->
-                        {% for comment in comments %}
-                        <div class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
-                            <p class="font-weight-bold">
-                                {{ comment.author }}
-                                <span class="font-weight-normal">
-                                    {{ comment.created_on }}
-                                </span> wrote:
-                            </p>
-                            <div id="comment{{ comment.id }}">
-                                {{ comment.body | linebreaks }}
-                            </div>
-                            {% if not comment.approved and comment.author == user %}
-                            <p class="approval">
-                                This comment is awaiting approval
-                            </p>
-                            {% endif %}
-                        </div>
-                        {% endfor %}
+                <!-- Star Rating Form customised to Gloves to fit with fightvault's theme -->
+                <form method="post" id="rating-form">
+                    {% csrf_token %}
+                    <div class="star-rating">
+                        <input type="radio" id="glove5" name="rating" value="5"><label for="glove5"
+                            title="5 gloves"></label>
+                        <input type="radio" id="glove4" name="rating" value="4"><label for="glove4"
+                            title="4 gloves"></label>
+                        <input type="radio" id="glove3" name="rating" value="3"><label for="glove3"
+                            title="3 gloves"></label>
+                        <input type="radio" id="glove2" name="rating" value="2"><label for="glove2"
+                            title="2 gloves"></label>
+                        <input type="radio" id="glove1" name="rating" value="1"><label for="glove1"
+                            title="1 glove"></label>
                     </div>
-                </div>
-                <!-- Creating New Comments -->
-                <div class="col-md-4 card mb-4 mt-3">
-                    <div class="card-body">
-                        {% if user.is_authenticated %}
-                        <h3>Leave a comment:</h3>
-                        <p>Posting as: {{ user.username }}</p>
-                        <form id="commentForm" method="post">
-                            {{ comment_form | crispy }}
-                            {% csrf_token %}
-                            <div class="center-button">
-                                <button id="submitButton" type="submit" class="btn-submit-comment btn-lg">Submit</button>
-                            </div>
-                        </form>
-                        {% else %}
-                        <p>Log in to leave a comment</p>
+                    <button type="submit" class="btn btn-primary">Submit Rating</button>
+                </form>
+            </div>
+        </div>
+        <!-- Displaying count of comments -->
+        <div class="row">
+            <div class="col-12">
+                <strong class="text-secondary">
+                    <i class="far fa-comments"></i> {{ comment_count }}
+                </strong>
+            </div>
+            <div class="col-12">
+                <hr>
+            </div>
+        </div>
+        <!-- Displaying Comments -->
+        <div class="row">
+            <div class="col-md-8 card mb-4 mt-3">
+                <h3>Comments:</h3>
+                <div class="card-body">
+                    <!-- for loop inside the empty control tags to iterate through each comment in comments -->
+                    {% for comment in comments %}
+                    <div
+                        class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                        <p class="font-weight-bold">
+                            {{ comment.author }}
+                            <span class="font-weight-normal">
+                                {{ comment.created_on }}
+                            </span> wrote:
+                        </p>
+                        <div id="comment{{ comment.id }}">
+                            {{ comment.body | linebreaks }}
+                        </div>
+                        {% if not comment.approved and comment.author == user %}
+                        <p class="approval">
+                            This comment is awaiting approval
+                        </p>
                         {% endif %}
                     </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Creating New Comments -->
+            <div class="col-md-4 card mb-4 mt-3">
+                <div class="card-body">
+                    {% if user.is_authenticated %}
+                    <h3>Leave a comment:</h3>
+                    <p>Posting as: {{ user.username }}</p>
+                    <form id="commentForm" method="post">
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <div class="center-button">
+                            <button id="submitButton" type="submit" class="btn-submit-comment btn-lg">Submit</button>
+                        </div>
+                    </form>
+                    {% else %}
+                    <p>Log in to leave a comment</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
+<script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
