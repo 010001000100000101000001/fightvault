@@ -226,22 +226,30 @@ button.btn.btn-primary:hover {
 }
 
 /* Media query for mobile view */
-@media (max-width: 768px) {
+@media screen and (max-width: 480px) {
     .navbar-brand .brand-logo {
         font-size: 20px; /* Smaller font size for mobile devices */
     }
-}
 
-/* Media query for tablets */
-@media (min-width: 768px) {
-    .navbar-brand .brand-logo {
-        font-size: 24px; /* Medium font size for tablets */
+    .navbar-text.site-description {
+        display: none;
     }
 }
 
-/* Media query size for desktops */
-@media (min-width: 992px) {
+/* Media query for tablet devices */
+@media (min-width: 481px) and (max-width: 1200px) {
     .navbar-brand .brand-logo {
-        font-size: 26px; /* Larger font size for desktop screens */
+        font-size: 24px; /* Medium font size for tablets */
+    }
+    
+    .navbar-text.site-description {
+        display: none;
+    }
+}
+
+/* Media query for laptops */
+@media (min-width: 1025px) and (max-width: 1600px) {
+    .navbar-brand .brand-logo {
+        font-size: 26px;
     }
 }
