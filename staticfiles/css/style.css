@@ -225,7 +225,7 @@ button.btn.btn-primary:hover {
     align-items: center;
 }
 
-/* Media query for mobile view */
+/* Small */
 @media screen and (max-width: 480px) {
     .navbar-brand .brand-logo {
         font-size: 20px; /* Smaller font size for mobile devices */
@@ -236,7 +236,7 @@ button.btn.btn-primary:hover {
     }
 }
 
-/* Media query for tablet devices */
+/* Medium */
 @media (min-width: 481px) and (max-width: 1200px) {
     .navbar-brand .brand-logo {
         font-size: 24px; /* Medium font size for tablets */
@@ -247,9 +247,16 @@ button.btn.btn-primary:hover {
     }
 }
 
-/* Media query for laptops */
-@media (min-width: 1025px) and (max-width: 1600px) {
+/* Large */
+@media (min-width: 1201px) and (max-width: 1600px) {
     .navbar-brand .brand-logo {
         font-size: 26px;
+    }
+}
+
+/* Extra Large */
+@media screen and (min-width: 1601px) {
+    .navbar-brand .brand-logo {
+        font-size: 28px; /* Larger font size for very large screens */
     }
 }
