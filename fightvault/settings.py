@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-010001000100-fightvault-vj9a5leuy1i.ws-eu114.gitpod.io',
+    '8000-010001000100-fightvault-iucdvj2xzaf.ws-eu114.gitpod.io',
     'fightvault-d3f5315751bb.herokuapp.com'
 ]
 
