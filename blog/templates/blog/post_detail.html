@@ -27,7 +27,7 @@
             {% if post.fighter1_name != "Fighter 1" and post.fighter2_name != "Fighter 2" %}
             <div class="row mt-4 voting-section">
                 <div class="col-md-12">
-                    <h3>Who do you predict will win?</h3>
+                    <h3 class="voting-heading">Who do you predict will win? <i class="fa-duotone fa-poll-people"></i></h3>
                     <form method="post">
                         {% csrf_token %}
                         <div class="form-check">
@@ -38,10 +38,10 @@
                             <input class="form-check-input" type="radio" name="choice" id="fighter2" value="fighter2">
                             <label class="form-check-label" for="fighter2">{{ fighter2_name }}</label>
                         </div>
-                        <button type="submit" name="vote" class="btn btn-primary">Submit Vote</button>
+                        <button type="submit" name="vote" class="btn btn-primary submit-vote">Submit Vote</button>
                     </form>
                     <div class="mt-4 current-votes">
-                        <h4>Current Votes:</h4>
+                        <h4>Current Poll</h4>
                         <div class="progress">
                             <div class="progress-bar bg-success" role="progressbar"
                                 style="width: {{ fighter1_percentage }}%;" aria-valuenow="{{ fighter1_percentage }}"
@@ -101,6 +101,7 @@
             </form>
         </div>
     </div>
+
     <!-- Displaying count of comments -->
     <div class="row">
         <div class="col-12">

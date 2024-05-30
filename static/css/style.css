@@ -155,14 +155,27 @@ button.btn.btn-primary:hover {
 
 .btn-submit-rating {
     border-radius: 8px;
-    padding: 15px;
+    padding: 5px 10px;
     font-size: 14px;
 }
 
 /* Voting section styles */
 .current-votes {
+    margin-bottom: 30px;
+}
+
+.voting-heading {
     margin-bottom: 20px;
 }
+
+.submit-vote {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+
 
 /* Comments section styles */
 .comment-author {
