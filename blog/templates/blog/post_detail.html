@@ -73,8 +73,7 @@
                 {% if ratings %}
                 {% for rating in ratings %}
                 <div class="rating">
-                    <p>Score: {{ rating.score }} stars</p>
-                    <p>Comment: {{ rating.comment }}</p>
+                    <p>Score: {{ rating.score }} out of 5</p>
                     <p>Rated by: {{ rating.user.username }}</p>
                     <p>Rated on: {{ rating.created_on }}</p>
                 </div>
