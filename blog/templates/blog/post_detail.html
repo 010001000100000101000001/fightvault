@@ -132,7 +132,7 @@
                     </div>
                     {% if not comment.approved and comment.author == user %}
                     <p class="approval comment-approval">
-                        This comment is awaiting approval
+                        <i class="fa-regular fa-comment-arrow-up"></i> This comment is awaiting admin approval.
                     </p>
                     {% endif %}
                 </div>
@@ -143,8 +143,8 @@
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
                 {% if user.is_authenticated %}
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
+                <h3>Leave a comment <i class="fa-duotone fa-comment-arrow-down"></i></h3>
+                <p class="posting-as">Posting as: {{ user.username }}</p>
                 <form id="commentForm" method="post">
                     {{ comment_form | crispy }}
                     {% csrf_token %}

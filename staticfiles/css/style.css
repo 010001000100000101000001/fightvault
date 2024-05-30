@@ -173,6 +173,13 @@ button.btn.btn-primary:hover {
     color: red;
 }
 
+.comment-text {
+    font-weight: bold;
+}
+
+.posting-as {
+    font-weight: bold;
+}
 
 /* Custom styles for about page */
 .about-page-container {
