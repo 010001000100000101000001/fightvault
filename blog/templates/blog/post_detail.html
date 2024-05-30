@@ -74,7 +74,6 @@
                 {% for rating in ratings %}
                 <div class="rating">
                     <p><span class="rating-score">Score:</span> {{ rating.score }} stars</p>
-                    <p>Comment: {{ rating.comment }}</p>
                     <p>Rated by: {{ rating.user.username }}</p>
                     <p class="rating-date">Rated on: {{ rating.created_on }}</p>
                 </div>

@@ -105,6 +105,19 @@ button.btn.btn-primary:hover {
     margin-top: 20px;
 }
 
+.average-rating {
+    color: red;
+    font-weight: bold;
+}
+
+.rating-score {
+    font-weight: bold;
+}
+
+.rating-date {
+    color: #bbc8d3;
+}
+
 /*  Star Ratings Styles (Customised to Gloves)  */
 .star-rating {
     direction: rtl;
