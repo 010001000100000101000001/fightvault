@@ -164,6 +164,16 @@ button.btn.btn-primary:hover {
     margin-bottom: 20px;
 }
 
+/* Comments section styles */
+.comment-author {
+    color: #bbc8d3;
+}
+
+.comment-approval {
+    color: red;
+}
+
+
 /* Custom styles for about page */
 .about-page-container {
     position: relative;
