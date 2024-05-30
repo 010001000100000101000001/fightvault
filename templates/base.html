@@ -130,8 +130,8 @@
         </div>
         {% else %}
         <div class="alert alert-warning text-end m-3" role="alert">
-            You are not logged in. Please <a href="{% url 'account_login' %}">login</a> or <a
-                href="{% url 'account_signup' %}">register</a>.
+            You are not logged in <i class="fa-solid fa-ghost"></i> --- Please <a href="{% url 'account_login' %}">login</a>
+            or <a href="{% url 'account_signup' %}">register</a>.
         </div>
         {% endif %}
         {% block content %}
