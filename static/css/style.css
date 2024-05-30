@@ -107,7 +107,7 @@ button.btn.btn-primary:hover {
 
 .average-rating {
     color: red;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .rating-score {
@@ -116,6 +116,11 @@ button.btn.btn-primary:hover {
 
 .rating-date {
     color: #bbc8d3;
+}
+
+.rating-author {
+    color: #5dabe2;
+    font-style: italic;
 }
 
 /*  Star Ratings Styles (Customised to Gloves)  */
