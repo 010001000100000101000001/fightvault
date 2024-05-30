@@ -69,96 +69,97 @@
             <!-- Ratings display -->
             <div class="ratings-section">
                 <h2>Ratings</h2>
-                <p>Average Rating: {{ average_rating }} out of 5</p>
+                <p class="average-rating">Average Rating: {{ average_rating }} out of 5</p>
                 {% if ratings %}
                 {% for rating in ratings %}
                 <div class="rating">
-                    <p>Score: {{ rating.score }} out of 5</p>
+                    <p><span class="rating-score">Score:</span> {{ rating.score }} stars</p>
+                    <p>Comment: {{ rating.comment }}</p>
                     <p>Rated by: {{ rating.user.username }}</p>
-                    <p>Rated on: {{ rating.created_on }}</p>
+                    <p class="rating-date">Rated on: {{ rating.created_on }}</p>
                 </div>
                 {% endfor %}
                 {% else %}
                 <p>No ratings yet.</p>
                 {% endif %}
+            </div>
 
-                <!-- Star Rating Form customised to Gloves to fit with fightvault's theme -->
-                <form method="post" id="rating-form">
-                    {% csrf_token %}
-                    <div class="star-rating">
-                        <input type="radio" id="glove5" name="rating" value="5"><label for="glove5"
-                            title="5 gloves"></label>
-                        <input type="radio" id="glove4" name="rating" value="4"><label for="glove4"
-                            title="4 gloves"></label>
-                        <input type="radio" id="glove3" name="rating" value="3"><label for="glove3"
-                            title="3 gloves"></label>
-                        <input type="radio" id="glove2" name="rating" value="2"><label for="glove2"
-                            title="2 gloves"></label>
-                        <input type="radio" id="glove1" name="rating" value="1"><label for="glove1"
-                            title="1 glove"></label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit Rating</button>
-                </form>
-            </div>
-        </div>
-        <!-- Displaying count of comments -->
-        <div class="row">
-            <div class="col-12">
-                <strong class="text-secondary">
-                    <i class="far fa-comments"></i> {{ comment_count }}
-                </strong>
-            </div>
-            <div class="col-12">
-                <hr>
-            </div>
-        </div>
-        <!-- Displaying Comments -->
-        <div class="row">
-            <div class="col-md-8 card mb-4 mt-3">
-                <h3>Comments:</h3>
-                <div class="card-body">
-                    <!-- for loop inside the empty control tags to iterate through each comment in comments -->
-                    {% for comment in comments %}
-                    <div
-                        class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
-                        <p class="font-weight-bold">
-                            {{ comment.author }}
-                            <span class="font-weight-normal">
-                                {{ comment.created_on }}
-                            </span> wrote:
-                        </p>
-                        <div id="comment{{ comment.id }}">
-                            {{ comment.body | linebreaks }}
-                        </div>
-                        {% if not comment.approved and comment.author == user %}
-                        <p class="approval">
-                            This comment is awaiting approval
-                        </p>
-                        {% endif %}
-                    </div>
-                    {% endfor %}
+            <!-- Star Rating Form customised to Gloves to fit with fightvault's theme -->
+            <form method="post" id="rating-form">
+                {% csrf_token %}
+                <div class="star-rating">
+                    <input type="radio" id="glove5" name="rating" value="5"><label for="glove5"
+                        title="5 gloves"></label>
+                    <input type="radio" id="glove4" name="rating" value="4"><label for="glove4"
+                        title="4 gloves"></label>
+                    <input type="radio" id="glove3" name="rating" value="3"><label for="glove3"
+                        title="3 gloves"></label>
+                    <input type="radio" id="glove2" name="rating" value="2"><label for="glove2"
+                        title="2 gloves"></label>
+                    <input type="radio" id="glove1" name="rating" value="1"><label for="glove1" title="1 glove"></label>
                 </div>
-            </div>
-            <!-- Creating New Comments -->
-            <div class="col-md-4 card mb-4 mt-3">
-                <div class="card-body">
-                    {% if user.is_authenticated %}
-                    <h3>Leave a comment:</h3>
-                    <p>Posting as: {{ user.username }}</p>
-                    <form id="commentForm" method="post">
-                        {{ comment_form | crispy }}
-                        {% csrf_token %}
-                        <div class="center-button">
-                            <button id="submitButton" type="submit" class="btn-submit-comment btn-lg">Submit</button>
-                        </div>
-                    </form>
-                    {% else %}
-                    <p>Log in to leave a comment</p>
+                <button type="submit" class="btn btn-primary">Submit Rating</button>
+            </form>
+        </div>
+    </div>
+    <!-- Displaying count of comments -->
+    <div class="row">
+        <div class="col-12">
+            <strong class="text-secondary">
+                <i class="far fa-comments"></i> {{ comment_count }}
+            </strong>
+        </div>
+        <div class="col-12">
+            <hr>
+        </div>
+    </div>
+    <!-- Displaying Comments -->
+    <div class="row">
+        <div class="col-md-8 card mb-4 mt-3">
+            <h3>Comments:</h3>
+            <div class="card-body">
+                <!-- for loop inside the empty control tags to iterate through each comment in comments -->
+                {% for comment in comments %}
+                <div
+                    class="p-2 comments{% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                    <p class="font-weight-bold">
+                        {{ comment.author }}
+                        <span class="font-weight-normal">
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    <div id="comment{{ comment.id }}">
+                        {{ comment.body | linebreaks }}
+                    </div>
+                    {% if not comment.approved and comment.author == user %}
+                    <p class="approval">
+                        This comment is awaiting approval
+                    </p>
                     {% endif %}
                 </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Creating New Comments -->
+        <div class="col-md-4 card mb-4 mt-3">
+            <div class="card-body">
+                {% if user.is_authenticated %}
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form id="commentForm" method="post">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <div class="center-button">
+                        <button id="submitButton" type="submit" class="btn-submit-comment btn-lg">Submit</button>
+                    </div>
+                </form>
+                {% else %}
+                <p>Log in to leave a comment</p>
+                {% endif %}
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 <script src="{% static 'js/script.js' %}"></script>
