@@ -370,6 +370,10 @@ body.open-sidebar {
     .navbar-text.site-description {
         display: none;
     }
+    .navbar-text.site-description {
+        display: none;
+    }
+
 }
 
 /* Medium */
