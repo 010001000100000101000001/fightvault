@@ -198,10 +198,7 @@ button.btn.btn-primary:hover {
     border-radius: 8px;
     margin-top: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-
 }
-
-
 
 /* Comments section styles */
 .comment-author {
@@ -257,14 +254,7 @@ button.btn.btn-primary:hover {
         display: none;
     }
 }
-
-/* Media query for tablet view */
-@media (min-width: 768px) and (max-width: 1199px) {
-    .image-container {
-        display: flex;
-        flex-direction: column;
-    }
-    
+ 
     .image-container img {
         max-width: 100%;
         margin: 0 auto;
@@ -274,15 +264,13 @@ button.btn.btn-primary:hover {
         margin-top: 20px;
     }
 
-}
-
 /* Styles for login,logout and signup pages*/
 .login-logout-signup-page-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Full viewport height */
-    background-color: #f0f2f5
-  }
+    background-color: #f0f2f5;
+}
 
 /* Styles for the personalized greeting messages in the main content section */
 .alert {
@@ -307,8 +295,8 @@ button.btn.btn-primary:hover {
 /* Sidebar styles */
 .side-menu {
     height: 100%; /* Full height */
-    width: 0;
-    position: fixed;
+    width: 0; /* Initial width set to 0 */
+    position: fixed; /* Fixed position */
     z-index: 1050; /* Stay on top */
     top: 0;
     left: 0;
@@ -366,14 +354,9 @@ body.open-sidebar {
     .navbar-brand .brand-logo {
         font-size: 20px; /* Smaller font size for mobile devices */
     }
-
-    .navbar-text.site-description {
+    text.site-description {
         display: none;
     }
-    .navbar-text.site-description {
-        display: none;
-    }
-
 }
 
 /* Medium */
@@ -381,8 +364,7 @@ body.open-sidebar {
     .navbar-brand .brand-logo {
         font-size: 24px; /* Medium font size for tablets */
     }
-    
-    .navbar-text.site-description {
+    .site-description {
         display: none;
     }
 }
@@ -398,5 +380,4 @@ body.open-sidebar {
 @media screen and (min-width: 1601px) {
     .navbar-brand .brand-logo {
         font-size: 28px; /* Larger font size for very large screens */
-    }
 }
