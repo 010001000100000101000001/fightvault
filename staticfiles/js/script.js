@@ -9,6 +9,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+ // Menu toggle functionality
+ const menuToggle = document.getElementById('menuToggle');
+ const closeMenu = document.getElementById('closeMenu');
+ const sideMenu = document.getElementById('sideMenu');
+
+ menuToggle.addEventListener('click', () => {
+     openNav();
+ });
+
+ closeMenu.addEventListener('click', () => {
+     closeNav();
+ });
+
+
 function submitRating(rating) {
     const form = document.getElementById('rating-form');
     const csrfToken = getCookie('csrftoken');
