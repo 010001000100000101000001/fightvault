@@ -157,6 +157,7 @@ button.btn.btn-primary:hover {
     border-radius: 8px;
     padding: 5px 10px;
     font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Voting section styles */
@@ -173,6 +174,8 @@ button.btn.btn-primary:hover {
     font-size: 14px;
     border-radius: 8px;
     margin-top: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 
@@ -192,6 +195,27 @@ button.btn.btn-primary:hover {
 
 .posting-as {
     font-weight: bold;
+}
+
+.btn-submit-comment {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    border-radius: 8px; /* Rounded edges */
+    padding: 8px 16px; 
+    font-size: 14px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit-comment:hover {
+    background-color: red; /* red background on hover */
+    color: #ffffff; /* White text */
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Custom styles for about page */
@@ -255,28 +279,6 @@ button.btn.btn-primary:hover {
     background-color: rgb(248, 249, 250); /* Changed to rgb(248, 249, 250) for unauthenticated users */
     color: #282c31; /* Text color for better contrast */
     border: 1px solid #ccc; /* Add a border for better visibility */
-}
-
-
-/* Custom styles for the comment submit button */
-.btn-submit-comment {
-    background-color: #000000; /* Black background */
-    color: #ffffff; /* White text */
-    border-radius: 8px; /* Rounded edges */
-    padding: 8px 16px; 
-    font-size: 14px;
-    border: none;
-}
-
-.btn-submit-comment:hover {
-    background-color: red; /* red background on hover */
-    color: #ffffff; /* White text */
-}
-
-.center-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Small */
