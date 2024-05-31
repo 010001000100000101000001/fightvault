@@ -315,6 +315,11 @@ button.btn.btn-primary:hover {
     font-size: 36px;
 }
 
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
 /* Small */
 @media screen and (max-width: 480px) {
     .navbar-brand .brand-logo {
