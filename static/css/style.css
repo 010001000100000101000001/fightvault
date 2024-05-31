@@ -332,6 +332,12 @@ button.btn.btn-primary:hover {
     background-color: transparent;
 }
 
+/* Add margin to content when the sidebar is open */
+body.open-sidebar {
+    overflow: hidden; /* Prevent scrolling when sidebar is open */
+}
+
+
 /* Small */
 @media screen and (max-width: 480px) {
     .navbar-brand .brand-logo {
