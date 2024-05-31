@@ -69,10 +69,10 @@
                     </li>
                 </ul>
                 <div class="site-description">
-                <span class="navbar-text mx-auto site-description d-none d-lg-block">
-                    Your Destination for MMA and Combat Sports News
-                    <i class="fa-solid fa-octagon"></i>
-                </span>
+                    <span class="navbar-text mx-auto site-description d-none d-lg-block">
+                        Your Destination for MMA and Combat Sports News
+                        <i class="fa-solid fa-octagon"></i>
+                    </span>
                 </div>
                 <ul class="navbar-nav ms-auto">
                     {% if user.is_authenticated %}
@@ -140,7 +140,8 @@
         </div>
         {% else %}
         <div class="alert alert-warning text-end m-3" role="alert">
-            You are not logged in <i class="fa-solid fa-ghost"></i> --- Please <a href="{% url 'account_login' %}">login</a>
+            You are not logged in <i class="fa-solid fa-ghost"></i> --- Please <a
+                href="{% url 'account_login' %}">login</a>
             or <a href="{% url 'account_signup' %}">register</a>.
         </div>
         {% endif %}
