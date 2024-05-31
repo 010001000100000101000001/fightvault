@@ -47,37 +47,33 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand-logo">FightVault<i
-                        class="fa-duotone fa-boxing-glove fa-bounce"></i></span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation"
-                aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <span class="brand-logo">FightVault<i class="fa-duotone fa-boxing-glove fa-bounce"></i></span>
+            </a>
+            <button class="navbar-toggler" type="button" id="menuToggle" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNavigation">
                 <ul class="navbar-nav primary-navigation me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'home' %}">
-                            Home
-                        </a>
+                            href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == about_url %}active{% endif %}"
-                            href="{% url 'about' %}">
-                            About
-                        </a>
+                            href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == contact_url %}active{% endif %}"
-                            href="{% url 'contact' %}">
-                            Contact
-                        </a>
+                            href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
-                <span class="navbar-text mx-auto site-description">
+                <div class="site-description">
+                <span class="navbar-text mx-auto site-description d-none d-lg-block">
                     Your Destination for MMA and Combat Sports News
                     <i class="fa-solid fa-octagon"></i>
                 </span>
+                </div>
                 <ul class="navbar-nav ms-auto">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -103,6 +99,20 @@
             </div>
         </div>
     </nav>
+
+    <!-- Sidebar -->
+    <div id="sideMenu" class="side-menu">
+        <a href="javascript:void(0)" class="closebtn" id="closeMenu">&times;</a>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contact</a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'custom_logout' %}">Logout <i class="fa-solid fa-left-from-bracket"></i></a>
+        {% else %}
+        <a href="{% url 'account_signup' %}">Register <i class="fa-solid fa-user-plus"></i></a>
+        <a href="{% url 'account_login' %}">Login <i class="fa-solid fa-user"></i></a>
+        {% endif %}
+    </div>
 
     <!-- Displaying alert messages for users -->
     <div class="container">
