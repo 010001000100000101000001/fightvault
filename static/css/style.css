@@ -295,6 +295,15 @@ button.btn.btn-primary:hover {
     padding-top: 60px; /* Place content 60px from the top */
 }
 
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white; /* Set text color to white */
+    display: block;
+    transition: 0.3s;
+}
+
 /* Small */
 @media screen and (max-width: 480px) {
     .navbar-brand .brand-logo {
