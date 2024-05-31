@@ -7,36 +7,35 @@ document.addEventListener('DOMContentLoaded', (event) => {
             submitRating(rating);
         });
     });
-});
 
  // Menu toggle functionality
- const menuToggle = document.getElementById('menuToggle');
- const closeMenu = document.getElementById('closeMenu');
- const sideMenu = document.getElementById('sideMenu');
+    const menuToggle = document.getElementById('menuToggle');
+    const closeMenu = document.getElementById('closeMenu');
+    const sideMenu = document.getElementById('sideMenu');
 
- menuToggle.addEventListener('click', () => {
-     openNav();
- });
+    menuToggle.addEventListener('click', () => {
+        openNav();
+    });
 
- closeMenu.addEventListener('click', () => {
-     closeNav();
- });
+    closeMenu.addEventListener('click', () => {
+        closeNav();
+    });
 
- function openNav() {
-    sideMenu.style.width = "100%";
-    document.body.classList.add('open-sidebar');
-}
+    function openNav() {
+        sideMenu.style.width = "100%";
+        document.body.classList.add('open-sidebar');
+    }
 
-function closeNav() {
-    sideMenu.style.width = "0";
-    document.body.classList.remove('open-sidebar');
-}
-
+    function closeNav() {
+        sideMenu.style.width = "0";
+        document.body.classList.remove('open-sidebar');
+    }
+});
 
 function submitRating(rating) {
     const form = document.getElementById('rating-form');
     const csrfToken = getCookie('csrftoken');
-    
+
     const formData = new FormData(form);
     formData.append('rating', rating);
 
