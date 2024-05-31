@@ -388,7 +388,7 @@ body.open-sidebar {
 }
 
 /* Large */
-@media (min-width: 1201px) and (max-width: 1600px) {
+@media (min-width: 1401px) and (max-width: 1600px) {
     .navbar-brand .brand-logo {
         font-size: 26px;
     }
