@@ -286,6 +286,9 @@ button.btn.btn-primary:hover {
     height: 100%; /* Full height */
     width: 0;
     position: fixed;
+    z-index: 1050; /* Stay on top */
+    top: 0;
+    left: 0;
 }
 
 /* Small */
