@@ -98,6 +98,7 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
     padding: 20px; /* Padding inside the container */
     border-radius: 10px; /* Rounded corners */
+    z-index: 1;
 }
 
 button.btn.btn-primary {
@@ -369,6 +370,10 @@ body.open-sidebar {
     .navbar-text.site-description {
         display: none;
     }
+    .navbar-text.site-description {
+        display: none;
+    }
+
 }
 
 /* Medium */

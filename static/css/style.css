@@ -377,7 +377,7 @@ body.open-sidebar {
 }
 
 /* Medium */
-@media (min-width: 481px) and (max-width: 1200px) {
+@media (min-width: 481px) and (max-width: 1400px) {
     .navbar-brand .brand-logo {
         font-size: 24px; /* Medium font size for tablets */
     }
