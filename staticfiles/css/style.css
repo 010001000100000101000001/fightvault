@@ -281,6 +281,13 @@ button.btn.btn-primary:hover {
     border: 1px solid #ccc; /* Add a border for better visibility */
 }
 
+/* Sidebar styles */
+.side-menu {
+    height: 100%; /* Full height */
+    width: 0;
+    position: fixed;
+}
+
 /* Small */
 @media screen and (max-width: 480px) {
     .navbar-brand .brand-logo {
