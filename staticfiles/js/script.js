@@ -22,6 +22,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
      closeNav();
  });
 
+ function openNav() {
+    sideMenu.style.width = "100%";
+    document.body.classList.add('open-sidebar');
+}
+
+function closeNav() {
+    sideMenu.style.width = "0";
+    document.body.classList.remove('open-sidebar');
+}
+
 
 function submitRating(rating) {
     const form = document.getElementById('rating-form');
