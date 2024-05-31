@@ -315,6 +315,18 @@ button.btn.btn-primary:hover {
     font-size: 36px;
 }
 
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand .brand-logo {
+    font-size: 26px; /* Adjust the size as needed */
+    letter-spacing: 1px; /* Adds space between characters */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-weight: 600; /* Makes the text thicker */
+}
+
 /* Small */
 @media screen and (max-width: 480px) {
     .navbar-brand .brand-logo {

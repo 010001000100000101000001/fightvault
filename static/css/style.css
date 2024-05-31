@@ -327,6 +327,11 @@ button.btn.btn-primary:hover {
     font-weight: 600; /* Makes the text thicker */
 }
 
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
 /* Small */
 @media screen and (max-width: 480px) {
     .navbar-brand .brand-logo {
