@@ -53,7 +53,6 @@ def post_detail(request, slug):
         fighter1_percentage = 0
         fighter2_percentage = 0
 
-
     if request.method == "POST" and 'vote' in request.POST:
         if not request.user.is_authenticated:
             messages.warning(request, "You need to log in or register to vote.")
@@ -141,9 +140,14 @@ def rate_post(request, post_id):
     )
 
     if not created:
+        rating.score = rating_value
+        rating.save()
+        return JsonResponse({'message': 'Your rating has been updated.'}, status=200)
+    else:
         return JsonResponse({'message': 'You have already rated this post.'}, status=400)
 
-    return JsonResponse({'message': 'Thank you for rating this post!'})
+    return JsonResponse({'message': 'Thank you for rating this post!'}, status=200)
+
 
 def custom_logout(request):
     logout(request)

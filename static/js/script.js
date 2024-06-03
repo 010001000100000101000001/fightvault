@@ -48,12 +48,10 @@ function submitRating(rating) {
     })
     .then(response => response.json())
     .then(data => {
-        if (data.message) {
-            alert(data.message);
-        } else {
-            alert('Error submitting rating.');
+        alert(data.message);
+        if (data.average_rating) {
+            document.querySelector('.average-rating').innerText = `Average Rating: ${data.average_rating} out of 5`;
         }
-        document.querySelector('.average-rating').innerText = `Average Rating: ${data.average_rating} out of 5`;
     })
     .catch(error => console.error('Error:', error));
 }
