@@ -3,6 +3,7 @@ from django.views import generic
 from django.contrib import messages
 from django.contrib.auth import logout
 from django.http import JsonResponse
+from django.db.models import Avg
 from .models import Post, Rating, Comment, Vote
 from .forms import RatingForm, CommentForm, VoteForm
 
@@ -121,7 +122,6 @@ def post_detail(request, slug):
         }
     )
 
-
 def rate_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     rating_value = request.POST.get('rating')
@@ -133,20 +133,19 @@ def rate_post(request, post_id):
     if rating_value < 1 or rating_value > 5:
         return JsonResponse({'message': 'Invalid rating value.'}, status=400)
 
-    rating, created = Rating.objects.get_or_create(
+    rating, created = Rating.objects.update_or_create(
         post=post,
         user=request.user,
         defaults={'score': rating_value}
     )
 
-    if not created:
-        rating.score = rating_value
-        rating.save()
-        return JsonResponse({'message': 'Your rating has been updated.'}, status=200)
+    if created:
+        message = 'You have rated this post!'
     else:
-        return JsonResponse({'message': 'You have already rated this post.'}, status=400)
+        message = 'Your rating has been updated.'
 
-    return JsonResponse({'message': 'Thank you for rating this post!'}, status=200)
+    average_rating = post.ratings.aggregate(Avg('score'))['score__avg']
+    return JsonResponse({'message': message, 'average_rating': round(average_rating, 1)}, status=200)
 
 
 def custom_logout(request):

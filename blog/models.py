@@ -5,6 +5,7 @@ from cloudinary.models import CloudinaryField
 # Constants for post status choices
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class Post(models.Model):
     """
     Represents a blog post.
@@ -34,9 +35,6 @@ class Post(models.Model):
     fighter1_name = models.CharField(max_length=35, default='Fighter 1')
     fighter2_name = models.CharField(max_length=35, default='Fighter 2')
     display_voting = models.BooleanField(default=False)
-
-
-
 
     class Meta:
         ordering = ["-created_on"]
@@ -97,6 +95,9 @@ class Rating(models.Model):
     comment = models.TextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        unique_together = ('post', 'user')
+
     def __str__(self):
         return f"Rating by {self.user.username} on {self.post.title}: {self.score} stars"
 
@@ -110,7 +111,5 @@ class Vote(models.Model):
     class Meta:
         unique_together = ('post', 'user')
 
-    
-    
     def __str__(self):
         return f"{self.user.username} voted for {self.choice} on {self.post.title}"
