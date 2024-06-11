@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-010001000100-fightvault-puxs1s4z89w.ws-eu114.gitpod.io',
+    '8000-010001000100-fightvault-07cycinontc.ws.codeinstitute-ide.net',
     'fightvault-d3f5315751bb.herokuapp.com'
 ]
 
@@ -101,7 +101,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.gitpod.io",
+    "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com"
 ]
 
