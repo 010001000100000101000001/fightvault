@@ -16,7 +16,7 @@
       <strong>{% trans "Messages:" %}</strong>
       <ul>
         {% for message in messages %}
-        <li>{{message}}</li>
+        <li>{{ message }}</li>
         {% endfor %}
       </ul>
     </div>
@@ -34,6 +34,7 @@
         {% endif %}
       </ul>
     </div>
+
     {% block content %}
     {% endblock content %}
     {% endblock body %}
