@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-
 {% load i18n %}
 {% load static %}
 
@@ -18,10 +17,10 @@
             <p class="text-center">
               {% blocktrans %}
               Join FightVault<i class="fa-duotone fa-boxing-glove"></i> to stay updated with the latest MMA and combat
-              sports news <i class="fa-solid fa-octagon"></i>.
+              sports news <i class="fa-solid fa-octagon"></i>
               Already have an account? Please <a class="link" href="{{ login_url }}">{{ _('sign in') }}</a> instead.
-              {% endblocktrans %}
             </p>
+            {% endblocktrans %}
             <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
               {% csrf_token %}
               {{ form.as_p }}
@@ -39,4 +38,3 @@
   </div>
 </div>
 {% endblock %}
-
