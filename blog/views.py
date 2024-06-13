@@ -24,7 +24,8 @@ def post_detail(request, slug):
         slug (str): The URL-friendly identifier for the post.
 
     Returns:
-        HttpResponse: An HTTP response object containing the rendered post detail template.
+        HttpResponse: An HTTP response object containing the rendered post
+        detail template.
     """
     # Fetch the blog post and raise a 404 error if not found
     queryset = Post.objects.filter(status=1)
@@ -34,7 +35,11 @@ def post_detail(request, slug):
     ratings = post.ratings.all()
 
     # Calculate average rating if there are any ratings; otherwise set to 0
-    average_rating = round(sum(rating.score for rating in ratings) / len(ratings), 1) if ratings else 0
+    if ratings:
+        total_score = sum(rating.score for rating in ratings)
+        average_rating = round(total_score / len(ratings), 1)
+    else:
+        average_rating = 0
 
     # Retrieve all comments for the post, ordered by creation date
     comments = post.comments.all().order_by("-created_on")
@@ -45,63 +50,78 @@ def post_detail(request, slug):
 
     # Calculate vote percentages
     total_votes = post.votes.count()
-    if total_votes > 0:
-        fighter1_votes = post.votes.filter(choice='fighter1').count()
-        fighter2_votes = post.votes.filter(choice='fighter2').count()
-        fighter1_percentage = round((fighter1_votes / total_votes) * 100, 2)
-        fighter2_percentage = round((fighter2_votes / total_votes) * 100, 2)
-    else:
-        fighter1_percentage = 0
-        fighter2_percentage = 0
 
-    if request.method == "POST" and 'vote' in request.POST:
-        if not request.user.is_authenticated:
-            messages.warning(request, "You need to log in or register to vote.")
+
+if total_votes > 0:
+    fighter1_votes = post.votes.filter(choice='fighter1').count()
+    fighter2_votes = post.votes.filter(choice='fighter2').count()
+    fighter1_percentage = round((fighter1_votes / total_votes) * 100, 2)
+    fighter2_percentage = round((fighter2_votes / total_votes) * 100, 2)
+else:
+    fighter1_percentage = 0
+    fighter2_percentage = 0
+
+if request.method == "POST" and 'vote' in request.POST:
+    if not request.user.is_authenticated:
+        messages.warning(request, "You need to log in or register to vote.")
+        return redirect('post_detail', slug=post.slug)
+
+    vote_form = VoteForm(request.POST)
+    if vote_form.is_valid():
+        # Check if the user has already voted on this post
+        existing_vote = (
+            Vote.objects
+            .filter(post=post, user=request.user)
+            .first()
+        )
+
+        if existing_vote:
+            messages.error(request, "You have already voted on this post.")
+        else:
+            vote = vote_form.save(commit=False)
+            vote.post = post
+            vote.user = request.user
+            vote.save()
+            messages.success(request, "Your vote has been submitted.")
+
+        return redirect('post_detail', slug=post.slug)
+
+
+elif request.method == "POST" and 'rating' in request.POST:
+    if not request.user.is_authenticated:
+        messages.warning(request, "You need to log in or register to rate.")
+        return redirect('post_detail', slug=post.slug)
+
+    rating_value = request.POST.get('rating')
+    if rating_value:
+        rating_value = int(rating_value)
+        if 1 <= rating_value <= 5:
+            rating, created = Rating.objects.get_or_create(
+                post=post,
+                user=request.user,
+                defaults={'score': rating_value}
+            )
+            if not created:
+                rating.score = rating_value
+                rating.save()
+            messages.success(request, "Your rating has been submitted.")
             return redirect('post_detail', slug=post.slug)
-        vote_form = VoteForm(request.POST)
-        if vote_form.is_valid():
-            # Check if the user has already voted on this post
-            existing_vote = Vote.objects.filter(post=post, user=request.user).first()
-            if existing_vote:
-                messages.error(request, "You have already voted on this post.")
-            else:
-                vote = vote_form.save(commit=False)
-                vote.post = post
-                vote.user = request.user
-                vote.save()
-                messages.success(request, "Your vote has been submitted.")
-            return redirect('post_detail', slug=post.slug)
-    elif request.method == "POST" and 'rating' in request.POST:
-        if not request.user.is_authenticated:
-            messages.warning(request, "You need to log in or register to rate.")
-            return redirect('post_detail', slug=post.slug)
-        rating_value = request.POST.get('rating')
-        if rating_value:
-            rating_value = int(rating_value)
-            if 1 <= rating_value <= 5:
-                rating, created = Rating.objects.get_or_create(
-                    post=post,
-                    user=request.user,
-                    defaults={'score': rating_value}
-                )
-                if not created:
-                    rating.score = rating_value
-                    rating.save()
-                messages.success(request, "Your rating has been submitted.")
-                return redirect('post_detail', slug=post.slug)
-            else:
-                messages.error(request, "Invalid rating value.")
-    elif request.method == "POST":
-        comment_form = CommentForm(request.POST)
-        if comment_form.is_valid():
-            comment = comment_form.save(commit=False)
-            comment.post = post
-            comment.author = request.user
-            comment.save()
-            messages.success(request, 'Your comment was submitted successfully and is currently waiting admin approval.')
-            return redirect('post_detail', slug=post.slug)
-    else:
-        comment_form = CommentForm()
+        else:
+            messages.error(request, "Invalid rating value.")
+
+elif request.method == "POST":
+    comment_form = CommentForm(request.POST)
+    if comment_form.is_valid():
+        comment = comment_form.save(commit=False)
+        comment.post = post
+        comment.author = request.user
+        comment.save()
+        messages.success(request, 'Your comment was submitted successfully '
+                                  'and is currently waiting admin approval.')
+        return redirect('post_detail', slug=post.slug)
+
+else:
+    comment_form = CommentForm()
 
     # Render the post_detail template with context variables
     return render(
@@ -122,12 +142,16 @@ def post_detail(request, slug):
         }
     )
 
+
 def rate_post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     rating_value = request.POST.get('rating')
 
     if not rating_value:
-        return JsonResponse({'message': 'Rating value is required.'}, status=400)
+        return JsonResponse(
+            {'message': 'Rating value is required.'},
+            status=400
+        )
 
     rating_value = int(rating_value)
     if rating_value < 1 or rating_value > 5:
@@ -145,7 +169,10 @@ def rate_post(request, post_id):
         message = 'Your rating has been updated.'
 
     average_rating = post.ratings.aggregate(Avg('score'))['score__avg']
-    return JsonResponse({'message': message, 'average_rating': round(average_rating, 1)}, status=200)
+    return JsonResponse(
+        {'message': message, 'average_rating': round(average_rating, 1)},
+        status=200
+    )
 
 
 def custom_logout(request):

@@ -13,10 +13,13 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
+
 class VoteForm(forms.ModelForm):
     class Meta:
         model = Vote
         fields = ['choice']
         widgets = {
-            'choice': forms.RadioSelect(choices=[('fighter1', 'Fighter 1'), ('fighter2', 'Fighter 2')]),
+            'choice': forms.RadioSelect(
+                choices=[('fighter1', 'Fighter 1'), ('fighter2', 'Fighter 2')]
+            ),
         }
