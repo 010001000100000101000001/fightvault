@@ -48,43 +48,44 @@ def post_detail(request, slug):
     # Initialize vote form
     vote_form = VoteForm()
 
+    # Initialize comment form (default to None)
+    comment_form = None
+
     # Calculate vote percentages
     total_votes = post.votes.count()
 
-
-if total_votes > 0:
-    fighter1_votes = post.votes.filter(choice='fighter1').count()
-    fighter2_votes = post.votes.filter(choice='fighter2').count()
-    fighter1_percentage = round((fighter1_votes / total_votes) * 100, 2)
-    fighter2_percentage = round((fighter2_votes / total_votes) * 100, 2)
-else:
     fighter1_percentage = 0
     fighter2_percentage = 0
+
+    if total_votes > 0:
+        fighter1_votes = post.votes.filter(choice='fighter1').count()
+        fighter2_votes = post.votes.filter(choice='fighter2').count()
+        fighter1_percentage = round((fighter1_votes / total_votes) * 100)
+        fighter2_percentage = round((fighter2_votes / total_votes) * 100)
 
     if request.method == "POST" and 'vote' in request.POST:
         if not request.user.is_authenticated:
             messages.warning(request, "You need to log in or register to vote")
             return redirect('post_detail', slug=post.slug)
 
-    vote_form = VoteForm(request.POST)
-    if vote_form.is_valid():
-        # Check if the user has already voted on this post
-        existing_vote = (
-            Vote.objects
-            .filter(post=post, user=request.user)
-            .first()
-        )
+        vote_form = VoteForm(request.POST)
+        if vote_form.is_valid():
+            # Check if the user has already voted on this post
+            existing_vote = (
+                Vote.objects
+                .filter(post=post, user=request.user)
+                .first()
+                )
+            if existing_vote:
+                messages.error(request, "You have already voted on this post.")
+            else:
+                vote = vote_form.save(commit=False)
+                vote.post = post
+                vote.user = request.user
+                vote.save()
+                messages.success(request, "Your vote has been submitted.")
 
-        if existing_vote:
-            messages.error(request, "You have already voted on this post.")
-        else:
-            vote = vote_form.save(commit=False)
-            vote.post = post
-            vote.user = request.user
-            vote.save()
-            messages.success(request, "Your vote has been submitted.")
-
-        return redirect('post_detail', slug=post.slug)
+            return redirect('post_detail', slug=post.slug)
 
     elif request.method == "POST" and 'rating' in request.POST:
         if not request.user.is_authenticated:
@@ -104,9 +105,10 @@ else:
                     rating.score = rating_value
                     rating.save()
                 messages.success(request, "Your rating has been submitted.")
-                return redirect('post_detail', slug=post.slug)
             else:
                 messages.error(request, "Invalid rating value.")
+        return redirect('post_detail', slug=post.slug)
+
     elif request.method == "POST":
         comment_form = CommentForm(request.POST)
         if comment_form.is_valid():
@@ -117,11 +119,10 @@ else:
             messages.success(
                 request,
                 'Your comment was submitted and is waiting admin approval.'
-                )
-        return redirect('post_detail', slug=post.slug)
-
-else:
-    comment_form = CommentForm()
+            )
+            return redirect('post_detail', slug=post.slug)
+    else:
+        comment_form = CommentForm()
 
     # Render the post_detail template with context variables
     return render(
