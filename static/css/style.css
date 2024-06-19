@@ -147,21 +147,21 @@ button.btn.btn-primary:hover {
 }
 
 /*  Star Ratings Styles (Customised to Gloves)  */
-.star-rating {
+.glove-rating {
     direction: rtl;
     unicode-bidi: bidi-override;
     display: inline-block;
 }
 
-.star-rating input {
+.glove-rating input {
     display: none; /* Hide the radio buttons */
 }
 
-.star-rating input {
+.glove-rating input {
     display: none;
 }
 
-.star-rating label {
+.glove-rating label {
     cursor: pointer;
     display: inline-block;
     width: 40px;
@@ -170,9 +170,9 @@ button.btn.btn-primary:hover {
     background-size: contain;
 }
 
-.star-rating input:checked ~ label,
-.star-rating label:hover,
-.star-rating label:hover ~ label {
+.glove-rating input:checked ~ label,
+.glove-rating label:hover,
+.glove-rating label:hover ~ label {
     filter: grayscale(100%) brightness(0); /* Change color to black */
 }
 

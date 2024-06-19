@@ -1,8 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+
 from django.shortcuts import render, redirect
 from .forms import InquiryForm
+
 
 def contact_view(request):
     if request.method == 'POST':

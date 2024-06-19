@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const stars = document.querySelectorAll('.star-rating input');
+    const gloves = document.querySelectorAll('.glove-rating input');
 
-    stars.forEach(star => {
-        star.addEventListener('change', (e) => {
+    gloves.forEach(glove => {
+        glove.addEventListener('change', (e) => {
             const rating = e.target.value;
             submitRating(rating);
         });
