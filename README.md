@@ -258,24 +258,14 @@ This project has been successfully deployed through the Heroku platform, utilizi
 
 The live link can be found here: https://fightvault-d3f5315751bb.herokuapp.com/
 
+
 ## Credits 
 
-<a href="https://www.freepik.com/free-photo/boxing-glove-hanging-wire-mesh-fence_8403137.htm#fromView=search&page=1&position=13&uuid=6a20f894-e0d5-4319-9924-9afc5383a952">Image by wavebreakmedia_micro on Freepik</a>
+### Content
 
-https://www.flickr.com/photos/184367221@N07/48711412483/in/photolist-2hdsHRn-Pj4SCJ-MGVwLp-LNU1Pj-2hdsHDD-MJKKCz-VaGuyX-2i5tJbP-ahsvM5-23T37QM-8HsSxH-2o8TiTk-2of4EW3-2ok32PJ-9ed3Fj-D3XoaY-jrUdJJ-SbjLaa-2c3onSK-9ed3Tf-axjffz-2aqvLbw-8HsT4V-aSiTkH-KyuF3Q-aEiZUz-uCabRg-cPw2JE-7ZPJtx-DyYK4c-ckpQN9-2jLwenk-6yZJxW-xsJgov-2mHYQu1-dPUyXf-cEz5q5-5tLc3W-2o4hs6c-ZWEyzs-2iGAyjQ-dh9j6K-7VxbT5-2p4HBAi-94DMLS-21w5mRJ-9xcT5U-PW8Frj-2qq1W-2p4PEyG
+I chose the subjects and and fights and used ChatGPT to generate an article which I edited and corrected some information for the examples of the blog posts that would be made by real admins that are part of the FightVault team. Some posts are dated and this site would always have fresh posts added as new events and news unfolds in real time. I created fake accounts and usernames to add comments, votes and ratings on the posts to test the functionality of featuures and give an example of how the site would be used by people who signed up and created an account.
 
-
-https://www.flickr.com/photos/thedailysportsherald/10132617584 TheDailySportsHerald's photo, licensed as Attribution-NonCommercial-NoDerivs.
-
-
-https://www.flickr.com/photos/jblmpao/31070937830 Demetrious Johnson   Joint Base Lewis McChord's photo, licensed as Attribution-NonCommercial-ShareAlike. 
-
-
-https://www.flickr.com/photos/122735657@N06/13995369395/in/photolist-njHVJk-nhFug3-njLpTG-rNbgJW-NcyNAj-c4oqhU-njryTS-rNekkh-njrqFQ-rviGuj-rLqp5k-rMTFfB-qQzwsk-rzdqh2-ryYyaW-c8rkBw-rKYNhm-rvA9TN-rvpGWQ-c8rfsQ-NcyNmS-NcyP3w-c4ouff-rB9KRF-NcyNyL-c9VDyU-c4ovV9-bkaVzC-tjJmTF-s6hpAV-c9VNoC-nmuwtz-HDHcLu-4HpKrV-QPFxib-c9Wb2o-c8rhWd-c9WrU5-c4o5wQ-c4ot55-c9W8Ab-c4od75-c4oaH5-c4nXQd-njrHka-c4o15J-c4ooqb-c8rw3W-njrGSh-c8rWWL/   Adam Crowther's photo, licensed as Attribution-NonCommercial-NoDerivs
-
-
-contact image 2: 
-https://www.flickr.com/photos/thejointstaff/34082947345/in/photolist-zxmx9E-zxmxhW-zAxD3t-Nxxbp4-zAxCCF-qvDmkw-zzEMBP-AKm2bC-zzEMsk-oYeYHd-zyzuZy-ATdAeV-AfgdFP-BfoYCT-yrgmhm-26nrCoq-rxPyzN-rN9WCa-rvpGWQ-TJjrZk-TVN1Pc-TJjsiX-jHodhe-2hSrqgq-ruyDWj-HDHcLu-7Z5MpN-7G8biq-5oXVcR-NsHbnC-NsHbDQ-BBHTrg-BzqGLW-BbuNT2-AMumjy-AUVooQ-2payJR4
+### Media
 
 
 https://commons.wikimedia.org/wiki/File:Usyk_-_Knyazev_-_0412.jpg
@@ -298,12 +288,6 @@ https://www.flickr.com/photos/kenlund/7237766724 Prudential Center, Newark, New 
 
 https://commons.wikimedia.org/wiki/File:Islam_Makhachev_2022_UFC_belt.png
 
-### Content 
-
-
-### Media
-
-- 
 
 ## Acknowledgements
 
