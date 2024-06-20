@@ -212,22 +212,22 @@ FightVault is a blog designed for mixed martial arts and combat sports enthusias
 
 ### Validator Testing 
 
-- **HTML**
- - W3C HTML validator was used for html testing.
+**HTML**
+  W3C HTML validator was used for html testing.
  - Link for validator: https://validator.w3.org/.
  
   
-- **CSS**
+**CSS**
  - W3C CSS validator was used for CSS testing.
  - Link for CSS validator: https://jigsaw.w3.org/css-validator/.
 
 
-- **JavaScript**
+**JavaScript**
   - JS Hint was used for JavaScript testing.
   - Link for JS Hint: https://jshint.com/.
 
 
-- **Python**
+**Python**
   - CI Python Linter was used to test python for PEP8 adherence.
   - Link for CI Python Linter: https://pep8ci.herokuapp.com/.
   
