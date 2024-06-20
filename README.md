@@ -1,6 +1,6 @@
 # FightVault
 
-FightVault is your destination for the latest news, updates, and information on MMA and combat sports. The platform aims to keep fans and enthusiasts informed and connected with the combat sports community. It promotes communication and interaction between users by allowing people to sign up with an email address and creating a password. Site users who are logged in, can comment, rate and vote on the predicted outcome of a bout on relevant posts that include the polling feature. It is a blog where site users can share their opinions and excitement on all things related to combat sports.
+FightVault is your destination for the latest news, updates, and information on mixed martial arts and combat sports. The platform aims to keep fans and enthusiasts informed and connected with the combat sports community. It promotes communication and interaction between users by allowing people to sign up with an email address and creating a password. Site users who are logged in, can comment, rate and vote on the predicted outcome of a bout on relevant posts that include the polling feature. It is a blog where site users can share their opinions and excitement on all things related to combat sports.
 
 
 ## Table of Contents
@@ -9,7 +9,7 @@ FightVault is your destination for the latest news, updates, and information on 
 
 ## Project Overview
 
-FightVault is a blog designed for MMA and combat sports enthusiasts. It aims to bring together a community of passionate individuals who share a love for all things martial arts. The platform is dedicated to providing a space where fans can write, read, and learn about their favorite sports and fighters. FightVault strives to offer an engaging experience, from in-depth articles, to the latest news and event coverage. Over time we hope it can grow to a place where we interview fighters and expand a section where users can watch and share media content.
+FightVault is a blog designed for mixed martial arts and combat sports enthusiasts. It aims to bring together a community of passionate people who share a love for martial arts and combat sports. The platform is dedicated to providing a space where fans can write, read, and learn about their favorite sports and fighters. FightVault strives to offer an engaging experience, from in-depth articles, to the latest news and event coverage. Over time we hope it can grow to a place where we interview fighters and expand a section where users can watch and share media content.
 
 
 ## User Stories
@@ -119,17 +119,41 @@ FightVault is a blog designed for MMA and combat sports enthusiasts. It aims to 
 
 
 - **User Authentication**
-  - Includes user registration, login, and logout functionalities powered by Django Allauth.
+  - User registration form.
+  - User login form.
+  - A button to logout displayed on every page where the user will be redirected back to the home page a message is displayed confirming they have been logged out.
+  - Authentication powered by Django Allauth.
   
 
 - **Blog Post Detail Page**
-  - Detailed view of each blog post, including the full content, author details, and the ability to leave comments and ratings.
-  -
+  - Detailed view of each blog post, including the full post content.
+  - Full featured image, relevant to the post.
+  - Time and date the post was created.
+  - Post Author.
+    
+- **Comments**
+  - A comment section for users to comment on the post.
+  - A full view of all approved comments along with the username of the commenter and the time and date of the comment.
+  - Feedback to the user to let them know that there comment is awaiting admin approval.
+  - An arrow pointing to the comment awaiting to be approved.
+  - Comment displayed in bold for easy viewing.
+  - Username and time and date slighty greyed out to not be too distracting from the main comments.
 
-- **Comments and Ratings**
-  - Users can leave comments and rate blog posts to provide feedback and engage with the content.
- 
-
+ - **Ratings section**
+   - A rating system for the post.
+   - Average ratings displayed in bold red.
+   - Username of the person who rated.
+   - Time and date of the rating
+   - Boxing gloves graphic for users to interact and choose the rating in a fun an engaging way.
+   - Colour change of the gloves from red to black when hovered on and clicked.
+   - Easily see visually the rating choice out of 5.
+     
+- **Polling Section**
+    - A polling system to vote on the predicted outcome of a bout, only included on relevant posts.
+    - Two options are displayed with both fighters names with an option to select one.
+    - A submit vote button to submit the vote.
+    - Current poll is displayed in green and red for contrast along with percentage bars included with the fighers names and the persentage of the current votes.
+   
 ### Features Left to Implement
 
 
@@ -189,22 +213,90 @@ FightVault is a blog designed for MMA and combat sports enthusiasts. It aims to 
 ### Validator Testing 
 
 - **HTML**
+ - W3C HTML validator was used for html testing.
+ - Link for validator: https://validator.w3.org/.
  
   
 - **CSS**
+ - W3C CSS validator was used for CSS testing.
+ - Link for CSS validator: https://jigsaw.w3.org/css-validator/.
 
 
-### Unfixed Bugs
+- **JavaScript**
+  - JS Hint was used for JavaScript testing.
+  - Link for JS Hint: https://jshint.com/.
+
+
+- **Python**
+  - CI Python Linter was used to test python for PEP8 adherence.
+  - Link for CI Python Linter: https://pep8ci.herokuapp.com/.
+  
+
 
 
 ## Deployment
 
+This project has been successfully deployed through the Heroku platform, utilizing the Code Institute's Heroku mock terminal. To achieve this, the following deployment procedure was undertaken:
 
+**Repository Cloning**: Initiated the process by cloning the project's repository to ensure a local copy for preparing deployment.
 
-The live link can be found here: 
+**Procfile Creation**:  A procfile was created and web: gunicorn fightvault.wsgi was added.
+
+**Updated Requirements.txt**: Requirements.txt was updated with the necessary changes using pip3 freeze --local > requirements.txt command in the terminal.
+
+**Settings** DEBUG: Set to False for production.
+
+**Heroku Application**: Proceeded by establishing a new application within the Heroku environment, dedicated specifically to this project.
+
+**Buildpack Configuration**: Configured the necessary Python buildpack.
+
+**Environment Variables**: Set up SECRET_KEY in Config Vars, also CLOUDINARY_URL and DATABASE_URL were set up at appropriate stages.
+
+**Repository Integration**: Linked the Heroku application to this corresponding GitHub repository to enable direct deployments from the source code.
+
+**Application Deployment**: Completed the deployment process by utilizing Heroku's 'Deploy' feature, which facilitated the transition of the project from development to a live environment.
+
+The live link can be found here: https://fightvault-d3f5315751bb.herokuapp.com/
 
 ## Credits 
 
+<a href="https://www.freepik.com/free-photo/boxing-glove-hanging-wire-mesh-fence_8403137.htm#fromView=search&page=1&position=13&uuid=6a20f894-e0d5-4319-9924-9afc5383a952">Image by wavebreakmedia_micro on Freepik</a>
+
+https://www.flickr.com/photos/184367221@N07/48711412483/in/photolist-2hdsHRn-Pj4SCJ-MGVwLp-LNU1Pj-2hdsHDD-MJKKCz-VaGuyX-2i5tJbP-ahsvM5-23T37QM-8HsSxH-2o8TiTk-2of4EW3-2ok32PJ-9ed3Fj-D3XoaY-jrUdJJ-SbjLaa-2c3onSK-9ed3Tf-axjffz-2aqvLbw-8HsT4V-aSiTkH-KyuF3Q-aEiZUz-uCabRg-cPw2JE-7ZPJtx-DyYK4c-ckpQN9-2jLwenk-6yZJxW-xsJgov-2mHYQu1-dPUyXf-cEz5q5-5tLc3W-2o4hs6c-ZWEyzs-2iGAyjQ-dh9j6K-7VxbT5-2p4HBAi-94DMLS-21w5mRJ-9xcT5U-PW8Frj-2qq1W-2p4PEyG
+
+
+https://www.flickr.com/photos/thedailysportsherald/10132617584 TheDailySportsHerald's photo, licensed as Attribution-NonCommercial-NoDerivs.
+
+
+https://www.flickr.com/photos/jblmpao/31070937830 Demetrious Johnson   Joint Base Lewis McChord's photo, licensed as Attribution-NonCommercial-ShareAlike. 
+
+
+https://www.flickr.com/photos/122735657@N06/13995369395/in/photolist-njHVJk-nhFug3-njLpTG-rNbgJW-NcyNAj-c4oqhU-njryTS-rNekkh-njrqFQ-rviGuj-rLqp5k-rMTFfB-qQzwsk-rzdqh2-ryYyaW-c8rkBw-rKYNhm-rvA9TN-rvpGWQ-c8rfsQ-NcyNmS-NcyP3w-c4ouff-rB9KRF-NcyNyL-c9VDyU-c4ovV9-bkaVzC-tjJmTF-s6hpAV-c9VNoC-nmuwtz-HDHcLu-4HpKrV-QPFxib-c9Wb2o-c8rhWd-c9WrU5-c4o5wQ-c4ot55-c9W8Ab-c4od75-c4oaH5-c4nXQd-njrHka-c4o15J-c4ooqb-c8rw3W-njrGSh-c8rWWL/   Adam Crowther's photo, licensed as Attribution-NonCommercial-NoDerivs
+
+
+contact image 2: 
+https://www.flickr.com/photos/thejointstaff/34082947345/in/photolist-zxmx9E-zxmxhW-zAxD3t-Nxxbp4-zAxCCF-qvDmkw-zzEMBP-AKm2bC-zzEMsk-oYeYHd-zyzuZy-ATdAeV-AfgdFP-BfoYCT-yrgmhm-26nrCoq-rxPyzN-rN9WCa-rvpGWQ-TJjrZk-TVN1Pc-TJjsiX-jHodhe-2hSrqgq-ruyDWj-HDHcLu-7Z5MpN-7G8biq-5oXVcR-NsHbnC-NsHbDQ-BBHTrg-BzqGLW-BbuNT2-AMumjy-AUVooQ-2payJR4
+
+
+https://commons.wikimedia.org/wiki/File:Usyk_-_Knyazev_-_0412.jpg
+
+
+https://www.flickr.com/photos/kevinpoh/4730344693  Kevin Poh's photo
+
+
+https://www.flickr.com/photos/websummit/52473040640 https://www.flickr.com/photos/websummit/52473040640
+
+
+https://commons.wikimedia.org/wiki/File:Max_Holloway_180428-D-SW162-1532_%2827918239868%29.jpg  Creator: Sgt. James K. McCann 
+
+
+https://commons.wikimedia.org/wiki/File:Michael_Chandler_at_MTV_Movie_Awards_2012.jpg American mixed martial artist Michael Chandler interviewed at the MTV Movie Awards 2012
+
+
+https://www.flickr.com/photos/kenlund/7237766724 Prudential Center, Newark, New Jersey 
+
+
+https://commons.wikimedia.org/wiki/File:Islam_Makhachev_2022_UFC_belt.png
 
 ### Content 
 
