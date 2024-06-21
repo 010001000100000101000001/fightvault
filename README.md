@@ -265,6 +265,7 @@ The live link can be found here: https://fightvault-d3f5315751bb.herokuapp.com/
 
 I chose the subjects and and fights and used ChatGPT to generate an article which I edited and corrected some information for the examples of the blog posts that would be made by real admins that are part of the FightVault team. Some posts are dated and this site would always have fresh posts added as new events and news unfolds in real time. I created fake accounts and usernames to add comments, votes and ratings on the posts to test the functionality of featuures and give an example of how the site would be used by people who signed up and created an account.
 
+
 ### Media
 
 
@@ -287,6 +288,15 @@ https://www.flickr.com/photos/kenlund/7237766724 Prudential Center, Newark, New 
 
 
 https://commons.wikimedia.org/wiki/File:Islam_Makhachev_2022_UFC_belt.png
+
+ChatGPT was used to generate the images on the About page. I shared some similar images and gave prompts to change the colour scheme until I selected the images to be used.
+
+
+### Favicons
+
+Font awesome icons are used througout the site. Link: https://fontawesome.com/.
+The glove icons from the Ratings system are from Freefavicon. Link: https://www.freefavicon.com/freefavicons/sports/iconinfo/boxing-glove-152-171268.html.
+The favicon generator that was used for the browser tab thumbnail is Real Favicon Generator. Link: https://realfavicongenerator.net/.
 
 
 ## Acknowledgements
