@@ -4,7 +4,7 @@
 
 ## Introduction
 
-FightVault is a blog for fans of martial arts and combat sports. It promotes communication and interaction between users by allowing people to sign up with an email address and creating a password. Site users who are logged in, can create a comment, read other user's approved comments, update and delete their own comments. Site users can rate a blog post and vote on the predicted outcome of a bout on relevant posts that include the polling feature.
+This is my fourth project in Code Institute Diploma in Software Development with eCommerce. FightVault is a blog for fans of martial arts and combat sports. It promotes communication and interaction between users by allowing people to sign up with an email address and creating a password. Users are authenticated use django-allauth. Site users who are logged-in, can create comments, read other user's approved comments, update and delete their own comments. Logged-in users can rate a blog post and vote on the predicted outcome of a bout or match on relevant posts that include the polling feature. The website is a full stack django project written in HTML, CSS, Javascript and Python.
 
 
 ![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/80d903a9-2720-43ee-9569-268649d03556)
@@ -157,11 +157,16 @@ The aim is to provide a space for people who share a love for martial arts and c
   - In mobile and smaller screens there is a hamburger menu when clicked on opens a side menu which displays the navigational bar and lists of page. It includes an x to remove the menu 
     from visibility.
 
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/9266a9e6-d992-4430-b856-7df2d0ac03aa)
+
 - **Home Page**
   - Displays the latest blog posts with titles, authors, times and dates, featured images, and excerpts.
   - When the title is hovered over the colour changes from black to red and when a post has been viewed, the colour of the title changes to blue to show what posts have already been 
     viewed by the site user.
   - It has NEXT and PREVIOUS buttons included to navigate through older posts and navigate back to more recent posts.
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/210229b3-fb66-415f-b2d5-a73739bc9c7d)
+
 
 
 - **About Page**
@@ -169,26 +174,43 @@ The aim is to provide a space for people who share a love for martial arts and c
   - This can be updated as FightVault evolves and be edited by a site admin in the django admin panel.
   - Two images are displayed on the left hand side, the first is the Fightvault image with a logo and the second is gloves, pads and a black belt.
   - The second image is not displayed on smaller mobile screens for a better UI.
-    
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/2c7b045e-0b90-4475-8fad-f3e59c1de530)
+
 
 - **Contact Page**
   - Allows users to get in touch with the FightVault team for inquiries or feedback.
   - It has the FightVault logo image in the background.
 
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/6e09a232-0253-4f7d-9d68-82a2d0daca09)
+
+
 
 - **User Authentication**
   - User registration form.
   - User login form.
-  - A button to logout displayed on every page where the user will be redirected back to the home page a message is displayed confirming they have been logged out.
-  - Authentication powered by Django Allauth.
-  
+  - A button to logout displayed on every page once the user has logged in where the user will be redirected back to the home page a message is displayed confirming they have been logged out.
+  - Authentication powered by Django-Allauth.
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/7f429300-a8c5-4984-b122-70ed59ccb596)
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/4b6a1567-12ee-4160-bcfc-598b76d3bff1)
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/09a0368a-1360-4760-a449-7dc18481c4e1)
+
+
+
 
 - **Blog Post Detail Page**
   - Detailed view of each blog post, including the full post content.
   - Full featured image, relevant to the post.
   - Time and date the post was created.
   - Post Author.
-    
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/23ec8f8d-2038-408b-b651-44997a3c118e)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/7481613b-888e-4291-a303-7f6cf7cf8cb3)
+
+
 - **Comments**
   - A comment section for users to comment on the post.
   - A full view of all approved comments along with the username of the commenter and the time and date of the comment.
