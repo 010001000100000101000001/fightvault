@@ -1,15 +1,26 @@
 # FightVault
 
-FightVault is your destination for the latest news, updates, and information on mixed martial arts and combat sports. The platform aims to keep fans and enthusiasts informed and connected with the combat sports community. It promotes communication and interaction between users by allowing people to sign up with an email address and creating a password. Site users who are logged in, can comment, rate and vote on the predicted outcome of a bout on relevant posts that include the polling feature. It is a blog where site users can share their opinions and excitement on all things related to combat sports.
+
+
+## Introduction
+
+FightVault is a blog for fans of martial arts and combat sports. It promotes communication and interaction between users by allowing people to sign up with an email address and creating a password. Site users who are logged in, can create a comment, read other user's approved comments, update and delete their own comments. Site users can rate a blog post and vote on the predicted outcome of a bout on relevant posts that include the polling feature.
 
 
 ## Table of Contents
 
-
+[FightVault](Fightvault)
+ - [Introduction](Introduction)
+ - [Table of Contents](Table of Contents)
+ - [Project Overview](Project Overview)
+ - [User Stories](User Stories)
+   -[View a Page of Posts](View a Page of Posts)
+   -[Open a Post](Open a post)
+   
 
 ## Project Overview
 
-FightVault is a blog designed for mixed martial arts and combat sports enthusiasts. It aims to bring together a community of passionate people who share a love for martial arts and combat sports. The platform is dedicated to providing a space where fans can write, read, and learn about their favorite sports and fighters. FightVault strives to offer an engaging experience, from in-depth articles, to the latest news and event coverage. Over time we hope it can grow to a place where we interview fighters and expand a section where users can watch and share media content.
+The aim is to provide a space for people who share a love for martial arts and combat sports. The site gives a space  for  users to read, write, and learn about their favourite sports and fighters. Over time we hope it can grow to a place where we interview fighters and expand a section where users can watch and share media content.
 
 
 ## User Stories
