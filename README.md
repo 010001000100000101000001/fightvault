@@ -7,6 +7,11 @@
 FightVault is a blog for fans of martial arts and combat sports. It promotes communication and interaction between users by allowing people to sign up with an email address and creating a password. Site users who are logged in, can create a comment, read other user's approved comments, update and delete their own comments. Site users can rate a blog post and vote on the predicted outcome of a bout on relevant posts that include the polling feature.
 
 
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/80d903a9-2720-43ee-9569-268649d03556)
+
+[Click Here to View Live Website on Heroku](https://fightvault-d3f5315751bb.herokuapp.com/)
+
+
 ## Table of Contents
 
 - [FightVault](#fightvault)
