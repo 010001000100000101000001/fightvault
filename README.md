@@ -9,13 +9,13 @@ FightVault is a blog for fans of martial arts and combat sports. It promotes com
 
 ## Table of Contents
 
-[FightVault](# Fightvault)
- - [Introduction](## Introduction)
- - [Table of Contents](## Table of Contents)
- - [Project Overview](## Project Overview)
- - [User Stories](## User Stories)
-   - [View a Page of Posts](### View a Page of Posts)
-   - [Open a Post](### Open a post)
+[FightVault](#Fightvault)
+ - [Introduction](##Introduction)
+ - [Table of Contents](##Table of Contents)
+ - [Project Overview](##Project Overview)
+ - [User Stories](##User Stories)
+   - [View a Page of Posts](###View a Page of Posts)
+   - [Open a Post](###Open a post)
    
 
 ## Project Overview
