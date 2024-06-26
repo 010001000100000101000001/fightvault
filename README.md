@@ -228,15 +228,21 @@ Page scroll continued below ..
    - Boxing gloves graphic for users to interact and choose the rating in a fun an engaging way.
    - Colour change of the gloves from red to black when hovered on and clicked.
    - Easily see visually the rating choice out of 5.
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/3883e5b1-0d51-48c9-8689-59fd5ae763ef)
+
      
 - **Polling Section**
     - A polling system to vote on the predicted outcome of a bout, only included on relevant posts.
     - Two options are displayed with both fighters names with an option to select one.
     - A submit vote button to submit the vote.
     - Current poll is displayed in green and red for contrast along with percentage bars included with the fighers names and the persentage of the current votes.
-   
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/cddf69de-d34d-4764-8cb4-1183802aa5c3)
+
 ### Features Left to Implement
 
+Another section of the website where media files can be viewed and users can comment and rate the video clips.
 
 
 
@@ -250,8 +256,6 @@ Page scroll continued below ..
 ### Color Scheme
 
 - The color scheme is designed to be bold and vibrant, reflecting the dynamic nature of combat sports.
-  - Primary colors: 
-  - Secondary colors: 
 
 ### Typography
 
@@ -274,7 +278,7 @@ Page scroll continued below ..
   - Utilized for responsive and mobile-first front-end design.
   
 - **ElephantSQL**
-  - 
+  - Used as the database to store information.
   
 - **GitHub and Heroku**
  
