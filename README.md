@@ -14,7 +14,6 @@ This is my fourth project in Code Institute Diploma in Software Development with
 
 
 ## Table of Contents
-
 - [FightVault](#fightvault)
 - [Introduction](#introduction)
 - [Table of Contents](#table-of-contents)
@@ -52,17 +51,16 @@ This is my fourth project in Code Institute Diploma in Software Development with
   - [Automated Tests](#automated-tests)
   - [Manual Tests](#manual-tests)
   - [Validator Testing](#validator-testing)
-    - [HTML](#html)
-    - [CSS](#css)
-    - [JavaScript](#javascript)
-    - [Python](#python)
+    - [HTML](#validator-testing-html)
+    - [CSS](#validator-testing-css)
+    - [JavaScript](#validator-testing-javascript)
+    - [Python](#validator-testing-python)
 - [Deployment](#deployment)
 - [Credits](#credits)
   - [Content](#content)
   - [Media](#media)
   - [Favicons](#favicons)
 - [Acknowledgements](#acknowledgements)
-   
 
 ## Project Overview
 
