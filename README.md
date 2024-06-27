@@ -12,9 +12,10 @@ This is my fourth project in Code Institute Diploma in Software Development with
 [Click Here to View Live Website on Heroku](https://fightvault-d3f5315751bb.herokuapp.com/)
 
 
+
 ## Table of Contents
 
-- [FightVault](#Fightvault)
+- [FightVault](#fightvault)
 - [Introduction](#introduction)
 - [Table of Contents](#table-of-contents)
 - [Project Overview](#project-overview)
@@ -24,14 +25,6 @@ This is my fourth project in Code Institute Diploma in Software Development with
   - [View Comments](#view-comments)
   - [Account Registration](#account-registration)
   - [Additional User Stories](#additional-user-stories)
-    - [Register for an Account](#register-for-an-account)
-    - [Log in to Account](#log-in-to-account)
-    - [Log out of Account](#log-out-of-account)
-    - [Post Comments on Blog Posts](#post-comments-on-blog-posts)
-    - [Manage User Comments](#manage-user-comments)
-    - [Create, Edit, and Delete Blog Posts](#create-edit-and-delete-blog-posts)
-    - [Rate Blog Posts](#rate-blog-posts)
-    - [View the Overall Rating of a Blog Post](#view-the-overall-rating-of-a-blog-post)
 - [Entity Relationship Diagram - ERD](#entity-relationship-diagram---erd)
   - [Entities and Attributes](#entities-and-attributes)
     - [Post](#post)
