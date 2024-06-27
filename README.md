@@ -384,6 +384,35 @@ Another section of the website where media files can be viewed and users can com
 
 ### Manual Tests
 
+### Navigation Bar
+
+| Feature Tested                | Expected Outcome                                                 | Testing Performed        | Actual Outcome                                | Result   |
+|-------------------------------|------------------------------------------------------------------|--------------------------|-----------------------------------------------|----------|
+| FightVault logo link          | Directs user to the home page                                    | Click "FightVault"       | Directed to home page                         | Pass     |
+| Home link                     | Directs user to the home page                                    | Click "Home"             | Directed to home page                         | Pass     |
+| About link                    | Directs user to the about page                                   | Click "About"            | Directed to about page                        | Pass     |
+| Contact link                  | Directs user to the booking page                                 | Click "Contact"          | Directed to contact page                      | Pass     |
+| Register link                 | Directs user to the sign up page                                 | Click "Register"         | Directed to sign up page                      | Pass     |
+| Login in link                 | Directs user to the sign in page                                 | Click "Login"            | Directed to sign in page                      | Pass     |
+| register link in alert bar    | Directs user to the sign up page                                 | Click "register"         | Directed to sign up page                      | Pass     |
+| login in link in alert bar    | Directs user to the sign in page                                 | Click "login"            | Directed to sign in page                      | Pass     |
+| Logout link (signed in)       | Directs user to the home page / Displays feedback message        | Click "Logout"           | Directed to home page (alerts user)           | Pass     |
+| Personalised welcome message  | Personalised welcome message for logged in user displayed        | Signed in                | Personalised message displayed                | Pass     |
+| Personal email displayed      | Displays users email                                             | Signed in                | Users email is displayed                      | Pass     |
+| Last login displayed          | Displays date and time user logged in                            | Signed in                | Displays date and time user logged in         | Pass     |
+
+### Home page
+
+| Feature Tested                | Expected Outcome                                                 | Testing Performed        | Actual Outcome                                | Result   |
+|-------------------------------|------------------------------------------------------------------|--------------------------|-----------------------------------------------|----------|
+| Responsive design             | The page changes so the content fits at all screen sizes         | Change sizes (DevTools)  | The page is responsive amd content fits       | Pass     |
+| Text readability              | Text is readable at all screen sizes                             | Read all text blocks     | The text is readable at all breakpoints       | Pass     |
+| Pagination buttons            | NEXT and PREVIOUS buttons redirects to see older and newer posts | Click NEXT and PREVIOUS  | Posts are displayed correctly and scrollable  | Pass     |
+| Image click redirects         | Clicking all the post image redirects to post_detail             | Click all images         | User is redirected to post_detail page        | Pass     |
+| Post title click redirects    | Clicking all post titles redirects user to post_detail           | Click all post titles    | User is redirected to post_detail page        | Pass     |
+| Social media links wired-up   | Clicking social media links opens new tab to social media page   | Click social media icons | New tab is opened to social media page        | Pass     |
+
+
 
 
 ### Validator Testing 
