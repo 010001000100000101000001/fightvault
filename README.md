@@ -421,7 +421,62 @@ Another section of the website where media files can be viewed and users can com
 
 ## Deployment
 
+### Fork the Repository
+1. Click the "Fork" button at the top right corner of the page.
+2. This action creates a copy of the repository under your own GitHub account.
+
+### Clone the Repository Locally
+- **Open Your Forked Repository:**
+  - Go to your GitHub account and open the forked FightVault repository.
+- **Clone the Repository:**
+  - Click the "Code" button.
+  - Copy the URL provided.
+- **Open Your Command Line Interface (CLI):**
+  - Navigate to the directory where you want to clone the repository.
+  - Run the Clone Command: "git clone <copied-URL>"
+    - Replace `<copied-URL>` with the URL you copied from GitHub.
+- **Move Into the Cloned Directory:**"cd fightvault"
+
+### Set Up the Application Locally
+- **Install Dependencies:**
+  - Ensure you have Python and pip installed.
+  - Run the following command to install the required packages: `pip install -r requirements.txt`
+- **Run the Application:**
+  - Start the development server: `python manage.py runserver`
+
+### Deploy to Heroku
+
 This project has been successfully deployed through the Heroku platform, utilizing the Code Institute's Heroku mock terminal. To achieve this, the following deployment procedure was undertaken:
+
+- **Open Heroku:**
+  - Go to Heroku and log in to your account.
+- **Create a New Application:**
+  - Click on "New" in the top right corner and select "Create new app".
+  - Choose a unique app name and select your region.
+  - Press "Create app".
+- **Configure the Application Settings:**
+  - **Config Vars:**
+    - Navigate to the "Settings" tab.
+    - Under "Config Vars", click "Reveal Config Vars".
+    - Add the following environment variables:
+      ```
+      DATABASE_URL: Your database URL.
+      CLOUDINARY_URL: Your Cloudinary URL for managing media files.
+      SECRET_KEY: A secret key for Django security (generate a random one).
+      ```
+  - **Buildpacks:**
+    - Scroll to the "Buildpacks" section and click "Add buildpack".
+    - Select "Python" and press "Save changes".
+- **Deploy the Application:**
+  - **Connect to GitHub:**
+    - Go to the "Deploy" tab.
+    - In the "Deployment method" section, select "GitHub".
+    - Search for your forked FightVault repository and press "Connect".
+  - **Manual Deploy:**
+    - Scroll down to the "Manual deploy" section.
+    - Select the branch you want to deploy and click "Deploy Branch".
+  - Heroku will now build and deploy application.
+  
 
 **Repository Cloning**: Initiated the process by cloning the project's repository to ensure a local copy for preparing deployment.
 
