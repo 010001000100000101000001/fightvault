@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="display-3">404 <i class="fa-regular fa-face-eyes-xmarks"></i></h1>
+    <p class="lead"> The page you're looking for does not exist.</p>
+    <a href="{% url 'home' %}" class="btn btn-primary mt-3">Return to Home</a>
+</div>
+{% endblock %}

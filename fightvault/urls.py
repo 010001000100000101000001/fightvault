@@ -16,6 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import render
+from django.conf.urls import handler404
+
+
+# Custom 404 error view
+def custom_404(request, exception):
+    # Renders the 404.html template when a 404 error occurs
+    return render(request, '404.html', status=404)
 
 
 urlpatterns = [
@@ -26,3 +34,6 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path("", include("blog.urls"), name="blog-urls"),
 ]
+
+# Assign the custom 404 handler
+handler404 = custom_404
