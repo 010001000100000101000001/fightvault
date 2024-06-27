@@ -14,55 +14,61 @@ This is my fourth project in Code Institute Diploma in Software Development with
 
 ## Table of Contents
 
-- [FightVault](#fightvault)
-  - [Introduction](#introduction)
-  - [Table of Contents](#table-of-contents)
-  - [Project Overview](#project-overview)
-  - [User Stories](#user-stories)
-    - [View a Page of Posts](#view-a-page-of-posts)
-    - [Open a Post](#open-a-post)
-    - [View Comments](#view-comments)
-    - [Account Registration](#account-registration)
-    - [Additional User Stories](#additional-user-stories)
-      - [Register for an Account](#register-for-an-account)
-      - [Log in to Account](#log-in-to-account)
-      - [Log out of Account](#log-out-of-account)
-      - [Post Comments on Blog Posts](#post-comments-on-blog-posts)
-      - [Manage User Comments](#manage-user-comments)
-      - [Create, Edit, and Delete Blog Posts](#create-edit-and-delete-blog-posts)
-      - [Rate Blog Posts](#rate-blog-posts)
-      - [View the Overall Rating of a Blog Post](#view-the-overall-rating-of-a-blog-post)
-  - [Features](#features)
-    - [Existing Features](#existing-features)
-      - [Navigation Bar](#navigation-bar)
-      - [Home Page](#home-page)
-      - [About Page](#about-page)
-      - [Contact Page](#contact-page)
-      - [User Authentication](#user-authentication)
-      - [Blog Post Detail Page](#blog-post-detail-page)
-      - [Comments](#comments)
-      - [Ratings Section](#ratings-section)
-      - [Polling Section](#polling-section)
-    - [Features Left to Implement](#features-left-to-implement)
-  - [Design](#design)
-    - [Wireframes](#wireframes)
-    - [Color Scheme](#color-scheme)
-    - [Typography](#typography)
-  - [Technologies Used](#technologies-used)
-  - [Testing](#testing)
-    - [Automated Tests](#automated-tests)
-    - [Manual Tests](#manual-tests)
-    - [Validator Testing](#validator-testing)
-      - [HTML](#html)
-      - [CSS](#css)
-      - [JavaScript](#javascript)
-      - [Python](#python)
-  - [Deployment](#deployment)
-  - [Credits](#credits)
-    - [Content](#content)
-    - [Media](#media)
-    - [Favicons](#favicons)
-  - [Acknowledgements](#acknowledgements)
+- [FightVault](#Fightvault)
+- [Introduction](#introduction)
+- [Table of Contents](#table-of-contents)
+- [Project Overview](#project-overview)
+- [User Stories](#user-stories)
+  - [View a Page of Posts](#view-a-page-of-posts)
+  - [Open a Post](#open-a-post)
+  - [View Comments](#view-comments)
+  - [Account Registration](#account-registration)
+  - [Additional User Stories](#additional-user-stories)
+    - [Register for an Account](#register-for-an-account)
+    - [Log in to Account](#log-in-to-account)
+    - [Log out of Account](#log-out-of-account)
+    - [Post Comments on Blog Posts](#post-comments-on-blog-posts)
+    - [Manage User Comments](#manage-user-comments)
+    - [Create, Edit, and Delete Blog Posts](#create-edit-and-delete-blog-posts)
+    - [Rate Blog Posts](#rate-blog-posts)
+    - [View the Overall Rating of a Blog Post](#view-the-overall-rating-of-a-blog-post)
+- [Entity Relationship Diagram - ERD](#entity-relationship-diagram---erd)
+  - [Entities and Attributes](#entities-and-attributes)
+    - [Post](#post)
+    - [Comment](#comment)
+    - [Rating](#rating)
+    - [Vote](#vote)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+    - [Navigation Bar](#navigation-bar)
+    - [Home Page](#home-page)
+    - [About Page](#about-page)
+    - [Contact Page](#contact-page)
+    - [User Authentication](#user-authentication)
+    - [Blog Post Detail Page](#blog-post-detail-page)
+    - [Comments](#comments)
+    - [Ratings Section](#ratings-section)
+    - [Polling Section](#polling-section)
+  - [Features Left to Implement](#features-left-to-implement)
+- [Design](#design)
+  - [Wireframes](#wireframes)
+  - [Color Scheme](#color-scheme)
+  - [Typography](#typography)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+  - [Automated Tests](#automated-tests)
+  - [Manual Tests](#manual-tests)
+  - [Validator Testing](#validator-testing)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [JavaScript](#javascript)
+    - [Python](#python)
+- [Deployment](#deployment)
+- [Credits](#credits)
+  - [Content](#content)
+  - [Media](#media)
+  - [Favicons](#favicons)
+- [Acknowledgements](#acknowledgements)
    
 
 ## Project Overview
@@ -143,6 +149,101 @@ The aim is to provide a space for people who share a love for martial arts and c
 
 - **Acceptance criteria 1:** The average rating is displayed on each post detail page.
 - **Acceptance criteria 2:** The score the ratings are displayed with the username of the user who rated the post and the time and date it was rated.
+
+
+## Entity Relationship Diagram - ERD
+
+
+| About            | Attributes     | Data Type           |
+|------------------|----------------|---------------------|
+| **title**        | CharField      | `max_length=100`    |
+|                  |                | `default='About FightVault'` |
+| **profile_image** | CloudinaryField | `default='placeholder'` |
+| **mission**      | TextField      | `blank=True`        |
+| **values**       | TextField      | `blank=True`        |
+| **goals**        | TextField      | `blank=True`        |
+| **updated_on**   | DateTimeField  | `auto_now=True`     |
+
+
+## Entities and Attributes
+
+### Post
+
+
+| Attribute         | Data Type                | Notes                                |
+|-------------------|--------------------------|--------------------------------------|
+| **title**         | `CharField`              | max_length=200, unique=True          |
+| **slug**          | `SlugField`              | max_length=200, unique=True          |
+| **author**        | `ForeignKey`             | to `User`, related_name="blog_posts" |
+| **featured_image**| `CloudinaryField`        | default='placeholder'                |
+| **content**       | `TextField`              |                                      |
+| **created_on**    | `DateTimeField`          | auto_now_add=True                    |
+| **updated_on**    | `DateTimeField`          | auto_now=True                        |
+| **status**        | `IntegerField`           | choices=STATUS_CHOICES, default=0    |
+| **excerpt**       | `TextField`              | blank=True                           |
+| **fighter1_name** | `CharField`              | max_length=35, default='Fighter 1'   |
+| **fighter2_name** | `CharField`              | max_length=35, default='Fighter 2'   |
+| **display_voting**| `BooleanField`           | default=False                        |
+
+**Relationships:**
+- One-to-Many with `User` (author)
+- One-to-Many with `Comment`
+- One-to-Many with `Rating`
+- One-to-Many with `Vote`
+
+### Comment
+
+| Attribute         | Data Type                | Notes                                |
+|-------------------|--------------------------|--------------------------------------|
+| **post**          | `ForeignKey`             | to `Post`, related_name="comments"   |
+| **author**        | `ForeignKey`             | to `User`, related_name="comments_author" |
+| **body**          | `TextField`              |                                      |
+| **approved**      | `BooleanField`           | default=False                        |
+| **created_on**    | `DateTimeField`          | auto_now_add=True                    |
+
+**Relationships:**
+- Many-to-One with `Post`
+- Many-to-One with `User`
+
+### Rating
+
+| Attribute         | Data Type                | Notes                                |
+|-------------------|--------------------------|--------------------------------------|
+| **post**          | `ForeignKey`             | to `Post`, related_name="ratings"    |
+| **user**          | `ForeignKey`             | to `User`                            |
+| **score**         | `IntegerField`           | choices=1-5                          |
+| **comment**       | `TextField`              | blank=True, null=True                |
+| **created_on**    | `DateTimeField`          | auto_now_add=True                    |
+
+**Relationships:**
+- Many-to-One with `Post`
+- Many-to-One with `User`
+
+### Vote
+
+| Attribute         | Data Type                | Notes                                |
+|-------------------|--------------------------|--------------------------------------|
+| **post**          | `ForeignKey`             | to `Post`, related_name="votes"      |
+| **user**          | `ForeignKey`             | to `User`                            |
+| **choice**        | `CharField`              | max_length=10                        |
+| **created_at**    | `DateTimeField`          | auto_now_add=True                    |
+
+**Relationships:**
+- Many-to-One with `Post`
+- Many-to-One with `User`
+
+
+
+### Attributes
+
+| Attribute     | Data Type      | Notes                                |
+|---------------|----------------|--------------------------------------|
+| **name**      | `CharField`    | max_length=100                       |
+| **email**     | `EmailField`   |                                      |
+| **message**   | `TextField`    |                                      |
+| **created_at**| `DateTimeField`| auto_now_add=True                    |
+
+
 
 
 
