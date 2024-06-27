@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h1 class="display-3">500 <i class="fa-regular fa-face-eyes-xmarks"></i></h1>
+    <p class="lead"> Something went wrong on our end.</p>
+    <p>Our team has been notified. Please try again later.</p>
+    <a href="{% url 'home' %}" class="btn btn-primary mt-3">Return to Home</a>
+</div>
+{% endblock %}

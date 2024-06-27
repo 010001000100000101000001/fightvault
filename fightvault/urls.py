@@ -26,6 +26,12 @@ def custom_404(request, exception):
     return render(request, '404.html', status=404)
 
 
+# Custom 500 error view
+def custom_500(request):
+    # Renders the 500.html template when a 500 error occurs
+    return render(request, '500.html', status=500)
+
+
 urlpatterns = [
     path('contact/', include('contact.urls')),
     path('about/', include('about.urls')),
@@ -35,5 +41,6 @@ urlpatterns = [
     path("", include("blog.urls"), name="blog-urls"),
 ]
 
-# Assign the custom 404 handler
+# Assign the custom error handlers
 handler404 = custom_404
+handler500 = custom_500
