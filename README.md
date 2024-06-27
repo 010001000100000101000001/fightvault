@@ -154,15 +154,14 @@ The aim is to provide a space for people who share a love for martial arts and c
 ## Entity Relationship Diagram - ERD
 
 
-| About            | Attributes     | Data Type           |
-|------------------|----------------|---------------------|
-| **title**        | CharField      | `max_length=100`    |
-|                  |                | `default='About FightVault'` |
-| **profile_image** | CloudinaryField | `default='placeholder'` |
-| **mission**      | TextField      | `blank=True`        |
-| **values**       | TextField      | `blank=True`        |
-| **goals**        | TextField      | `blank=True`        |
-| **updated_on**   | DateTimeField  | `auto_now=True`     |
+| Attribute         | Data Type       | Notes                                    |
+|-------------------|-----------------|------------------------------------------|
+| **title**         | `CharField`     | `max_length=100`, `default='About FightVault'` |
+| **profile_image** | `CloudinaryField` | `default='placeholder'`                 |
+| **mission**       | `TextField`     | `blank=True`                             |
+| **values**        | `TextField`     | `blank=True`                             |
+| **goals**         | `TextField`     | `blank=True`                             |
+| **updated_on**    | `DateTimeField` | `auto_now=True`                          |
 
 
 ## Entities and Attributes
