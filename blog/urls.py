@@ -8,5 +8,12 @@ urlpatterns = [
     path('rate-post/<int:post_id>/', views.rate_post, name='rate_post'),
     path(
         'edit-comment/<int:comment_id>/',
-        views.edit_comment, name='edit_comment'),
+        views.edit_comment,
+        name='edit_comment'
+            ),
+        path(
+            'comment/<int:comment_id>/delete/',
+            views.delete_comment,
+            name='delete_comment'
+            ),
 ]

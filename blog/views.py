@@ -197,6 +197,19 @@ def edit_comment(request, comment_id):
     return render(
         request, 'blog/edit_comment.html', {'form': form, 'comment': comment})
 
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+
+    # Check that the user is the author of the comment
+    if comment.author != request.user:
+        messages.error(
+            request, "You are not authorised to delete this comment.")
+        return redirect('post_detail', slug=comment.post.slug)
+
+    comment.delete()
+    messages.success(request, "Comment deleted successfully.")
+    return redirect('post_detail', slug=comment.post.slug)
+
 
 @login_required
 def rate_post(request, post_id):
