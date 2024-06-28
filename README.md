@@ -331,6 +331,13 @@ Page scroll continued below ..
 
 ![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/cddf69de-d34d-4764-8cb4-1183802aa5c3)
 
+
+- **Custom 404 error page**
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/278b6c22-287e-44eb-b610-8da25f5e9650)
+
+
+
 ### Features Left to Implement
 
 Another section of the website where media files can be viewed and users can comment and rate the video clips.
