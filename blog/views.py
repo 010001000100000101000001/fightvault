@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.db.models import Avg
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth import logout
 from .models import Post, Rating, Comment, Vote
 from .forms import RatingForm, CommentForm, VoteForm
 from django.urls import reverse
