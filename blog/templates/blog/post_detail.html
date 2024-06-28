@@ -136,6 +136,12 @@
                         <i class="fa-regular fa-comment-arrow-up"></i> This comment is awaiting admin approval.
                     </p>
                     {% endif %}
+                    <!-- Edit Comments -->
+                    {% if comment.author == user %}
+                    <div class="comment-actions mt-2">
+                        <a href="{% url 'edit_comment' comment.id %}" class="btn btn-warning btn-sm">Edit</a>
+                    </div>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>

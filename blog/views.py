@@ -1,11 +1,12 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 from django.views import generic
 from django.contrib import messages
-from django.contrib.auth import logout
 from django.http import HttpResponse
 from django.db.models import Avg
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post, Rating, Comment, Vote
 from .forms import RatingForm, CommentForm, VoteForm
+from django.urls import reverse
 
 
 # Class based views
@@ -171,6 +172,32 @@ def render_post_detail(request, post, ratings, average_rating, comments,
     )
 
 
+@login_required
+def edit_comment(request, comment_id):
+    """
+    View to edit an existing comment.
+    """
+    comment = get_object_or_404(Comment, id=comment_id)
+
+    # Check the user is the author of the comment
+    if comment.author != request.user:
+        messages.error(request, "This is not your comment.")
+        return redirect('post_detail', slug=comment.post.slug)
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Your comment has been updated.")
+            return redirect('post_detail', slug=comment.post.slug)
+    else:
+        form = CommentForm(instance=comment)
+
+    return render(
+        request, 'blog/edit_comment.html', {'form': form, 'comment': comment})
+
+
+@login_required
 def rate_post(request, post_id):
     """
     View function to handle rating a post via HTTP POST request.
