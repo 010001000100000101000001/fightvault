@@ -83,12 +83,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom styles for pagination buttons */
 .pagination .page-link {
-    background-color: #282c31; /* Set background color to #282c31 */
-    color: white; /* Set text color to white */
+    background-color: #282c31;
+    color: white;
 }
 
 .pagination .page-link:hover {
-    background-color: red; /* Change background color to red on hover */
+    background-color: red;
 }
 
 /* Custom styles for contact page */
@@ -97,18 +97,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-page-background {
-    background-size: cover; /* Ensure the image covers the entire area */
-    background-position: center; /* Center the background image */
-    min-height: 100vh; /* Minimum height of 100vh to cover full viewport */
-    display: flex; /* Flexbox display */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */ 
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-page-container {
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    padding: 20px; /* Padding inside the container */
-    border-radius: 10px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
     z-index: 1;
 }
 
