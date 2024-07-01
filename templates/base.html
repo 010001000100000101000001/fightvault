@@ -47,13 +47,17 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <span class="brand-logo">FightVault<i class="fa-duotone fa-boxing-glove fa-bounce"></i></span>
+            <a class="navbar-brand" href="{% url 'home' %}" aria-label="Home - FightVault">
+                <span class="brand-logo">FightVault<i class="fa-duotone fa-boxing-glove fa-bounce"
+                        aria-hidden="true"></i></span>
             </a>
-            <button class="navbar-toggler" type="button" id="menuToggle" aria-label="Toggle navigation">
+            <!-- Mobile Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" id="menuToggle" aria-label="Toggle navigation"
+                aria-controls="mainNavigation" aria-expanded="false" aria-haspopup="true">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNavigation">
+                <!-- Primary Navigation Links -->
                 <ul class="navbar-nav primary-navigation me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
@@ -68,30 +72,32 @@
                             href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
+                <!-- Site Description for Large Screens -->
                 <div class="site-description">
                     <span class="navbar-text mx-auto site-description d-none d-lg-block">
                         Your Destination for MMA and Combat Sports News
                         <i class="fa-solid fa-octagon"></i>
                     </span>
                 </div>
+                <!-- User Links -->
                 <ul class="navbar-nav ms-auto">
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'custom_logout' %}">
-                            Logout <i class="fa-solid fa-left-from-bracket"></i>
+                        <a class="nav-link" href="{% url 'custom_logout' %}" aria-label="Logout">
+                            Logout <i class="fa-solid fa-left-from-bracket" aria-hidden="true"></i>
                         </a>
                     </li>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_signup' %}">
-                            Register <i class="fa-solid fa-user-plus"></i>
+                            href="{% url 'account_signup' %}" aria-label="Register">
+                            Register <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'account_login' %}">
-                            Login <i class="fa-solid fa-user"></i>
+                            href="{% url 'account_login' %}" aria-label="Login">
+                            Login <i class="fa-solid fa-user" aria-hidden="true"></i>
                         </a>
                     </li>
                     {% endif %}
@@ -154,12 +160,30 @@
     <footer class="footer mt-auto py-3 bg-dark">
         <p class="m-0 text-center text-white">Made by FightVault<i class="fa-light fa-boxing-glove"></i></p>
         <p class="m-0 text-center text-white">Follow us:
-            <a href="https://www.facebook.com/" class="text-white ms-3" target="_blank"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://twitter.com/" class="text-white ms-3" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
-            <a href="https://www.instagram.com/" class="text-white ms-3" target="_blank"><i class="fab fa-instagram-square"></i></a>
-            <a href="https://www.youtube.com/" class="text-white ms-3" target="_blank"><i class="fab fa-youtube-square"></i></a>
-            <a href="https://vimeo.com/" class="text-white ms-3" target="_blank"><i class="fa-brands fa-vimeo"></i></a>
-            <a href="https://mastodon.social/" class="text-white ms-3" target="_blank"><i class="fa-brands fa-mastodon"></i></a>
+            <a href="https://www.facebook.com/" class="text-white ms-3" target="_blank">
+                <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                <span class="sr-only">Facebook</span>
+            </a>
+            <a href="https://twitter.com/" class="text-white ms-3" target="_blank">
+                <i class="fa-brands fa-square-x-twitter" aria-hidden="true"></i>
+                <span class="sr-only">Twitter</span>
+            </a>
+            <a href="https://www.instagram.com/" class="text-white ms-3" target="_blank">
+                <i class="fab fa-instagram-square" aria-hidden="true"></i>
+                <span class="sr-only">Instagram</span>
+            </a>
+            <a href="https://www.youtube.com/" class="text-white ms-3" target="_blank">
+                <i class="fab fa-youtube-square" aria-hidden="true"></i>
+                <span class="sr-only">YouTube</span>
+            </a>
+            <a href="https://vimeo.com/" class="text-white ms-3" target="_blank">
+                <i class="fa-brands fa-vimeo" aria-hidden="true"></i>
+                <span class="sr-only">Vimeo</span>
+            </a>
+            <a href="https://mastodon.social/" class="text-white ms-3" target="_blank">
+                <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+                <span class="sr-only">Mastodon</span>
+            </a>
         </p>
     </footer>
 
