@@ -131,6 +131,11 @@ button.btn.btn-primary:hover {
 .average-rating {
     color: red;
     font-weight: bolder;
+    background-color: black;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
 .rating-score {
