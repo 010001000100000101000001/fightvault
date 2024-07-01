@@ -14,14 +14,25 @@ html, body {
     flex-direction: column;
 }
 
+/* Footer */
 .footer {
     background-color: #0a0a0b;
     color: white;
     padding: 1rem 0;
     text-align: center;
-    position: relative;
-    width: 100%;
-    bottom: 0;
+}
+
+.footer a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.footer a .fa-icon {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
 main {
@@ -129,7 +140,7 @@ button.btn.btn-primary:hover {
 }
 
 .average-rating {
-    color: red;
+    color: #ffffff;
     font-weight: bolder;
     background-color: black;
     padding: 5px 10px;
