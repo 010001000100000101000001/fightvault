@@ -6,15 +6,34 @@
     <div class="row">
         <!-- Left column for image -->
         <div class="col-md-4 image-container">
-            <!-- FightVault logo image -->
-            <img src="{% static 'images/fightvault-image.webp' %}" class="img-fluid mb-3 fightvault-logo"
-                alt="FightVault Image">
+            <!-- Images for About page with responsive design -->
+            <img src="{% static 'images/fightvault-image-150w.webp' %}" srcset="{% static 'images/fightvault-image-150w.webp' %} 150w,
+                 {% static 'images/fightvault-image-300w.webp' %} 300w,
+                 {% static 'images/fightvault-image-600w.webp' %} 600w,
+                 {% static 'images/fightvault-image-800w.webp' %} 800w"
+                 sizes="(max-width: 600px) 100vw, 
+                        (max-width: 1200px) 50vw, 
+                        33vw"
+                 class="img-fluid mb-3 fightvault-logo" alt="FightVault Image">
 
             {% if about.image %}
-            <img src="{{ about.image.url }}" class="img-fluid about-image" alt="{{ about.title }}">
+            <img src="{{ about.image.url }}-150w.webp" srcset="{{ about.image.url }}-150w.webp 150w,
+                 {{ about.image.url }}-300w.webp 300w,
+                 {{ about.image.url }}-600w.webp 600w,
+                 {{ about.image.url }}-800w.webp 800w"
+                 sizes="(max-width: 600px) 100vw, 
+                        (max-width: 1200px) 50vw, 
+                        33vw"
+                 class="img-fluid about-image" alt="{{ about.title }}">
             {% else %}
-            <img src="{% static 'images/default-about.webp' %}" class="img-fluid about-image default-about-image"
-                alt="About FightVault">
+            <img src="{% static 'images/default-about-150w.webp' %}" srcset="{% static 'images/default-about-150w.webp' %} 150w,
+                 {% static 'images/default-about-300w.webp' %} 300w,
+                 {% static 'images/default-about-600w.webp' %} 600w,
+                 {% static 'images/default-about-800w.webp' %} 800w"
+                 sizes="(max-width: 600px) 100vw, 
+                        (max-width: 1200px) 50vw, 
+                        33vw"
+                 class="img-fluid about-image default-about-image" alt="Gloves, pads and blackbelt">
             {% endif %}
         </div>
 
