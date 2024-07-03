@@ -332,9 +332,14 @@ Page scroll continued below ..
 ![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/cddf69de-d34d-4764-8cb4-1183802aa5c3)
 
 
-- **Custom 404 error page**
+- **Custom 404 Not Found error page**
 
 ![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/278b6c22-287e-44eb-b610-8da25f5e9650)
+
+
+- **Custom 500 internal server error page**
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/424d7144-0013-4a57-bdeb-c2c0b399814c)
 
 
 
