@@ -535,7 +535,14 @@ The live link can be found here: https://fightvault-d3f5315751bb.herokuapp.com/
 
 ### Content
 
-I chose the subjects and and fights and used ChatGPT to generate an article which I edited and corrected some information for the examples of the blog posts that would be made by real admins that are part of the FightVault team. Some posts are dated and this site would always have fresh posts added as new events and news unfolds in real time. I created fake accounts and usernames to add comments, votes and ratings on the posts to test the functionality of featuures and give an example of how the site would be used by people who signed up and created an account.
+I chose the subjects and and fights and used ChatGPT to generate an article which I edited and corrected some information for the examples of the blog posts that would be made by real admins that are part of the FightVault team. Some posts are dated and this site would always have fresh posts added as new events and news unfolds in real time. I created fake accounts and usernames to add comments, votes and ratings on the posts to test the functionality of featuures and give an example of how the site would be used by people who signed up and created an account. The codestar walk-through project was used as a base to start this project and implement a lot of ideas and technologies which I have added some and taken some away to make this project my own.
+
+#### Links and sources
+
+https://ausi.github.io/respimagelint/docs.html#images.missingFittingSrc
+https://www.w3schools.com/
+https://www.codecademy.com/
+https://claude.ai/
 
 
 ### Media
