@@ -709,23 +709,23 @@ I chose the subjects and and fights and used ChatGPT to generate an article whic
 
 #### Links and sources
 
-https://ausi.github.io/respimagelint/docs.html#images.missingFittingSrc
-https://www.w3schools.com/
-https://www.codecademy.com/
-https://claude.ai/
-https://dequeuniversity.com/rules/axe/4.9/link-name
-https://stackoverflow.com/questions/51884586/force-cloudinary-urls-to-use-https
-https://www.freshtechtips.com/2014/01/rwd-testing-in-google-chrome.html
-https://cloudconvert.com/jpg-to-webp
-https://tinypng.com/
-https://ezgif.com/resize
-https://medium.com/nyc-design/7-rules-for-creating-visually-aesthetic-ui-6ac0fe8856f
-https://mailtrap.io/blog/gmail-smtp/
-https://www.learnpython.org/
-https://fonts.google.com/
-https://docs.google.com/document/d/1VSJtnhh_8djRyncotRzMJG9g_ATfiBHasUVZ1xTwybE/edit#heading=h.hvy9tw74f1o0
-https://cloudinary.com/
-https://web.dev/articles/csp#eval_too
+- https://ausi.github.io/respimagelint/docs.html#images.missingFittingSrc
+- https://www.w3schools.com/
+- https://www.codecademy.com/
+- https://claude.ai/
+- https://dequeuniversity.com/rules/axe/4.9/link-name
+- https://stackoverflow.com/questions/51884586/force-cloudinary-urls-to-use-https
+- https://www.freshtechtips.com/2014/01/rwd-testing-in-google-chrome.html
+- https://cloudconvert.com/jpg-to-webp
+- https://tinypng.com/
+- https://ezgif.com/resize
+- https://medium.com/nyc-design/7-rules-for-creating-visually-aesthetic-ui-6ac0fe8856f
+- https://mailtrap.io/blog/gmail-smtp/
+- https://www.learnpython.org/
+- https://fonts.google.com/
+- https://docs.google.com/document/d/1VSJtnhh_8djRyncotRzMJG9g_ATfiBHasUVZ1xTwybE/edit#heading=h.hvy9tw74f1o0
+- https://cloudinary.com/
+- https://web.dev/articles/csp#eval_too
 
 
 
@@ -739,18 +739,13 @@ https://web.dev/articles/csp#eval_too
 
 - https://www.flickr.com/photos/kevinpoh/4730344693  Kevin Poh's photo
 
-
 - https://www.flickr.com/photos/websummit/52473040640 https://www.flickr.com/photos/websummit/52473040640
-
 
 - https://commons.wikimedia.org/wiki/File:Max_Holloway_180428-D-SW162-1532_%2827918239868%29.jpg  Creator: Sgt. James K. McCann 
 
-
 - https://commons.wikimedia.org/wiki/File:Michael_Chandler_at_MTV_Movie_Awards_2012.jpg American mixed martial artist Michael Chandler interviewed at the MTV Movie Awards 2012
 
-
 - https://www.flickr.com/photos/kenlund/7237766724 Prudential Center, Newark, New Jersey 
-
 
 - https://commons.wikimedia.org/wiki/File:Islam_Makhachev_2022_UFC_belt.png
 
