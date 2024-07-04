@@ -432,16 +432,59 @@ Another section of the website where media files can be viewed and users can com
 **HTML**
   W3C HTML validator was used for html testing.
  - Link for validator: https://validator.w3.org/.
- 
-  
+
+#### Home
+link: https://fightvault-d3f5315751bb.herokuapp.com/
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/11d4fe04-9a19-45fb-b040-9e262223d71f)
+
+
+#### About
+link: https://fightvault-d3f5315751bb.herokuapp.com/about/
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/eb4f2354-ba9c-414f-b29c-ad52ec5b0dc5)
+
+#### Contact
+link: https://fightvault-d3f5315751bb.herokuapp.com/contact/
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/2b61b3d8-22e5-46ae-aa30-42828a010dee)
+
+
+#### Register / signup
+link: https://fightvault-d3f5315751bb.herokuapp.com/accounts/signup/
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/b0c208cd-567c-4f53-8033-5b496219cd84)
+
+  <span class="helptext"><ul><li>Your password can’t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li><li>Your password can’t be entirely numeric.</li></ul></span>↩
+    ↩
+    ↩
+  </p>  
+This particular line is the issue due to how it renders in the browser when helptext is used.
+
+
+#### Login
+link: https://fightvault-d3f5315751bb.herokuapp.com/accounts/login/
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/25e8bed5-d471-494e-ba87-1e00430edfab)
+
+
+
 **CSS**
  - W3C CSS validator was used for CSS testing.
  - Link for CSS validator: https://jigsaw.w3.org/css-validator/.
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/e2d27275-6c40-4e06-b1d9-7e3821ed31a9)
+
+By Direct input:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/6eaff242-4a30-4fd4-89d2-6fc0b9777d21)
+
 
 
 **JavaScript**
   - JS Hint was used for JavaScript testing.
   - Link for JS Hint: https://jshint.com/.
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/e5464c2e-b349-41e3-808d-32c42046ff9b)
 
 
 **Python**
