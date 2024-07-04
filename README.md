@@ -256,7 +256,8 @@ The aim is to provide a space for people who share a love for martial arts and c
     viewed by the site user.
   - It has NEXT and PREVIOUS buttons included to navigate through older posts and navigate back to more recent posts.
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/210229b3-fb66-415f-b2d5-a73739bc9c7d)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/424cd5aa-dd5a-4e07-b662-58e1b3b9a3cf)
+
 
 
 
@@ -266,14 +267,16 @@ The aim is to provide a space for people who share a love for martial arts and c
   - Two images are displayed on the left hand side, the first is the Fightvault image with a logo and the second is gloves, pads and a black belt.
   - The second image is not displayed on smaller mobile screens for a better UI.
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/2c7b045e-0b90-4475-8fad-f3e59c1de530)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/d2b121d2-7d8d-407e-9957-fc6d340cbfd2)
+
 
 
 - **Contact Page**
   - Allows users to get in touch with the FightVault team for inquiries or feedback.
   - It has the FightVault logo image in the background.
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/6e09a232-0253-4f7d-9d68-82a2d0daca09)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/160e97d9-68b6-4286-864e-7a0df4b60370)
+
 
 
 
@@ -346,8 +349,6 @@ Page scroll continued below ..
 ### Features Left to Implement
 
 Another section of the website where media files can be viewed and users can comment and rate the video clips.
-
-
 
 
 ## Design
@@ -490,8 +491,13 @@ By Direct input:
 **Python**
   - CI Python Linter was used to test python for PEP8 adherence.
   - Link for CI Python Linter: https://pep8ci.herokuapp.com/.
-  
 
+All python code was tested and no errors present apart from in the settings file which has pre-existing code that was not added by me.
+
+Example:
+blog/views.py
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/393c1187-65b7-4c6d-a2c8-2f1eeed36bdc)
 
 
 ## Deployment
@@ -586,9 +592,21 @@ https://ausi.github.io/respimagelint/docs.html#images.missingFittingSrc
 https://www.w3schools.com/
 https://www.codecademy.com/
 https://claude.ai/
+https://dequeuniversity.com/rules/axe/4.9/link-name
+https://stackoverflow.com/questions/51884586/force-cloudinary-urls-to-use-https
+https://www.freshtechtips.com/2014/01/rwd-testing-in-google-chrome.html
+https://cloudconvert.com/jpg-to-webp
+https://tinypng.com/
+https://ezgif.com/resize
+https://medium.com/nyc-design/7-rules-for-creating-visually-aesthetic-ui-6ac0fe8856f
+https://mailtrap.io/blog/gmail-smtp/
+https://www.learnpython.org/
+https://fonts.google.com/
+https://docs.google.com/document/d/1VSJtnhh_8djRyncotRzMJG9g_ATfiBHasUVZ1xTwybE/edit#heading=h.hvy9tw74f1o0
 
 
 ### Media
+
 
 
 https://commons.wikimedia.org/wiki/File:Usyk_-_Knyazev_-_0412.jpg
