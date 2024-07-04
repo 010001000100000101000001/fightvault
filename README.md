@@ -604,6 +604,9 @@ https://mailtrap.io/blog/gmail-smtp/
 https://www.learnpython.org/
 https://fonts.google.com/
 https://docs.google.com/document/d/1VSJtnhh_8djRyncotRzMJG9g_ATfiBHasUVZ1xTwybE/edit#heading=h.hvy9tw74f1o0
+https://cloudinary.com/
+https://web.dev/articles/csp#eval_too
+
 
 
 ### Media
