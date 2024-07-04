@@ -70,6 +70,10 @@ The aim is to provide a space for people who share a love for martial arts and c
 
 ## User Stories
 
+Must have, Should have, Could have or Won't have labels have been assigned to my User Stories based on level of importance for a MVP (Minimum Viable Product) and for future iterations. They are available to view in my Projects section here on Github. Each user story is assigned points based on estimated time taken to develop each user story.
+
+The goal of MVP development is to test the product viability, gather user feedback, and validate the idea before investing more time and resources into developing the product further.
+
 ### View a Page of Posts
 
 **As a Site User, I can view a list of recent posts on the home page so that I can quickly find new content.**
@@ -577,13 +581,7 @@ link: https://fightvault-d3f5315751bb.herokuapp.com/contact/
 #### Register / signup
 link: https://fightvault-d3f5315751bb.herokuapp.com/accounts/signup/
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/b0c208cd-567c-4f53-8033-5b496219cd84)
-
-  <span class="helptext"><ul><li>Your password can’t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li><li>Your password can’t be entirely numeric.</li></ul></span>↩
-    ↩
-    ↩
-  </p>  
-This particular line is the issue due to how it renders in the browser when helptext is used.
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/98afcaa5-5398-4ef2-add2-f661d0583581)
 
 
 #### Login
@@ -711,51 +709,47 @@ I chose the subjects and and fights and used ChatGPT to generate an article whic
 
 #### Links and sources
 
-https://ausi.github.io/respimagelint/docs.html#images.missingFittingSrc
-https://www.w3schools.com/
-https://www.codecademy.com/
-https://claude.ai/
-https://dequeuniversity.com/rules/axe/4.9/link-name
-https://stackoverflow.com/questions/51884586/force-cloudinary-urls-to-use-https
-https://www.freshtechtips.com/2014/01/rwd-testing-in-google-chrome.html
-https://cloudconvert.com/jpg-to-webp
-https://tinypng.com/
-https://ezgif.com/resize
-https://medium.com/nyc-design/7-rules-for-creating-visually-aesthetic-ui-6ac0fe8856f
-https://mailtrap.io/blog/gmail-smtp/
-https://www.learnpython.org/
-https://fonts.google.com/
-https://docs.google.com/document/d/1VSJtnhh_8djRyncotRzMJG9g_ATfiBHasUVZ1xTwybE/edit#heading=h.hvy9tw74f1o0
-https://cloudinary.com/
-https://web.dev/articles/csp#eval_too
+- https://ausi.github.io/respimagelint/docs.html#images.missingFittingSrc
+- https://www.w3schools.com/
+- https://www.codecademy.com/
+- https://claude.ai/
+- https://dequeuniversity.com/rules/axe/4.9/link-name
+- https://stackoverflow.com/questions/51884586/force-cloudinary-urls-to-use-https
+- https://www.freshtechtips.com/2014/01/rwd-testing-in-google-chrome.html
+- https://cloudconvert.com/jpg-to-webp
+- https://tinypng.com/
+- https://ezgif.com/resize
+- https://medium.com/nyc-design/7-rules-for-creating-visually-aesthetic-ui-6ac0fe8856f
+- https://mailtrap.io/blog/gmail-smtp/
+- https://www.learnpython.org/
+- https://fonts.google.com/
+- https://docs.google.com/document/d/1VSJtnhh_8djRyncotRzMJG9g_ATfiBHasUVZ1xTwybE/edit#heading=h.hvy9tw74f1o0
+- https://cloudinary.com/
+- https://web.dev/articles/csp#eval_too
 
 
 
 ### Media
 
+- https://www.flickr.com/
 
+- https://pixabay.com/
 
-https://commons.wikimedia.org/wiki/File:Usyk_-_Knyazev_-_0412.jpg
+- Google search using the Free license filter.
 
+- https://www.flickr.com/photos/kevinpoh/4730344693  Kevin Poh's photo
 
-https://www.flickr.com/photos/kevinpoh/4730344693  Kevin Poh's photo
+- https://www.flickr.com/photos/websummit/52473040640 https://www.flickr.com/photos/websummit/52473040640
 
+- https://commons.wikimedia.org/wiki/File:Max_Holloway_180428-D-SW162-1532_%2827918239868%29.jpg  Creator: Sgt. James K. McCann 
 
-https://www.flickr.com/photos/websummit/52473040640 https://www.flickr.com/photos/websummit/52473040640
+- https://commons.wikimedia.org/wiki/File:Michael_Chandler_at_MTV_Movie_Awards_2012.jpg American mixed martial artist Michael Chandler interviewed at the MTV Movie Awards 2012
 
+- https://www.flickr.com/photos/kenlund/7237766724 Prudential Center, Newark, New Jersey 
 
-https://commons.wikimedia.org/wiki/File:Max_Holloway_180428-D-SW162-1532_%2827918239868%29.jpg  Creator: Sgt. James K. McCann 
+- https://commons.wikimedia.org/wiki/File:Islam_Makhachev_2022_UFC_belt.png
 
-
-https://commons.wikimedia.org/wiki/File:Michael_Chandler_at_MTV_Movie_Awards_2012.jpg American mixed martial artist Michael Chandler interviewed at the MTV Movie Awards 2012
-
-
-https://www.flickr.com/photos/kenlund/7237766724 Prudential Center, Newark, New Jersey 
-
-
-https://commons.wikimedia.org/wiki/File:Islam_Makhachev_2022_UFC_belt.png
-
-ChatGPT was used to generate the images on the About page. I shared some similar images and gave prompts to change the colour scheme until I selected the images to be used.
+- ChatGPT was used to generate the images on the About page. I shared some similar images and gave prompts to change the colour scheme until I selected the images to be used.
 
 
 ### Favicons
@@ -767,4 +761,4 @@ The favicon generator that was used for the browser tab thumbnail is Real Favico
 
 ## Acknowledgements
 
-
+A big Thank you to everyone at Code Institute, Laura our Cohort facilitator and everyone for the support. A special thanks to my mentor  Matt Bodden for keeping me on track on always pointing me in the right direction.
