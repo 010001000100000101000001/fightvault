@@ -15,7 +15,7 @@ EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
 
 EMAIL_HOST_USER = os.getenv('GMAIL_USER')
-EMAIL_HOST_PASSWORD = os.getenv('GMAIL_PASSWORD')  
+EMAIL_HOST_PASSWORD = os.getenv('GMAIL_PASSWORD')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -97,16 +97,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'fightvault.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-# DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-# }
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))

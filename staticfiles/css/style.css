@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
@@ -40,7 +40,7 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin-top: 0;
 }
 
