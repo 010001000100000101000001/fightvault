@@ -121,6 +121,9 @@ The aim is to provide a space for people who share a love for martial arts and c
 
 - **Acceptance criteria 1:** A comment form is available on each post detail page.
 - **Acceptance criteria 2:** Comments are displayed below the post in a threaded format.
+- **Acceptance criteria 3** Given more than one comment, there is a conversation thread.
+- **Acceptance criteria 4** Comments need to be approved by an admin before they are visible to other users.
+- **Acceptance criteria 5** A success message is generated to let the user know their comment was submitted for approval.
 
 **As an Admin, I can manage user comments so that I can moderate content on the site.**
 
@@ -141,6 +144,28 @@ The aim is to provide a space for people who share a love for martial arts and c
 
 - **Acceptance criteria 1:** The average rating is displayed on each post detail page.
 - **Acceptance criteria 2:** The score the ratings are displayed with the username of the user who rated the post and the time and date it was rated.
+
+**As a logged in Site User, I can modify my comment on a post so that I can update or correct what I have previously written.**
+
+-  **Acceptance criteria 1:** Given a logged-in user, they can modify their comment.
+-  **Acceptance criteria 2:** The user must be able to click this option to access a form to edit their comment.
+-  **Acceptance criteria 3:** After modifying their comment, the user can save changes.
+-  **Acceptance criteria 4:** The site should provide feedback indicating the comment has been successfully updated.
+
+**As a logged in site user I can I can delete my comment on a post so that I can remove my participation from the conversation if I choose.**
+
+- **Acceptance criteria 1:** Given a logged-in user, they can see a "Delete" option next to their comment so that they can click on it to initiate the deletion of their own comment.
+- **Acceptance criteria 2:** When the "Delete" option is clicked, a pop-up confirmation box appears asking the user, "Are you sure you want to delete this comment?" The user must confirm to delete or click the x or anywhere on the page to cancel.
+- **Acceptance criteria 3:** Upon confirming the deletion, the comment is removed from the post. The site should provide the user feedback indicating the comment has been successfully deleted.
+
+**As a site user I can vote on who I think will win a fight and see the percentage of votes for each fighter so that I can participate in predicting the outcomes for a fun element, see the community's opinions and engage, more with the content.**
+
+- **Acceptance criteria 1:** The user can see a vote form at the bottom of each fight-related post allowing them to choose between two fighters.
+- **Acceptance criteria 2:** After submitting a vote, the user receives a confirmation message, and their vote is recorded in the database.
+- **Acceptance criteria 3:** The user receives a confirmation message after submitting their vote, and their vote is recorded in the database.
+- **Acceptance criteria 4:** The user can see visual percentage bars showing the distribution of votes for each fighter, updated in real-time based on all submitted votes.
+
+
 
 
 ## Entity Relationship Diagram - ERD
