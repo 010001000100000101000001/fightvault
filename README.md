@@ -7,7 +7,8 @@
 This is my fourth project in Code Institute Diploma in Software Development with eCommerce. FightVault is a blog for fans of martial arts and combat sports. It promotes communication and interaction between users by allowing people to sign up with an email address and creating a password. Users are authenticated use django-allauth. Site users who are logged-in, can create comments, read other user's approved comments, update and delete their own comments. Logged-in users can rate a blog post and vote on the predicted outcome of a bout or match on relevant posts that include the polling feature. The website is a full stack django project written in HTML, CSS, Javascript and Python.
 
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/80d903a9-2720-43ee-9569-268649d03556)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/8a5f23ca-56c5-40b7-b946-98f2475b346c)
+
 
 [Click Here to View Live Website on Heroku](https://fightvault-d3f5315751bb.herokuapp.com/)
 
@@ -48,7 +49,7 @@ This is my fourth project in Code Institute Diploma in Software Development with
   - [Typography](#typography)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
-  - [Automated Tests](#automated-tests)
+  - [Lighthouse Tests](#lighthouse-tests)
   - [Manual Tests](#manual-tests)
   - [Validator Testing](#validator-testing)
     - [HTML](#validator-testing)
@@ -120,6 +121,9 @@ The aim is to provide a space for people who share a love for martial arts and c
 
 - **Acceptance criteria 1:** A comment form is available on each post detail page.
 - **Acceptance criteria 2:** Comments are displayed below the post in a threaded format.
+- **Acceptance criteria 3** Given more than one comment, there is a conversation thread.
+- **Acceptance criteria 4** Comments need to be approved by an admin before they are visible to other users.
+- **Acceptance criteria 5** A success message is generated to let the user know their comment was submitted for approval.
 
 **As an Admin, I can manage user comments so that I can moderate content on the site.**
 
@@ -140,6 +144,28 @@ The aim is to provide a space for people who share a love for martial arts and c
 
 - **Acceptance criteria 1:** The average rating is displayed on each post detail page.
 - **Acceptance criteria 2:** The score the ratings are displayed with the username of the user who rated the post and the time and date it was rated.
+
+**As a logged in Site User, I can modify my comment on a post so that I can update or correct what I have previously written.**
+
+-  **Acceptance criteria 1:** Given a logged-in user, they can modify their comment.
+-  **Acceptance criteria 2:** The user must be able to click this option to access a form to edit their comment.
+-  **Acceptance criteria 3:** After modifying their comment, the user can save changes.
+-  **Acceptance criteria 4:** The site should provide feedback indicating the comment has been successfully updated.
+
+**As a logged in site user I can I can delete my comment on a post so that I can remove my participation from the conversation if I choose.**
+
+- **Acceptance criteria 1:** Given a logged-in user, they can see a "Delete" option next to their comment so that they can click on it to initiate the deletion of their own comment.
+- **Acceptance criteria 2:** When the "Delete" option is clicked, a pop-up confirmation box appears asking the user, "Are you sure you want to delete this comment?" The user must confirm to delete or click the x or anywhere on the page to cancel.
+- **Acceptance criteria 3:** Upon confirming the deletion, the comment is removed from the post. The site should provide the user feedback indicating the comment has been successfully deleted.
+
+**As a site user I can vote on who I think will win a fight and see the percentage of votes for each fighter so that I can participate in predicting the outcomes for a fun element, see the community's opinions and engage, more with the content.**
+
+- **Acceptance criteria 1:** The user can see a vote form at the bottom of each fight-related post allowing them to choose between two fighters.
+- **Acceptance criteria 2:** After submitting a vote, the user receives a confirmation message, and their vote is recorded in the database.
+- **Acceptance criteria 3:** The user receives a confirmation message after submitting their vote, and their vote is recorded in the database.
+- **Acceptance criteria 4:** The user can see visual percentage bars showing the distribution of votes for each fighter, updated in real-time based on all submitted votes.
+
+
 
 
 ## Entity Relationship Diagram - ERD
@@ -224,7 +250,7 @@ The aim is to provide a space for people who share a love for martial arts and c
 
 
 
-### Attributes
+### Contact
 
 | Attribute     | Data Type      | Notes                                |
 |---------------|----------------|--------------------------------------|
@@ -256,7 +282,8 @@ The aim is to provide a space for people who share a love for martial arts and c
     viewed by the site user.
   - It has NEXT and PREVIOUS buttons included to navigate through older posts and navigate back to more recent posts.
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/210229b3-fb66-415f-b2d5-a73739bc9c7d)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/424cd5aa-dd5a-4e07-b662-58e1b3b9a3cf)
+
 
 
 
@@ -266,14 +293,16 @@ The aim is to provide a space for people who share a love for martial arts and c
   - Two images are displayed on the left hand side, the first is the Fightvault image with a logo and the second is gloves, pads and a black belt.
   - The second image is not displayed on smaller mobile screens for a better UI.
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/2c7b045e-0b90-4475-8fad-f3e59c1de530)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/d2b121d2-7d8d-407e-9957-fc6d340cbfd2)
+
 
 
 - **Contact Page**
   - Allows users to get in touch with the FightVault team for inquiries or feedback.
   - It has the FightVault logo image in the background.
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/6e09a232-0253-4f7d-9d68-82a2d0daca09)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/160e97d9-68b6-4286-864e-7a0df4b60370)
+
 
 
 
@@ -348,11 +377,11 @@ Page scroll continued below ..
 Another section of the website where media files can be viewed and users can comment and rate the video clips.
 
 
-
-
 ## Design
 
 ### Wireframes
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/b6409f45-46ca-4b7a-a561-1972bf7cf6e4)
 
 
 
@@ -390,7 +419,83 @@ Another section of the website where media files can be viewed and users can com
 
 
 
-### Automated Tests
+### Lighthouse Tests
+
+#### Home
+
+ Desktop:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/b3d94f6f-0758-4420-bf34-107d8fb1772e)
+
+
+Mobile:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/02deeeb6-eb32-4170-a532-8f19632a5f74)
+
+
+#### About
+
+Desktop:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/97c0e5c1-bec3-43a0-ae43-e763bbc50ded)
+
+
+Mobile:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/36793230-e4aa-4a90-84f3-31a973183ac2)
+
+
+#### Contact
+
+Desktop:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/8f3ebe95-d6d4-4058-9b41-9c40a2a7b36c)
+
+
+Mobile:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/63ce8445-153c-4e05-be10-679bd67b99c5)
+
+
+#### Register
+
+Desktop:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/86c87fa6-4c2e-4edf-957a-d215a76f6f06)
+
+
+Mobile: 
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/1bc2ed53-987f-4526-be95-4c32436d3d3b)
+
+
+
+#### Login
+
+Desktop: 
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/e3045b3d-34c8-4524-adb2-d9df3dc24cd8)
+
+
+Mobile:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/7755234d-175b-4c08-acfb-31f4c19c7935)
+
+
+#### Post Detail Page
+
+
+Desktop:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/a7f40a3b-f92f-426d-947b-a3055dee5c79)
+
+
+Mobile:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/fbac2e6b-679f-4666-91b7-8ee875bb1d69)
+
+
+
 
 
 
@@ -425,7 +530,26 @@ Another section of the website where media files can be viewed and users can com
 | Social media links wired-up   | Clicking social media links opens new tab to social media page   | Click social media icons | New tab is opened to social media page        | Pass     |
 
 
+### Contact Form
 
+| Feature Tested                | Expected Outcome                                                 | Testing Performed        | Actual Outcome                                | Result   |
+|-------------------------------|------------------------------------------------------------------|--------------------------|-----------------------------------------------|----------|
+| Email input requires email    | The email input is required, warning "@" must be included        | incorrect email format   | message will not post, warning appears        | Pass     |
+| Send button                   | redirects to thank_you page with a success response message      | Click send               | Correct page and message is displayed         | Pass     |
+
+
+### Post Detail Page
+
+| Feature Tested                | Expected Outcome                                                 | Testing Performed        | Actual Outcome                                | Result   |
+|-------------------------------|------------------------------------------------------------------|--------------------------|-----------------------------------------------|----------|
+| Vote System working correctly | Vote system displays the correct message, and updates Poll result| Submit Vote, check       | Feedback given and Poll updates in real time  | Pass     |
+| Vote Progress Bars            | Progress bars updates as new votes are submitted                 | Test with several voters | Progress bars are correctly updated and diplay| Pass     |
+| Ratings system                | The correct feedback messages are displayed                      | Submit Rating, check     | Correct user feedback based on conditions     | Pass     |
+| Average Rating is updated     | Average Ratings updates when ratings are submitted successfully  | Test with several raters | Average Ratings are updated successfully      | Pass     |
+| Posting a comment             | A comment is posted when submitted successfully (admin approved) | Test with several users  | A comment posts successfuly, (admin approved) | Pass     |
+| Update a comment              | A comment is updated when a logged in user updates               | Test with several users  | A comment updates successfully                | Pass     |
+| Delete a comment              | A comment is deleted when a logged in user deletes               | Test with several users  | A comment is removed from the public page     | Pass     |
+| Warning modal                 | A warning modal asks user if they want to confirm or cancel      | Test with several users  | A Warning Modal is displayed for the user     | Pass     |
 
 ### Validator Testing 
 
@@ -490,8 +614,13 @@ By Direct input:
 **Python**
   - CI Python Linter was used to test python for PEP8 adherence.
   - Link for CI Python Linter: https://pep8ci.herokuapp.com/.
-  
 
+All python code was tested and no errors present apart from in the settings file which has pre-existing code that was not added by me.
+
+Example:
+blog/views.py
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/393c1187-65b7-4c6d-a2c8-2f1eeed36bdc)
 
 
 ## Deployment
@@ -586,9 +715,24 @@ https://ausi.github.io/respimagelint/docs.html#images.missingFittingSrc
 https://www.w3schools.com/
 https://www.codecademy.com/
 https://claude.ai/
+https://dequeuniversity.com/rules/axe/4.9/link-name
+https://stackoverflow.com/questions/51884586/force-cloudinary-urls-to-use-https
+https://www.freshtechtips.com/2014/01/rwd-testing-in-google-chrome.html
+https://cloudconvert.com/jpg-to-webp
+https://tinypng.com/
+https://ezgif.com/resize
+https://medium.com/nyc-design/7-rules-for-creating-visually-aesthetic-ui-6ac0fe8856f
+https://mailtrap.io/blog/gmail-smtp/
+https://www.learnpython.org/
+https://fonts.google.com/
+https://docs.google.com/document/d/1VSJtnhh_8djRyncotRzMJG9g_ATfiBHasUVZ1xTwybE/edit#heading=h.hvy9tw74f1o0
+https://cloudinary.com/
+https://web.dev/articles/csp#eval_too
+
 
 
 ### Media
+
 
 
 https://commons.wikimedia.org/wiki/File:Usyk_-_Knyazev_-_0412.jpg
