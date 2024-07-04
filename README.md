@@ -7,7 +7,8 @@
 This is my fourth project in Code Institute Diploma in Software Development with eCommerce. FightVault is a blog for fans of martial arts and combat sports. It promotes communication and interaction between users by allowing people to sign up with an email address and creating a password. Users are authenticated use django-allauth. Site users who are logged-in, can create comments, read other user's approved comments, update and delete their own comments. Logged-in users can rate a blog post and vote on the predicted outcome of a bout or match on relevant posts that include the polling feature. The website is a full stack django project written in HTML, CSS, Javascript and Python.
 
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/80d903a9-2720-43ee-9569-268649d03556)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/8a5f23ca-56c5-40b7-b946-98f2475b346c)
+
 
 [Click Here to View Live Website on Heroku](https://fightvault-d3f5315751bb.herokuapp.com/)
 
