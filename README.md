@@ -577,13 +577,7 @@ link: https://fightvault-d3f5315751bb.herokuapp.com/contact/
 #### Register / signup
 link: https://fightvault-d3f5315751bb.herokuapp.com/accounts/signup/
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/b0c208cd-567c-4f53-8033-5b496219cd84)
-
-  <span class="helptext"><ul><li>Your password can’t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can’t be a commonly used password.</li><li>Your password can’t be entirely numeric.</li></ul></span>↩
-    ↩
-    ↩
-  </p>  
-This particular line is the issue due to how it renders in the browser when helptext is used.
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/98afcaa5-5398-4ef2-add2-f661d0583581)
 
 
 #### Login
@@ -733,10 +727,11 @@ https://web.dev/articles/csp#eval_too
 
 ### Media
 
+https://www.flickr.com/
 
+https://pixabay.com/
 
-https://commons.wikimedia.org/wiki/File:Usyk_-_Knyazev_-_0412.jpg
-
+Google search using the Free license filter.
 
 https://www.flickr.com/photos/kevinpoh/4730344693  Kevin Poh's photo
 
@@ -767,4 +762,4 @@ The favicon generator that was used for the browser tab thumbnail is Real Favico
 
 ## Acknowledgements
 
-
+A big Thank you to everyone at Code Institute, Laura our Cohort facilitator and everyone for the support. A special thanks to my mentor  Matt Bodden for keeping me on track on always pointing me in the right direction.
