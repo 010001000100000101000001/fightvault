@@ -70,7 +70,7 @@ The aim is to provide a space for people who share a love for martial arts and c
 
 ## User Stories
 
-Must have, Should have, Could have or Won't have labels have been assigned to my User Stories based on level of importance for a MVP (Minimum Viable Product) and for fututure iterations. They are available to view in my Projects section here on Github. Each user story is assigned points based on estimated time taken to develop each user story.
+Must have, Should have, Could have or Won't have labels have been assigned to my User Stories based on level of importance for a MVP (Minimum Viable Product) and for future iterations. They are available to view in my Projects section here on Github. Each user story is assigned points based on estimated time taken to develop each user story.
 
 The goal of MVP development is to test the product viability, gather user feedback, and validate the idea before investing more time and resources into developing the product further.
 
