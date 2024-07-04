@@ -394,6 +394,80 @@ Another section of the website where media files can be viewed and users can com
 
 ### Lighthouse Tests
 
+#### Home
+
+ Desktop:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/b3d94f6f-0758-4420-bf34-107d8fb1772e)
+
+
+Mobile:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/02deeeb6-eb32-4170-a532-8f19632a5f74)
+
+
+#### About
+
+Desktop:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/97c0e5c1-bec3-43a0-ae43-e763bbc50ded)
+
+
+Mobile:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/36793230-e4aa-4a90-84f3-31a973183ac2)
+
+
+#### Contact
+
+Desktop:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/8f3ebe95-d6d4-4058-9b41-9c40a2a7b36c)
+
+
+Mobile:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/63ce8445-153c-4e05-be10-679bd67b99c5)
+
+
+#### Register
+
+Desktop:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/86c87fa6-4c2e-4edf-957a-d215a76f6f06)
+
+
+Mobile: 
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/1bc2ed53-987f-4526-be95-4c32436d3d3b)
+
+
+
+#### Login
+
+Desktop: 
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/e3045b3d-34c8-4524-adb2-d9df3dc24cd8)
+
+
+Mobile:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/7755234d-175b-4c08-acfb-31f4c19c7935)
+
+
+#### Post Detail Page
+
+
+Desktop:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/a7f40a3b-f92f-426d-947b-a3055dee5c79)
+
+
+Mobile:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/fbac2e6b-679f-4666-91b7-8ee875bb1d69)
+
+
 
 
 
