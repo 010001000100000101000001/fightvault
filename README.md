@@ -727,30 +727,30 @@ https://web.dev/articles/csp#eval_too
 
 ### Media
 
-https://www.flickr.com/
+- https://www.flickr.com/
 
-https://pixabay.com/
+- https://pixabay.com/
 
-Google search using the Free license filter.
+- Google search using the Free license filter.
 
-https://www.flickr.com/photos/kevinpoh/4730344693  Kevin Poh's photo
-
-
-https://www.flickr.com/photos/websummit/52473040640 https://www.flickr.com/photos/websummit/52473040640
+- https://www.flickr.com/photos/kevinpoh/4730344693  Kevin Poh's photo
 
 
-https://commons.wikimedia.org/wiki/File:Max_Holloway_180428-D-SW162-1532_%2827918239868%29.jpg  Creator: Sgt. James K. McCann 
+- https://www.flickr.com/photos/websummit/52473040640 https://www.flickr.com/photos/websummit/52473040640
 
 
-https://commons.wikimedia.org/wiki/File:Michael_Chandler_at_MTV_Movie_Awards_2012.jpg American mixed martial artist Michael Chandler interviewed at the MTV Movie Awards 2012
+- https://commons.wikimedia.org/wiki/File:Max_Holloway_180428-D-SW162-1532_%2827918239868%29.jpg  Creator: Sgt. James K. McCann 
 
 
-https://www.flickr.com/photos/kenlund/7237766724 Prudential Center, Newark, New Jersey 
+- https://commons.wikimedia.org/wiki/File:Michael_Chandler_at_MTV_Movie_Awards_2012.jpg American mixed martial artist Michael Chandler interviewed at the MTV Movie Awards 2012
 
 
-https://commons.wikimedia.org/wiki/File:Islam_Makhachev_2022_UFC_belt.png
+- https://www.flickr.com/photos/kenlund/7237766724 Prudential Center, Newark, New Jersey 
 
-ChatGPT was used to generate the images on the About page. I shared some similar images and gave prompts to change the colour scheme until I selected the images to be used.
+
+- https://commons.wikimedia.org/wiki/File:Islam_Makhachev_2022_UFC_belt.png
+
+- ChatGPT was used to generate the images on the About page. I shared some similar images and gave prompts to change the colour scheme until I selected the images to be used.
 
 
 ### Favicons
