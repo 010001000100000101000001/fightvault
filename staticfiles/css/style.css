@@ -108,10 +108,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-page-container {
     background: rgba(255, 255, 255, 0.8);
-    padding: 40px;
+    padding: 30px;
     border-radius: 10px;
-    max-width: 90%;
-    width: 500px;
+    max-width: 80%;
+    width: 400px;
     z-index: 1;
 }
 
@@ -126,6 +126,16 @@ button.btn.btn-primary {
 
 button.btn.btn-primary:hover {
     background-color: red;
+}
+
+.contact form .form-group input,
+.contact form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
 }
 
 .form-wrapper {
