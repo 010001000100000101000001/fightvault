@@ -381,6 +381,8 @@ Another section of the website where media files can be viewed and users can com
 
 ### Wireframes
 
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/b6409f45-46ca-4b7a-a561-1972bf7cf6e4)
+
 
 
 ### Color Scheme
