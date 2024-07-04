@@ -103,12 +103,15 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .contact-page-container {
     background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
+    max-width: 90%;
+    width: 500px;
     z-index: 1;
 }
 
