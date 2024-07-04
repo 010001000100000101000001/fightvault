@@ -250,7 +250,7 @@ The aim is to provide a space for people who share a love for martial arts and c
 
 
 
-### Attributes
+### Contact
 
 | Attribute     | Data Type      | Notes                                |
 |---------------|----------------|--------------------------------------|
@@ -528,7 +528,26 @@ Mobile:
 | Social media links wired-up   | Clicking social media links opens new tab to social media page   | Click social media icons | New tab is opened to social media page        | Pass     |
 
 
+### Contact Form
 
+| Feature Tested                | Expected Outcome                                                 | Testing Performed        | Actual Outcome                                | Result   |
+|-------------------------------|------------------------------------------------------------------|--------------------------|-----------------------------------------------|----------|
+| Email input requires email    | The email input is required, warning "@" must be included        | incorrect email format   | message will not post, warning appears        | Pass     |
+| Send button                   | redirects to thank_you page with a success response message      | Click send               | Correct page and message is displayed         | Pass     |
+
+
+### Post Detail Page
+
+| Feature Tested                | Expected Outcome                                                 | Testing Performed        | Actual Outcome                                | Result   |
+|-------------------------------|------------------------------------------------------------------|--------------------------|-----------------------------------------------|----------|
+| Vote System working correctly | Vote system displays the correct message, and updates Poll result| Submit Vote, check       | Feedback given and Poll updates in real time  | Pass     |
+| Vote Progress Bars            | Progress bars updates as new votes are submitted                 | Test with several voters | Progress bars are correctly updated and diplay| Pass     |
+| Ratings system                | The correct feedback messages are displayed                      | Submit Rating, check     | Correct user feedback based on conditions     | Pass     |
+| Average Rating is updated     | Average Ratings updates when ratings are submitted successfully  | Test with several raters | Average Ratings are updated successfully      | Pass     |
+| Posting a comment             | A comment is posted when submitted successfully (admin approved) | Test with several users  | A comment posts successfuly, (admin approved) | Pass     |
+| Update a comment              | A comment is updated when a logged in user updates               | Test with several users  | A comment updates successfully                | Pass     |
+| Delete a comment              | A comment is deleted when a logged in user deletes               | Test with several users  | A comment is removed from the public page     | Pass     |
+| Warning modal                 | A warning modal asks user if they want to confirm or cancel      | Test with several users  | A Warning Modal is displayed for the user     | Pass     |
 
 ### Validator Testing 
 
