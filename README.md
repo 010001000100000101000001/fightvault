@@ -49,7 +49,7 @@ This is my fourth project in Code Institute Diploma in Software Development with
   - [Typography](#typography)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
-  - [Automated Tests](#automated-tests)
+  - [Lighthouse Tests](#lighthouse-tests)
   - [Manual Tests](#manual-tests)
   - [Validator Testing](#validator-testing)
     - [HTML](#validator-testing)
@@ -392,7 +392,9 @@ Another section of the website where media files can be viewed and users can com
 
 
 
-### Automated Tests
+### Lighthouse Tests
+
+
 
 
 
