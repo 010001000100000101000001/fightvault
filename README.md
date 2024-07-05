@@ -343,6 +343,16 @@ Page scroll continued below ..
   - An arrow pointing to the comment awaiting to be approved.
   - Comment displayed in bold for easy viewing.
   - Username and time and date slighty greyed out to not be too distracting from the main comments.
+  - Full CRUD functionality, a logged in user has the ability to edit and delete their own comments
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/c4112aa7-2344-4d14-9a31-7d54986056a9)
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/45bf223c-2b97-4ddf-9ccf-09d640852462)
+
+A modal pops up asking the user if they want to delete their comment:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/3acc40da-26c8-4d5f-8f36-9e8855b8fcb9)
+
 
  - **Ratings section**
    - A rating system for the post.
@@ -363,7 +373,8 @@ Page scroll continued below ..
     - A submit vote button to submit the vote.
     - Current poll is displayed in green and red for contrast along with percentage bars included with the fighers names and the persentage of the current votes.
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/cddf69de-d34d-4764-8cb4-1183802aa5c3)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/4827bbeb-dabe-4ce4-9660-8f3bcb1c1496)
+
 
 
 - **Custom 404 Not Found error page**
