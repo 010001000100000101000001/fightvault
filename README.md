@@ -353,7 +353,8 @@ Page scroll continued below ..
    - Colour change of the gloves from red to black when hovered on and clicked.
    - Easily see visually the rating choice out of 5.
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/3883e5b1-0d51-48c9-8689-59fd5ae763ef)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/1ada1f10-b08e-4906-9761-a582352a5198)
+
 
      
 - **Polling Section**
