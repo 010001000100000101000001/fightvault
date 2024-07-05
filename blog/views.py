@@ -176,11 +176,10 @@ def render_post_detail(request, post, ratings, average_rating, comments,
 @login_required
 def edit_comment(request, comment_id):
     """
-    View to edit an existing comment.
+    View to edit an existing comment with admin approval.
     """
     comment = get_object_or_404(Comment, id=comment_id)
 
-    # Check the user is the author of the comment
     if comment.author != request.user:
         messages.error(request, "This is not your comment.")
         return redirect('post_detail', slug=comment.post.slug)
@@ -188,14 +187,20 @@ def edit_comment(request, comment_id):
     if request.method == 'POST':
         form = CommentForm(request.POST, instance=comment)
         if form.is_valid():
-            form.save()
-            messages.success(request, "Your comment has been updated.")
+            edited_comment = form.save(commit=False)
+            edited_comment.approved = False
+            edited_comment.save()
+            messages.success(
+                request,
+                "Your comment has been updated and is awaiting approval."
+            )
             return redirect('post_detail', slug=comment.post.slug)
     else:
         form = CommentForm(instance=comment)
 
     return render(
-        request, 'blog/edit_comment.html', {'form': form, 'comment': comment})
+        request, 'blog/edit_comment.html', {'form': form, 'comment': comment}
+    )
 
 
 def delete_comment(request, comment_id):
