@@ -343,7 +343,7 @@ Page scroll continued below ..
   - An arrow pointing to the comment awaiting to be approved.
   - Comment displayed in bold for easy viewing.
   - Username and time and date slighty greyed out to not be too distracting from the main comments.
-  - Full CRUD functionality, a logged in user has the ability to edit and delete their own comments
+  - Full CRUD functionality, a logged in user has the ability to edit and delete their own comments.
 
 ![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/c4112aa7-2344-4d14-9a31-7d54986056a9)
 
@@ -575,7 +575,7 @@ Mobile:
 | Posting a comment             | A comment is posted when submitted successfully (admin approved) | Test with several users  | A comment posts successfuly, (admin approved) | Pass     |
 | Update a comment              | A comment is updated when a logged in user updates               | Test with several users  | A comment updates successfully                | Pass     |
 | Delete a comment              | A comment is deleted when a logged in user deletes               | Test with several users  | A comment is removed from the public page     | Pass     |
-| Warning modal                 | A warning modal asks user if they want to confirm or cancel      | Test with several users  | A Warning Modal is displayed for the user     | Pass     |
+| Warning modal                 | A warning modal asks user if they want to delete or cancel       | Test with several users  | A Warning Modal is displayed for the user     | Pass     |
 
 ### Validator Testing 
 
