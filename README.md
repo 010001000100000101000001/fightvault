@@ -378,22 +378,31 @@ Page scroll continued below ..
 
 ### Features Left to Implement
 
-Another section of the website where media files can be viewed and users can comment and rate the video clips.
+In future iterations of the website, with more time, I will create the ability for users to also create and edit blog posts but at this time this is reserved for staff and admin level users who have credentials to access the admin panel. I will create a section of the website where media files can be viewed and users can comment and rate the video clips.
 
 
 ## Design
 
 ### Wireframes
 
+Desktop:
 ![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/b6409f45-46ca-4b7a-a561-1972bf7cf6e4)
+
+Mobile:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/c2752568-0b1d-4949-9d63-cd053c6b4841)
+
 
 
 
 ### Color Scheme
 
 - The color scheme is designed to be bold and vibrant, reflecting the dynamic nature of combat sports.
+- https://contrast-grid.eightshapes.com/ was utilised to ensure good scores on contrast ratio for improved accessibility.
 
 ### Typography
+
+Google fonts was utilised for a modern look and fall back fonts were set in case of any issues that may arise.
 
 - The typography is chosen to be modern and easy to read.
   - Primary font: Montserrat
