@@ -363,7 +363,8 @@ A modal pops up asking the user if they want to delete their comment:
    - Colour change of the gloves from red to black when hovered on and clicked.
    - Easily see visually the rating choice out of 5.
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/1ada1f10-b08e-4906-9761-a582352a5198)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/8f319a26-46c7-451b-8774-d6b464b75d8e)
+
 
 
      
