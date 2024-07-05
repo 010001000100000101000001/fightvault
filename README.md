@@ -343,6 +343,16 @@ Page scroll continued below ..
   - An arrow pointing to the comment awaiting to be approved.
   - Comment displayed in bold for easy viewing.
   - Username and time and date slighty greyed out to not be too distracting from the main comments.
+  - Full CRUD functionality, a logged in user has the ability to edit and delete their own comments.
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/c4112aa7-2344-4d14-9a31-7d54986056a9)
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/45bf223c-2b97-4ddf-9ccf-09d640852462)
+
+A modal pops up asking the user if they want to delete their comment:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/3acc40da-26c8-4d5f-8f36-9e8855b8fcb9)
+
 
  - **Ratings section**
    - A rating system for the post.
@@ -353,7 +363,9 @@ Page scroll continued below ..
    - Colour change of the gloves from red to black when hovered on and clicked.
    - Easily see visually the rating choice out of 5.
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/3883e5b1-0d51-48c9-8689-59fd5ae763ef)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/8f319a26-46c7-451b-8774-d6b464b75d8e)
+
+
 
      
 - **Polling Section**
@@ -362,7 +374,8 @@ Page scroll continued below ..
     - A submit vote button to submit the vote.
     - Current poll is displayed in green and red for contrast along with percentage bars included with the fighers names and the persentage of the current votes.
 
-![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/cddf69de-d34d-4764-8cb4-1183802aa5c3)
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/4827bbeb-dabe-4ce4-9660-8f3bcb1c1496)
+
 
 
 - **Custom 404 Not Found error page**
@@ -378,22 +391,31 @@ Page scroll continued below ..
 
 ### Features Left to Implement
 
-Another section of the website where media files can be viewed and users can comment and rate the video clips.
+In future iterations of the website, with more time, I will create the ability for users to also create and edit blog posts but at this time this is reserved for staff and admin level users who have credentials to access the admin panel. I will create a section of the website where media files can be viewed and users can comment and rate the video clips.
 
 
 ## Design
 
 ### Wireframes
 
+Desktop:
 ![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/b6409f45-46ca-4b7a-a561-1972bf7cf6e4)
+
+Mobile:
+
+![image](https://github.com/010001000100000101000001/fightvault/assets/147556282/c2752568-0b1d-4949-9d63-cd053c6b4841)
+
 
 
 
 ### Color Scheme
 
 - The color scheme is designed to be bold and vibrant, reflecting the dynamic nature of combat sports.
+- https://contrast-grid.eightshapes.com/ was utilised to ensure good scores on contrast ratio for improved accessibility.
 
 ### Typography
+
+Google fonts was utilised for a modern look and fall back fonts were set in case of any issues that may arise.
 
 - The typography is chosen to be modern and easy to read.
   - Primary font: Montserrat
@@ -553,7 +575,7 @@ Mobile:
 | Posting a comment             | A comment is posted when submitted successfully (admin approved) | Test with several users  | A comment posts successfuly, (admin approved) | Pass     |
 | Update a comment              | A comment is updated when a logged in user updates               | Test with several users  | A comment updates successfully                | Pass     |
 | Delete a comment              | A comment is deleted when a logged in user deletes               | Test with several users  | A comment is removed from the public page     | Pass     |
-| Warning modal                 | A warning modal asks user if they want to confirm or cancel      | Test with several users  | A Warning Modal is displayed for the user     | Pass     |
+| Warning modal                 | A warning modal asks user if they want to delete or cancel       | Test with several users  | A Warning Modal is displayed for the user     | Pass     |
 
 ### Validator Testing 
 
